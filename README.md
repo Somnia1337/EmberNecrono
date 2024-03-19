@@ -11,5 +11,3 @@ I recommend using [Obsidian](https://obsidian.md/) - the markdown editor I've be
 ## Common Issues
 
 Reporting errors & typos in my notes is welcomed, feel free to PR.
-
-a test edit
