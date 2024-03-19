@@ -6,6 +6,6 @@ The notes Somnia1337 had taken with Obsidian in Markdown.
 
 # How to Use
 
-Click the green button "\< \> Code" and select "Download ZIP" to download all my notes and attachments, then unzip the `.zip` file and open the whole file as an Obsidian vault.
+Click the green button "<> Code" and select "Download ZIP" to download all my notes and attachments, then unzip the `.zip` file and open the whole file as an Obsidian vault.
 
 Yes, I recommend using [Obsidian](https://obsidian.md/) - the Markdown editor I've been using - to read & edit my notes, it has an elegant GUI and a fluent editing experience.
