@@ -38,9 +38,22 @@
               },
               "pinned": true
             }
+          },
+          {
+            "id": "6ccf9a0bbf65d327",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Private/Plan/Plan - Daily.md"
+                "file": "README.md"
               }
             }
           },
@@ -154,11 +167,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "67b30dad9f400034",
+  "active": "6ccf9a0bbf65d327",
   "lastOpenFiles": [
+    "Private/Plan/Plan - Daily.md",
     "DRAFT.md",
     "EmberNecrono",
-    "Private/Plan/Plan - Daily.md",
     "EmberNecrono/README.md",
     "git-test/test.md",
     "新建文件夹",

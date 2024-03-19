@@ -1,12 +1,14 @@
-# Somnia1337's Notes
+# EmberNecrono
 
-The notes Somnia1337 had taken with Obsidian and Markdown.
+The notes Somnia1337 had taken with Obsidian in Markdown.
+
+**Ember** is a piece of wood or coal, etc. that continues to burn after a fire has no more flames. **Necrono** is short for **Necronomicon**, also referred to as the **Book of the Dead**, is a fictional grimoire (textbook of magic) appearing in stories by the horror writer H. P. Lovecraft.
 
 ## How to Use
 
-Go to "Releases" and download the latest `.zip` file, unzip it, and you'll get `.md` note files.
+Click the green button "\< \> Code" and select "Download ZIP" to download all my notes and attachments, then unzip the `.zip` file and open the whole file as an Obsidian vault.
 
-I recommend using [Obsidian](https://obsidian.md/) - the markdown editor I've been using - to read & edit my notes, it has an elegant UI and a fluent editing experience.
+Yes, I recommend using [Obsidian](https://obsidian.md/) - the Markdown editor I've been using - to read & edit my notes, it has an elegant GUI and a fluent editing experience.
 
 ## Common Issues
 
