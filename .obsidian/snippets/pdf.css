@@ -1,6 +1,0 @@
-@media print {
-  /* resize codeblock tabs to 4 spaces */
-  code {
-    tab-size: 4;
-  }
-}
