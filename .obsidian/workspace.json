@@ -4,43 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "114449f600642bbd",
+        "id": "b0bde8baae48dc71",
         "type": "tabs",
         "children": [
           {
-            "id": "d57ee570af64d1bf",
+            "id": "5a27bab985888faa",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Private/Plan/Plan - Index.canvas",
-                "viewState": {
-                  "x": -1070,
-                  "y": -440,
-                  "zoom": -0.16634320662991667
-                }
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "67b30dad9f400034",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Private/Plan/Plan - Daily.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
-              "pinned": true
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Private/Plan/Plan - Daily.md"
-              }
+              "state": {}
             }
           },
           {
@@ -154,11 +127,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "67b30dad9f400034",
+  "active": "5a27bab985888faa",
   "lastOpenFiles": [
+    "Private/Plan/Plan - Daily.md",
     "DRAFT.md",
     "EmberNecrono",
-    "Private/Plan/Plan - Daily.md",
     "EmberNecrono/README.md",
     "git-test/test.md",
     "新建文件夹",
