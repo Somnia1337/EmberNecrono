@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "114449f600642bbd",
+        "id": "75a169ea58deaa9a",
         "type": "tabs",
         "children": [
           {
-            "id": "67b30dad9f400034",
+            "id": "8f4fdbc84ea70820",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "empty",
-              "state": {},
-              "pinned": true
+              "state": {}
             }
           }
         ]
@@ -129,7 +127,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "67b30dad9f400034",
+  "active": "8f4fdbc84ea70820",
   "lastOpenFiles": [
     "Private/Retro/Retro - 2023.md",
     "Private/Retro",
