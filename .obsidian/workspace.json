@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "469c7ec2d0e19f4a",
+        "id": "c625c6a011c8823b",
         "type": "tabs",
         "children": [
           {
-            "id": "04fc0b45f76d4053",
+            "id": "4cb0cb7f89474ffa",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -127,7 +127,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "04fc0b45f76d4053",
+  "active": "4cb0cb7f89474ffa",
   "lastOpenFiles": [
     "README.md",
     "Private/Plan/Plan - Daily.md",
