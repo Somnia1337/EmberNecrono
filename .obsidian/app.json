@@ -12,7 +12,7 @@
   "rightToLeft": false,
   "vimMode": false,
   "spellcheckLanguages": null,
-  "spellcheck": false,
+  "spellcheck": true,
   "defaultViewMode": "source",
   "pdfExportSettings": {
     "includeName": true,
