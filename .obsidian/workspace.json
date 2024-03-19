@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "6ce9e02ad440200e",
+    "type": "split",
+    "children": [
+      {
+        "id": "114449f600642bbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d57ee570af64d1bf",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Private/Plan/Plan - Index.canvas",
+                "viewState": {
+                  "x": -1070,
+                  "y": -440,
+                  "zoom": -0.16634320662991667
+                }
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "67b30dad9f400034",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Private/Plan/Plan - Daily.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
+              "pinned": true
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "475afe5cb3440851",
+    "type": "split",
+    "children": [
+      {
+        "id": "2ad066029cdbf583",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fda55c86885673d0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "87727d0bb51dca13",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "36b1116fc15e071d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 333.5
+  },
+  "right": {
+    "id": "1e6938f42094fd03",
+    "type": "split",
+    "children": [
+      {
+        "id": "9dcd13e17669b1d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0ce62af74faa4eb4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Private/Plan/Plan - Daily.md"
+              }
+            }
+          },
+          {
+            "id": "9fcb7c48573a3762",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "8cf1e91e844c4b04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bf01b8ecbb5b957",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 377.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "templates:插入模板": false,
+      "workspaces:管理工作区布局": false,
+      "remotely-save:Remotely Save": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "67b30dad9f400034",
+  "lastOpenFiles": [
+    "DRAFT.md",
+    "EmberNecrono",
+    "Private/Plan/Plan - Daily.md",
+    "EmberNecrono/README.md",
+    "git-test/test.md",
+    "新建文件夹",
+    "Computer Science/深入理解计算机系统/1 计算机系统漫游.md",
+    "Computer Science/汇编语言/汇编语言 - 检测点.md",
+    "Computer Science/汇编语言/6 包含多个段的程序.md",
+    "_Attachment/汇编语言.pdf",
+    "Private/Plan/Plan - Index.canvas",
+    "Computer Science/计算机网络/2 应用层.md",
+    "SCU/Homework/计算机网络/实验 1：初识 Wireshark.md",
+    "SCU/Homework/计算机网络/实验 2：HTTP 报文.md",
+    "Private/Plan/Plan - Archived/Plan - 2024 - Archived.md",
+    "Private/Plan/Plan - Archived/Plan - 2024 - Daily - Archived.md",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_114129.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_113938.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_113635.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_113507.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_113232.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_112657.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_112531.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_112402.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_111949.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文/Snipaste_240319_111842.png",
+    "_Attachment/SCU/Homework/计算机网络/实验 2：HTTP 报文",
+    "_Attachment/SCU/Homework/计算机网络/新建文件夹",
+    "Talk/Sentence.md",
+    "Private/Plan/Plan - 2024/Plan - 2024 - Weekly.md",
+    "Private/Diary/Diary - 2024/Diary - 2024.03.md",
+    "Misc/Minecraft.md",
+    "Reading/National Geographic.md",
+    "SCU/Homework/系统级编程/系统级编程 - 实验 1：C++.md",
+    "Computer Science/汇编语言/汇编语言 - 实验/汇编语言 - 实验 1：查看 CPU 和内存，用机器指令和汇编指令编程.md",
+    "OJ/Leet Code/LC - Contest.md",
+    "_Attachment/Computer Science/汇编语言/6 包含多个段的程序",
+    "_Attachment/Computer Science/汇编语言/新建文件夹",
+    "OJ/Leet Code/LC - Algo/LC - Algo - Ja/Easy - Ja.md",
+    "TODO.md",
+    "Algorithm/Methods.md",
+    "Computer Science/汇编语言/汇编语言 - 实验/汇编语言 - 实验 4：BX 和 loop 的使用.md",
+    "Computer Science/汇编语言/5 BX 和 loop 指令.md",
+    "Computer Science/汇编语言/汇编语言 - 实验",
+    "1 计算机网络和因特网.pdf",
+    "Computer Science/深入理解计算机系统",
+    "Private/Plan/Plan - Kanban.canvas",
+    "未命名.canvas",
+    "Start-Up Project.canvas",
+    "Test.canvas"
+  ]
+}
