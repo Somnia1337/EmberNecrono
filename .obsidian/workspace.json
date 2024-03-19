@@ -8,65 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d57ee570af64d1bf",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Private/Plan/Plan - Index.canvas",
-                "viewState": {
-                  "x": -1070,
-                  "y": -440,
-                  "zoom": -0.16634320662991667
-                }
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "67b30dad9f400034",
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Private/Plan/Plan - Daily.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "pinned": true
             }
-          },
-          {
-            "id": "6ccf9a0bbf65d327",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9aa268aa51854e0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Private/Favorite.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -131,9 +82,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Private/Favorite.md"
-              }
+              "state": {}
             }
           },
           {
@@ -180,13 +129,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9aa268aa51854e0f",
+  "active": "67b30dad9f400034",
   "lastOpenFiles": [
+    "Private/Plan/Plan - Daily.md",
     "README.md",
+    "Private/Favorite.md",
     "Private/Password.md",
     "Private/Resume.md",
     "新建 文本文档.txt",
-    "Private/Plan/Plan - Daily.md",
     "DRAFT.md",
     "EmberNecrono",
     "EmberNecrono/README.md",
@@ -226,7 +176,6 @@
     "_Attachment/Computer Science/汇编语言/新建文件夹",
     "OJ/Leet Code/LC - Algo/LC - Algo - Ja/Easy - Ja.md",
     "TODO.md",
-    "Algorithm/Methods.md",
     "Computer Science/汇编语言/汇编语言 - 实验",
     "1 计算机网络和因特网.pdf",
     "Private/Plan/Plan - Kanban.canvas",
