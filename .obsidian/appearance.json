@@ -1,0 +1,23 @@
+{
+  "accentColor": "#3884ff",
+  "theme": "system",
+  "interfaceFontFamily": "Microsoft YaHei UI",
+  "textFontFamily": "Inter,钉钉进步体",
+  "monospaceFontFamily": "JetBrains Mono",
+  "translucency": false,
+  "nativeMenus": false,
+  "baseFontSize": 18,
+  "showViewHeader": true,
+  "cssTheme": "Typora-Vue",
+  "enabledCssSnippets": [
+    "Code Tab",
+    "colors",
+    "code-block-tabs-corrector",
+    "bg_test",
+    "grid_background",
+    "eye-protection-color",
+    "style_tweaks",
+    "cursor_test",
+    "pdf"
+  ]
+}

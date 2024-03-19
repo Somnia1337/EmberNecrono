@@ -1,0 +1,274 @@
+{
+  "workspaces": {
+    "KTC": {
+      "main": {
+        "id": "6ce9e02ad440200e",
+        "type": "split",
+        "children": [
+          {
+            "id": "fda8d2d1f786bba4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "557e8f6e3a99f0cc",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "OJ/Leet Code/LC - Index.md",
+                    "mode": "preview",
+                    "backlinks": false,
+                    "source": false
+                  },
+                  "pinned": true
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "475afe5cb3440851",
+        "type": "split",
+        "children": [
+          {
+            "id": "2ad066029cdbf583",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "fda55c86885673d0",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "87727d0bb51dca13",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "36b1116fc15e071d",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 555.5
+      },
+      "right": {
+        "id": "1e6938f42094fd03",
+        "type": "split",
+        "children": [
+          {
+            "id": "9dcd13e17669b1d4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0ce62af74faa4eb4",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "OJ/Leet Code/LC - Index.md"
+                  }
+                }
+              },
+              {
+                "id": "9fcb7c48573a3762",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "8cf1e91e844c4b04",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4bf01b8ecbb5b957",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "pinned": true
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 600.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:打开快速切换": true,
+          "templates:插入模板": true,
+          "canvas:新建白板": false,
+          "graph:查看关系图谱": false,
+          "workspaces:管理工作区布局": false,
+          "remotely-save:Remotely Save": false
+        }
+      },
+      "active": "557e8f6e3a99f0cc"
+    },
+    "SStation": {
+      "main": {
+        "id": "6ce9e02ad440200e",
+        "type": "split",
+        "children": [
+          {
+            "id": "6fdef40d5ed0f349",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5bfd0bf247c9b46c",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "475afe5cb3440851",
+        "type": "split",
+        "children": [
+          {
+            "id": "2ad066029cdbf583",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "fda55c86885673d0",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "87727d0bb51dca13",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "36b1116fc15e071d",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 333.5
+      },
+      "right": {
+        "id": "1e6938f42094fd03",
+        "type": "split",
+        "children": [
+          {
+            "id": "9dcd13e17669b1d4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0ce62af74faa4eb4",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {}
+                }
+              },
+              {
+                "id": "9fcb7c48573a3762",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "8cf1e91e844c4b04",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4bf01b8ecbb5b957",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "pinned": true
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 377.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:打开快速切换": true,
+          "templates:插入模板": true,
+          "canvas:新建白板": false,
+          "graph:查看关系图谱": false,
+          "workspaces:管理工作区布局": false,
+          "remotely-save:Remotely Save": false
+        }
+      },
+      "active": "5bfd0bf247c9b46c"
+    }
+  },
+  "active": "SStation"
+}
