@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b0bde8baae48dc71",
+        "id": "469c7ec2d0e19f4a",
         "type": "tabs",
         "children": [
           {
-            "id": "5a27bab985888faa",
+            "id": "04fc0b45f76d4053",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -127,8 +127,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fda55c86885673d0",
+  "active": "04fc0b45f76d4053",
   "lastOpenFiles": [
+    "README.md",
     "Private/Plan/Plan - Daily.md",
     "DRAFT.md",
     "EmberNecrono",
