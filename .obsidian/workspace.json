@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "72c19a03a17059db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DRAFT.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "DRAFT.md"
               }
             }
           },
@@ -134,8 +148,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fa044cf72b82e8f6",
+  "active": "72c19a03a17059db",
   "lastOpenFiles": [
+    "README.md",
     "Computer Science/数据库系统和信息管理/3 SQL.md",
     "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
     "DRAFT.md",
@@ -161,7 +176,6 @@
     "Tutorial & Guideline/Why Can't Programmers.. Program.md",
     "Tutorial & Guideline/Run Away.md",
     "SCU/Final Exam.md",
-    "SCU/Resource/计算机网络 - 习题.md",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_110107.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104649.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104617.png",
