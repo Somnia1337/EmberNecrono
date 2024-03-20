@@ -2,9 +2,6 @@
   "types": {
     "aliases": "aliases",
     "cssclasses": "multitext",
-    "tags": "tags",
-    "da": "date",
-    "": "number",
-    "test": "checkbox"
+    "tags": "tags"
   }
 }
