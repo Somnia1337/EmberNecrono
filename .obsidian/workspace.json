@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a60b30ec12f0e896",
+        "id": "9e491191c07f69bd",
         "type": "tabs",
         "children": [
           {
-            "id": "70e91e703e926daf",
+            "id": "433f587f7b3c4a0a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -127,8 +127,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fda55c86885673d0",
+  "active": "433f587f7b3c4a0a",
   "lastOpenFiles": [
+    "DRAFT.md",
     "Private/Resume.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W02.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W01.md",
@@ -154,7 +155,6 @@
     "SCU/Resource/计算机网络 - 习题.md",
     "SCU/Resource/软件工程导论 - 习题.md",
     "NCU/History & Politics/思想道德与法治/6 学习法治思想，提升法治素养.md",
-    "NCU/History & Politics/思想道德与法治/错题.md",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_110107.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104649.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104617.png",
