@@ -44,6 +44,7 @@
 | [This might be the first newborn great white shark ever recorded](https://www.nationalgeographic.com/animals/article/newborn-great-white-shark-sighting)                        | @2024.01.30 | 3          | 3    |
 | [Everything you think you know about spiders is wrong](https://www.nationalgeographic.com/animals/article/debunking-spider-myths)                                               | @2024.02.04 | 3          | 4    |
 | [How do fireflies get their glow? We finally have some answers.](https://www.nationalgeographic.com/animals/article/fireflies-bioluminescence-glowing-genes-discovery)          | @2024.03.08 | 2          | 4    |
+| [The harrowing 5,000-mile flight of North America's wild whooping cranes](https://www.nationalgeographic.com/animals/article/whooping-cranes-migration-flight-endangered)       | @2024.03.20 | 5          | 3    |
 
 ### Travel
 
