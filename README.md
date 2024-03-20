@@ -1,4 +1,4 @@
-# EmberNecrono
+# [EmberNecrono](https://github.com/Somnia1337/EmberNecrono)
 
 The notes Somnia1337 took with Obsidian in Markdown.
 

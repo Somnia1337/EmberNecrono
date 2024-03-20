@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "124aeee6db18ea5f",
+        "id": "6c006dfe35a23025",
         "type": "tabs",
         "children": [
           {
-            "id": "a829262a4cb0838b",
+            "id": "fa044cf72b82e8f6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -127,7 +134,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a829262a4cb0838b",
+  "active": "fa044cf72b82e8f6",
   "lastOpenFiles": [
     "Computer Science/数据库系统和信息管理/3 SQL.md",
     "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
