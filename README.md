@@ -6,6 +6,6 @@ The notes Somnia1337 took with Obsidian in Markdown.
 
 # Get Started
 
-Click the green button "<> Code" above and select "Download ZIP" to download all my notes and attachments, then unzip the `.zip` file and open the whole folder as an Obsidian vault.
-
 I recommend using [Obsidian](https://obsidian.md/) - the Markdown editor I've been using - to read & edit my notes, it offers an elegant and fluent experience.
+
+Click [here](https://github.com/Somnia1337/EmberNecrono/archive/refs/heads/main.zip) to download all the notes and attachments into a `.zip` file, then unzip it and open the whole folder as an Obsidian vault.

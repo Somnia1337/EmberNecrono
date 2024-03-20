@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "README.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -149,12 +149,13 @@
   },
   "active": "0d6de59ffcf71e05",
   "lastOpenFiles": [
+    "README-ZH.md",
+    "README.md",
+    "Tutorial & Guideline/Markdown Tutorial.md",
     "Private/Plan/Plan - Daily.md",
     "OJ/Leet Code/LC - Index.md",
     "Private/Plan/Plan - Kanban.canvas",
-    "README.md",
     "Private/Plan/Plan - 2024/Plan - 2024 - Weekly.md",
-    "Tutorial & Guideline/Markdown Tutorial.md",
     "DRAFT.md",
     "Computer Science/数据库系统和信息管理/3 SQL.md",
     "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
@@ -175,7 +176,6 @@
     "Reading/橘子不是唯一的水果.md",
     "Reading/Booklist - Legacy.md",
     "Reading/金榜题名之后：大学生出路分化之谜.md",
-    "Misc/Minecraft.md",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_110107.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104649.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104617.png",
