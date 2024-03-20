@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9e491191c07f69bd",
+        "id": "124aeee6db18ea5f",
         "type": "tabs",
         "children": [
           {
-            "id": "433f587f7b3c4a0a",
+            "id": "a829262a4cb0838b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/数据库系统和信息管理/3 SQL.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computer Science/数据库系统和信息管理/3 SQL.md"
-              }
+              "state": {}
             }
           },
           {
@@ -134,10 +127,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "433f587f7b3c4a0a",
+  "active": "a829262a4cb0838b",
   "lastOpenFiles": [
-    "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
     "Computer Science/数据库系统和信息管理/3 SQL.md",
+    "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
     "DRAFT.md",
     "Private/Resume.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W02.md",
