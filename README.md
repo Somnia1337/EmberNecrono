@@ -4,6 +4,8 @@
 
 The notes Somnia1337 took with Obsidian in Markdown.
 
+![EmberNecrono|200](https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/EmberNecrono.png?raw=true)
+
 **Ember** is a piece of wood or coal, etc. that continues to burn after a fire has no more flames. **Necrono** is short for **Necronomicon**, also referred to as the **Book of the Dead**, it is a fictional grimoire (textbook of magic) appearing in stories by the horror writer H. P. Lovecraft.
 
 # Get Started
