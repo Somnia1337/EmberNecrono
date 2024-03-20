@@ -145,18 +145,43 @@
         "type": "split",
         "children": [
           {
-            "id": "6fdef40d5ed0f349",
+            "id": "8758f12e4949858a",
             "type": "tabs",
             "children": [
               {
-                "id": "5bfd0bf247c9b46c",
+                "id": "153f82eb8ca69a33",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
-                  "type": "empty",
-                  "state": {}
+                  "type": "canvas",
+                  "state": {
+                    "file": "Private/Plan/Plan - Kanban.canvas",
+                    "viewState": {
+                      "x": -1070,
+                      "y": -460,
+                      "zoom": -0.1049426619657736
+                    }
+                  },
+                  "pinned": true
+                }
+              },
+              {
+                "id": "dac8b449968fa3df",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Private/Plan/Plan - Daily.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": false
+                  },
+                  "pinned": true
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -190,7 +215,7 @@
                     "explainSearch": false,
                     "collapseAll": false,
                     "extraContext": false,
-                    "sortOrder": "alphabetical"
+                    "sortOrder": "byModifiedTime"
                   }
                 }
               },
@@ -221,7 +246,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {}
+                  "state": {
+                    "file": "Private/Plan/Plan - Daily.md"
+                  }
                 }
               },
               {
@@ -260,14 +287,16 @@
       "left-ribbon": {
         "hiddenItems": {
           "switcher:打开快速切换": true,
-          "templates:插入模板": true,
+          "graph:查看关系图谱": true,
           "canvas:新建白板": false,
-          "graph:查看关系图谱": false,
-          "workspaces:管理工作区布局": false,
-          "remotely-save:Remotely Save": false
+          "templates:插入模板": true,
+          "workspaces:管理工作区布局": true,
+          "remotely-save:Remotely Save": false,
+          "command-palette:打开命令面板": true
         }
       },
-      "active": "5bfd0bf247c9b46c"
+      "active": "dac8b449968fa3df",
+      "mtime": "2024-03-20T15:53:57+08:00"
     },
     "Intro": {
       "main": {
@@ -409,17 +438,17 @@
       },
       "left-ribbon": {
         "hiddenItems": {
-          "switcher:打开快速切换": false,
-          "graph:查看关系图谱": false,
           "canvas:新建白板": false,
           "templates:插入模板": false,
-          "workspaces:管理工作区布局": false,
-          "remotely-save:Remotely Save": false,
+          "graph:查看关系图谱": false,
+          "switcher:打开快速切换": false,
+          "workspaces:管理工作区布局": true,
+          "remotely-save:Remotely Save": true,
           "command-palette:打开命令面板": false
         }
       },
       "active": "0d6de59ffcf71e05",
-      "mtime": "2024-03-20T15:49:05+08:00"
+      "mtime": "2024-03-20T15:54:54+08:00"
     }
   },
   "active": "Intro"

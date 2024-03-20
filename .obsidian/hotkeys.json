@@ -295,5 +295,14 @@
       ],
       "key": "K"
     }
+  ],
+  "workspace:close": [],
+  "workspaces:open-modal": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "W"
+    }
   ]
 }
