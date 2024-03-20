@@ -6,7 +6,7 @@ Somnia1337 使用 Obsidian 记录的 Markdown 笔记。
 
 <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/EmberNecrono.png?raw=true" width="200px">
 
-**Ember** 意为“余焰未尽的木块 / 煤块”。**Necrono** 是 **Necronomicon** 的简写，也被称为 **Book of the Dead**，常译为“死灵书”，是一本虚构的魔法秘典，出现在恐怖故事作家 H.P.Lovecraft 的故事中。
+**Ember** 意为“余焰未尽的木块 / 煤块”。**Necrono** 是 **Necronomicon** 的简写，也被称为 **Book of the Dead**，常译为“死灵书”，是一本虚构的魔法秘典，出现在恐怖故事作家 H. P. Lovecraft 的故事中。
 
 # 快速上手
 
