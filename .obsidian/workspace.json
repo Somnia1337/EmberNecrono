@@ -11,8 +11,13 @@
             "id": "433f587f7b3c4a0a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/数据库系统和信息管理/3 SQL.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5
+    "width": 333.5,
+    "collapsed": true
   },
   "right": {
     "id": "1e6938f42094fd03",
@@ -80,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Computer Science/数据库系统和信息管理/3 SQL.md"
+              }
             }
           },
           {
@@ -114,7 +122,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 377.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -129,6 +138,8 @@
   },
   "active": "433f587f7b3c4a0a",
   "lastOpenFiles": [
+    "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
+    "Computer Science/数据库系统和信息管理/3 SQL.md",
     "DRAFT.md",
     "Private/Resume.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W02.md",
@@ -153,8 +164,6 @@
     "Tutorial & Guideline/Run Away.md",
     "SCU/Final Exam.md",
     "SCU/Resource/计算机网络 - 习题.md",
-    "SCU/Resource/软件工程导论 - 习题.md",
-    "NCU/History & Politics/思想道德与法治/6 学习法治思想，提升法治素养.md",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_110107.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104649.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104617.png",

@@ -289,3 +289,24 @@ WHERE credits >= ALL (SELECT credits
                      FROM Course
                      WHERE title LIKE '%bio%');
 ```
+
+---
+
+| Sales       |
+| ----------- |
+| sale_id     |
+| product     |
+| quantity    |
+| sale_date   |
+| customer_id |
+| sale_amount |
+
+> 1\. 选择订单总数和总金额。
+
+>2\. 选择每种产品的总金额。
+
+> 3\. 选择售出超过 `10` 件的产品的品名和售出量。
+
+> 4\. 选择每个订单的金额都大于所有订单的平均金额的产品。
+
+> 5\. 选择总金额大于一些订单的金额、但不是大于所有订单的金额的产品。
