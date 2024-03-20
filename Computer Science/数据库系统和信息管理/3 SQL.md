@@ -310,3 +310,17 @@ WHERE credits >= ALL (SELECT credits
 > 4\. 选择每个订单的金额都大于所有订单的平均金额的产品。
 
 > 5\. 选择总金额大于一些订单的金额、但不是大于所有订单的金额的产品。
+
+```sql
+SELECT product
+FROM Sales
+GROUP BY product
+HAVING SUM(sale_amount) > (
+	SELECT MIN(sale_amount)
+	FROM Sales
+	WHERE sale_amount < (
+		SELECT MAX(sale_amount)
+		FROM Sales
+	)
+);
+```
