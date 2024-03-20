@@ -1,7 +1,5 @@
 @2024.03.14 | Week 03
 
-卢剑歌 2022141461145
-
 > 1. Study boot.asm source code, write comments for each line of code.
 > 2. Change the source code of this assembly program. The new program should show your student id and name on the screen. Show me the source code and the screen shot of testing.
 

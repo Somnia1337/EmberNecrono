@@ -1,7 +1,5 @@
 @2024.03.19 | Week 04
 
-卢剑歌 2022141461145
-
 ### 1. The Basic HTTP GET/response interaction
 
 > 1\. Is your browser running HTTP version 1.0 or 1.1? What version of HTTP is the server running?
