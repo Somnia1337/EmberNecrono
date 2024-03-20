@@ -4,37 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "6c006dfe35a23025",
+        "id": "efb5a0e4452819d3",
         "type": "tabs",
         "children": [
           {
-            "id": "fa044cf72b82e8f6",
+            "id": "0d6de59ffcf71e05",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "README.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
             }
           },
           {
-            "id": "72c19a03a17059db",
+            "id": "9cd216a2cecd8fbc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DRAFT.md",
-                "mode": "source",
+                "file": "Tutorial & Guideline/Markdown Tutorial.md",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DRAFT.md"
+                "file": "README.md"
               }
             }
           },
@@ -148,12 +147,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "72c19a03a17059db",
+  "active": "0d6de59ffcf71e05",
   "lastOpenFiles": [
+    "Tutorial & Guideline/Markdown Tutorial.md",
     "README.md",
+    "DRAFT.md",
     "Computer Science/数据库系统和信息管理/3 SQL.md",
     "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
-    "DRAFT.md",
     "Private/Resume.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W02.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W01.md",
@@ -172,7 +172,6 @@
     "Reading/Booklist - Legacy.md",
     "Reading/金榜题名之后：大学生出路分化之谜.md",
     "Misc/Minecraft.md",
-    "Tutorial & Guideline/Markdown Tutorial.md",
     "Tutorial & Guideline/Why Can't Programmers.. Program.md",
     "Tutorial & Guideline/Run Away.md",
     "SCU/Final Exam.md",
