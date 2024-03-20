@@ -1,3 +1,5 @@
+[English](https://github.com/Somnia1337/EmberNecrono/blob/main/README.md)
+
 # [EmberNecrono](https://github.com/Somnia1337/EmberNecrono)
 
 Somnia1337 使用 Obsidian 记录的 Markdown 笔记。
