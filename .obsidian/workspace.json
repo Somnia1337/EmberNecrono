@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "41ec64460dc5225a",
+        "id": "ff3a61ee55533cc5",
         "type": "tabs",
         "children": [
           {
-            "id": "e1b1de5da2f91039",
+            "id": "bff7505538e743b7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -127,8 +127,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fda55c86885673d0",
+  "active": "bff7505538e743b7",
   "lastOpenFiles": [
+    "Misc/Minecraft.md",
     "Tutorial & Guideline/Markdown Tutorial.md",
     "Tutorial & Guideline/Why Can't Programmers.. Program.md",
     "Tutorial & Guideline/Run Away.md",
@@ -174,7 +175,6 @@
     "NCU/Physics/5 真空中的静电场.md",
     "NCU/Physics/17 量子物理基础.md",
     "NCU/Physics/15 光的偏振.md",
-    "NCU/Physics/14 光的衍射.md",
     "Private/Plan/Plan - Kanban.canvas",
     "Private/Plan/Plan - Index.canvas",
     "未命名.canvas",
