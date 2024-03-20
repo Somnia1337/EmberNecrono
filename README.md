@@ -4,7 +4,7 @@
 
 The notes Somnia1337 took with Obsidian in Markdown.
 
-<div style="text-align: center">
+<div style="text-align: center;">
   <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/EmberNecrono.png?raw=true" width="100px">
 </div>
 
