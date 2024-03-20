@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d86f2562480b44b3",
+        "id": "41ec64460dc5225a",
         "type": "tabs",
         "children": [
           {
-            "id": "b1a1334e35fa9b5a",
+            "id": "e1b1de5da2f91039",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -129,6 +129,9 @@
   },
   "active": "fda55c86885673d0",
   "lastOpenFiles": [
+    "Tutorial & Guideline/Markdown Tutorial.md",
+    "Tutorial & Guideline/Why Can't Programmers.. Program.md",
+    "Tutorial & Guideline/Run Away.md",
     "SCU/Final Exam.md",
     "SCU/Resource/计算机网络 - 习题.md",
     "SCU/Resource/软件工程导论 - 习题.md",
@@ -172,9 +175,6 @@
     "NCU/Physics/17 量子物理基础.md",
     "NCU/Physics/15 光的偏振.md",
     "NCU/Physics/14 光的衍射.md",
-    "NCU/Physics/13 光的干涉.md",
-    "NCU/Physics/12 波动.md",
-    "NCU/English/Wording.md",
     "Private/Plan/Plan - Kanban.canvas",
     "Private/Plan/Plan - Index.canvas",
     "未命名.canvas",
