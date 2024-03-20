@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "README.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
@@ -149,9 +149,9 @@
   },
   "active": "0d6de59ffcf71e05",
   "lastOpenFiles": [
-    "README-ZH.md",
-    "README.md",
     "Tutorial & Guideline/Markdown Tutorial.md",
+    "README.md",
+    "README-ZH.md",
     "Private/Plan/Plan - Daily.md",
     "OJ/Leet Code/LC - Index.md",
     "Private/Plan/Plan - Kanban.canvas",
