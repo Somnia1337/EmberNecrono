@@ -303,11 +303,46 @@ WHERE credits >= ALL (SELECT credits
 
 > 1\. 选择订单总数和总金额。
 
+```sql
+SELECT 
+	COUNT(sale_id) AS total_orders,
+	SUM(sale_amount) AS total_amount
+FROM Sales;
+```
+
 >2\. 选择每种产品的总金额。
+
+```sql
+SELECT
+	product,
+	SUM(sale_amount) AS total_amount
+FROM Sales
+GROUP BY product;
+```
 
 > 3\. 选择售出超过 `10` 件的产品的品名和售出量。
 
+```sql
+SELECT
+	product,
+	SUM(quantity) AS total_quantity
+FROM Sales
+GROUP BY product
+HAVING total_quantity > 10;
+```
+
 > 4\. 选择每个订单的金额都大于所有订单的平均金额的产品。
+
+```sql
+SELECT product
+FROM Sales
+GROUP BY product
+HAVING
+	MIN(sale_amount) > (
+		SELECT AVG(sale_amount)
+		FROM Sales
+	);
+```
 
 > 5\. 选择总金额大于一些订单的金额、但不是大于所有订单的金额的产品。
 
