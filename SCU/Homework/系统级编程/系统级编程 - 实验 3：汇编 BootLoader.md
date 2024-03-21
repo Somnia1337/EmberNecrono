@@ -1,7 +1,8 @@
 @2024.03.14 | Week 03
 
-> 1. Study boot.asm source code, write comments for each line of code.
-> 2. Change the source code of this assembly program. The new program should show your student id and name on the screen. Show me the source code and the screen shot of testing.
+> 1\. Study boot.asm source code, write comments for each line of code.
+> 
+> 2\. Change the source code of this assembly program. The new program should show your student id and name on the screen. Show me the source code and the screen shot of testing.
 
 #### 1. 阅读源码并注释
 
@@ -19,7 +20,7 @@ mov cx, 16 ; cx = 16
 mov ax, 01301h ; ax = 01301h
 mov bx, 000ch ; bx = 000ch
 mov dl, 0
-int 10h ; 中断服务，准备在显示器上显示
+int 10h ; 中断服务, 准备在显示器上显示
 ret
 BootMessage: db "2022141461145 Lu Jiange"
 times 510-($-$$) db 0 ; 填写 510-($-$$) 个 0 到内存中
