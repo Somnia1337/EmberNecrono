@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "efb5a0e4452819d3",
+        "id": "5427fbe1cbe0f48a",
         "type": "tabs",
         "children": [
           {
-            "id": "0d6de59ffcf71e05",
+            "id": "bafcf5333599d3db",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,11 +21,16 @@
             }
           },
           {
-            "id": "9cd216a2cecd8fbc",
+            "id": "09f1423d673c891d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -142,12 +147,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0d6de59ffcf71e05",
+  "active": "bafcf5333599d3db",
   "lastOpenFiles": [
     "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+    "README.md",
     "Mathematics/概率论与数理统计/3 多维随机变量及其分布.md",
     "Mathematics/概率论与数理统计/4 随机变量的数字特征.md",
-    "README.md",
     "Private/Log/Log - 2024/Log - 2024.03.md",
     "Private/Diary/Diary - 2024/Diary - 2024.03.md",
     "Private/Plan/Plan - Daily.md",
