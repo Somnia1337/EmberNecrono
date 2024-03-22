@@ -58,7 +58,7 @@ some code
 
 内部图片链接：`![[]]`，如
 
-![[EmberNecrono.png|100]]
+![[EmberNecrono_2048.png|100]]
 
 `|100` 指定了图片宽度为 100 像素。
 
