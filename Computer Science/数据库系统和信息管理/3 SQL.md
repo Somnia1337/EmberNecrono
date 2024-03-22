@@ -350,12 +350,7 @@ HAVING
 SELECT product
 FROM Sales
 GROUP BY product
-HAVING SUM(sale_amount) > (
-	SELECT MIN(sale_amount)
-	FROM Sales
-	WHERE sale_amount < (
-		SELECT MAX(sale_amount)
-		FROM Sales
-	)
-);
+HAVING
+	SUM(sale_amount) > SOME (SELECT sale_amount FROM Sales) 
+	AND SUM(sale_amount) <= ALL (SELECT sale_amount FROM Sales);
 ```
