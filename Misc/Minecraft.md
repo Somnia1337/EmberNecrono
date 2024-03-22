@@ -1,3 +1,7 @@
+### Config
+
+Ninjabrain-Bot Standard Deviation: `0.0044`
+
 ### Seed
 
 #### Set Seed
@@ -43,14 +47,14 @@
 | Blind           | 06:52(3 rods) |
 | End Enter       | 10:23         |
 
-### Rods, Eyes thrown and End Enter
+### Rods dropped, Eyes thrown and End Enter
 
-| Rods | Eyes thrown | End Enter |
-| :--: | :---------: | :-------: |
-|  6   |      2      |   88.3%   |
-|  6   |      1      |   94.4%   |
-|  5   |      2      |   25.5%   |
-|  5   |      1      |   29.5%   |
+| Rods dropped | Eyes thrown | End Enter |
+| :----------: | :---------: | :-------: |
+|      6       |      2      |   88.3%   |
+|      6       |      1      |   94.4%   |
+|      5       |      2      |   25.5%   |
+|      5       |      1      |   29.5%   |
 
 ### Height that gives Fall Damage (in Boat)
 
