@@ -24,13 +24,8 @@
             "id": "9cd216a2cecd8fbc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tutorial & Guideline/Markdown Tutorial.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -149,14 +144,18 @@
   },
   "active": "0d6de59ffcf71e05",
   "lastOpenFiles": [
+    "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+    "Mathematics/概率论与数理统计/3 多维随机变量及其分布.md",
+    "Mathematics/概率论与数理统计/4 随机变量的数字特征.md",
+    "README.md",
+    "Private/Log/Log - 2024/Log - 2024.03.md",
+    "Private/Diary/Diary - 2024/Diary - 2024.03.md",
     "Private/Plan/Plan - Daily.md",
     "SCU/Homework/系统级编程/系统级编程 - 实验 4：数据的表示.md",
-    "README.md",
     "Computer Science/系统级编程.md",
     "SCU/Homework/系统级编程/系统级编程 - 实验 3：汇编 BootLoader.md",
     "SCU/Homework/系统级编程/系统级编程 - 实验 2：位操作.md",
     "DRAFT.md",
-    "Tutorial & Guideline/Markdown Tutorial.md",
     "README-ZH.md",
     "Misc/Colors.md",
     "_Attachment/EmberNecrono.png",
@@ -174,10 +173,6 @@
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W02.md",
     "SCU/Homework/软件开发环境与工具（已退课）/软件开发环境与工具 - W01.md",
     "SCU/Homework/数据库系统和信息管理/1 - 引言.md",
-    "SCU/Homework/数据库系统和信息管理/2 - 关系模型介绍.md",
-    "SCU/Homework/系统级编程/系统级编程 - 实验 1：C++.md",
-    "SCU/Homework/计算机网络/实验 2：HTTP 报文.md",
-    "SCU/Homework/计算机网络/实验 1：初识 Wireshark.md",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_110107.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104649.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104617.png",
