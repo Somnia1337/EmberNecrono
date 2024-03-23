@@ -98,7 +98,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -145,8 +147,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4bf01b8ecbb5b957",
+  "active": "bafcf5333599d3db",
   "lastOpenFiles": [
+    "_Attachment/Screenshot_v0.2.png",
+    "_Attachment/Snipaste_240323_101550.png",
     "_Attachment/Screenshot_v0.1.png",
     "Screenshot_v0.1.png",
     "Screenshot.png",
@@ -184,8 +188,6 @@
     "Mathematics/概率论与数理统计/4 随机变量的数字特征.md",
     "_Attachment/Computer Science/汇编语言/汇编语言 - 实验/Snipaste_240320_203332.png",
     "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_110107.png",
-    "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104649.png",
-    "_Attachment/NCU/Politics & History/Politics/Snipaste_230222_104617.png",
     "_Attachment/NCU/Politics & History/Politics",
     "_Attachment/NCU/Politics & History",
     "_Attachment/NCU/Physics",
