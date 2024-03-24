@@ -4,12 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "5427fbe1cbe0f48a",
+        "id": "6f958b5dd0bfa52d",
         "type": "tabs",
         "children": [
           {
-            "id": "bafcf5333599d3db",
+            "id": "67fbb707231150bd",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -17,17 +18,18 @@
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "09f1423d673c891d",
+            "id": "be770c7df8b704bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -147,10 +149,18 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bafcf5333599d3db",
+  "active": "67fbb707231150bd",
   "lastOpenFiles": [
-    "Private/Plan/Plan - Daily.md",
+    "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+    "_Attachment/Screenshot-1_v0.4.png",
+    "_Attachment/Screenshot-2_v0.4.png",
+    "_Attachment/Screenshot_v0.4.png",
+    "_Attachment/Snipaste_240324_141001.png",
+    "_Attachment/Snipaste_240324_140853.png",
     "README.md",
+    "README-ZH.md",
+    "Computer Science/Tips.md",
+    "Private/Plan/Plan - Daily.md",
     "EmberNecrono-3.zip",
     "EmberNecrono.zip",
     "Computer Science/汇编语言/7 更灵活的定位内存地址的方法.md",
@@ -159,15 +169,11 @@
     "DRAFT.md",
     "Private/Plan/Plan - Index.canvas",
     "Private/Plan/Plan - Kanban.canvas",
-    "Tutorial & Guideline/Obsidian Flavored Markdown.md",
-    "README-ZH.md",
     "_Attachment/Screenshot_v0.3.png",
     "_Attachment/Snipaste_240323_102410.png",
     "_Attachment/Screenshot_v0.2.png",
     "_Attachment/Snipaste_240323_101550.png",
     "_Attachment/Screenshot_v0.1.png",
-    "Screenshot_v0.1.png",
-    "Screenshot.png",
     "Misc/Minecraft.md",
     "SCU/Exercise/系统级编程 - 习题.md",
     "SCU/Exercise/软件工程导论 - 习题.md",
@@ -182,14 +188,10 @@
     "SCU/Homework/系统级编程/系统级编程 - 实验 03：汇编 BootLoader.md",
     "SCU/Homework/系统级编程/系统级编程 - 实验 02：位操作.md",
     "SCU/Homework/系统级编程/系统级编程 - 实验 01：C++.md",
-    "_Attachment/256.svg",
-    "_Attachment/EmberNecrono.svg",
-    "_Attachment/EmberNecrono_2048.png",
     "Marp test.md",
     "Computer Science/数据库系统和信息管理/3 SQL.md",
     "Computer Science/计算机网络/2 应用层.md",
     "Computer Science/汇编语言/汇编语言 - 实验/汇编语言 - 实验 5：编写、调试具有多个段的程序.md",
-    "Computer Science/汇编语言/8 数据处理的两个基本问题.md",
     "_Attachment/NCU/Politics & History/Politics",
     "_Attachment/NCU/Politics & History",
     "_Attachment/NCU/Physics",
