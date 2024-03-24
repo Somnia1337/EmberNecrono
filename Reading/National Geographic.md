@@ -87,6 +87,7 @@
 | ['Exploding head syndrome'? Inside a mysterious, disturbing sleep condition](https://www.nationalgeographic.com/science/article/sleep-exploding-head-syndrome)                                                | @2024.03.13 | 3          | 4    |
 | [SpaceX ship reaches space but ends in fireball](https://www.nationalgeographic.com/science/article/spacex-starship-rocket-test-mars)                                                                         | @2024.03.15 | 3          | 4    |
 | [Why the equinox ushers in the arrival of spring](https://www.nationalgeographic.com/science/article/equinoxes)                                                                                               | @2024.03.17 | 2          | 1    |
+| [Is chocolate actually good for you?](https://www.nationalgeographic.com/science/article/chocolate-health-benefits)                                                                                           | @2024.03.24 | 2          | 4    |
 
 ### History & Culture
 

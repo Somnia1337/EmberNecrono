@@ -3013,6 +3013,68 @@ public int minimumDeletions(String word, int k) {
 
 #### [100227. 拾起 K 个 1 需要的最少行动次数](https://leetcode.cn/problems/minimum-moves-to-pick-k-ones/)
 
+### [# 390](https://leetcode.cn/contest/weekly-contest-390/)
+
+@2024.03.24
+
+未参加
+
+#### [100245. 每个字符最多出现两次的最长子字符串](https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences/)
+
+
+
+```java
+/**
+ * 双指针
+ * Somnia1337
+ */
+public int maximumLengthSubstring(String s) {
+	char[] chs = s.toCharArray();
+	int[] count = new int[26];
+	int n = chs.length, l = 0, r = 0, ans = 0;
+	while (r < n) {
+		count[chs[r] - 'a']++;
+		while (count[chs[r] - 'a'] > 2) {
+			count[chs[l++] - 'a']--;
+		}
+		ans = Math.max(r - l + 1, ans);
+		r++;
+	}
+	return ans;
+}
+```
+
+#### [100228. 执行操作使数据元素之和大于等于 K](https://leetcode.cn/problems/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k/)
+
+1. 枚举
+
+```java
+/**
+ * 枚举
+ * 灵茶山艾府
+ */
+public int minOperations(int k) {
+	int ans = Integer.MAX_VALUE;
+	for (int m = 1; m <= k; m++) {
+		ans = Math.min(m - 1 + (k - 1) / m, ans);
+	}
+	return ans;
+}
+```
+
+2. 数学
+
+```java
+/**
+ * 数学
+ * 灵茶山艾府
+ */
+public int minOperations(int k) {
+	int rt = Math.max((int) Math.sqrt(k - 1), 1);
+	return Math.min(rt - 1 + (k - 1) / rt, rt + (k - 1) / (rt + 1));
+}
+```
+
 # 🐱 双周赛
 
 ### [# 112](https://leetcode.cn/contest/biweekly-contest-112/)
