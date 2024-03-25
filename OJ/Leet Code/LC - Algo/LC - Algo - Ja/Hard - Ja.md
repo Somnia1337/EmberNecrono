@@ -632,8 +632,7 @@ public boolean check(int pos, int row)
 private StringBuilder ans;
 private boolean[] vis;
 
-public String getPermutation(int n, int k)
-{
+public String getPermutation(int n, int k) {
 	ans = new StringBuilder();
 	vis = new boolean[n + 1];
 	solve(n, n, k - 1);
@@ -641,14 +640,10 @@ public String getPermutation(int n, int k)
 }
 
 // 递归, x 为剩余的可用数字
-private void solve(int n, int x, int k)
-{
-	if (x == 1) // 只剩 1 个
-	{
-		for (int i = 1; i <= n; i++)
-		{
-			if (!vis[i])
-			{
+private void solve(int n, int x, int k) {
+	if (x == 1) { // 只剩 1 个
+		for (int i = 1; i <= n; i++) {
+			if (!vis[i]) {
 				ans.append(i);
 				return;
 			}
@@ -657,11 +652,9 @@ private void solve(int n, int x, int k)
 	
 	int perm = factorial(x - 1); // 确认当前位后的排列数
 	int offset = k / perm; // 分组偏移量
-	for (int i = 1; i <= n; i++) // 遍历剩余可用数字, 寻找本位
-	{
+	for (int i = 1; i <= n; i++) { // 遍历剩余可用数字, 寻找本位
 		if (!vis[i]) offset--;
-		if (offset < 0) // 本位
-		{
+		if (offset < 0) { // 本位
 			vis[i] = true;
 			ans.append(i);
 			break;
@@ -671,8 +664,7 @@ private void solve(int n, int x, int k)
 }
 
 // 计算阶乘, 即排列数
-private int factorial(int n)
-{
+private int factorial(int n) {
 	int ret = 1;
 	while (n > 1) ret *= n--;
 	return ret;
@@ -947,32 +939,25 @@ public int largestRectangleArea(int[] heights)
  * 枚举
  * justdoit149
  */
-public int maximalRectangle(char[][] matrix)
-{
+public int maximalRectangle(char[][] matrix) {
 	int rows = matrix.length, cols = matrix[0].length;
-	int[][][] dp = new int[rows][cols][2]; // 记录每个点在两个方向上的连续'1'
+	int[][][] dp = new int[rows][cols][2]; // 记录每个点在两个方向上的连续 '1'
 	int ans = 0;
-	
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			if (matrix[i][j] == '1')
-			{
-				// 更新dp
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			if (matrix[i][j] == '1') {
+				// 更新 dp
 				dp[i][j][0] = (i >= 1 ? dp[i - 1][j][0] + 1 : 1);
 				dp[i][j][1] = (j >= 1 ? dp[i][j - 1][1] + 1 : 1);
-				// 枚举宽度及对应的高度，更新最大面积
+				// 枚举宽度及对应的高度, 更新最大面积
 				int min = dp[i][j][1];
-				for (int k = i; k >= i - dp[i][j][0] + 1; k--)
-				{
+				for (int k = i; k >= i - dp[i][j][0] + 1; k--) {
 					min = Math.min(dp[k][j][1], min);
 					ans = Math.max(min * (i - k + 1), ans);
 				}
 			}
 		}
 	}
-	
 	return ans;
 }
 ```

@@ -14874,18 +14874,19 @@ private void union(int[] root, int x, int y) {
 
 #分类讨论 
 
-先用哈希表排除 `b` 中存在独有字符的情况。`t` 为 `len(b) / len(a)` 向上取整，只需尝试 `a` 重复 `t` 次、`t + 1` 次，否则返回 -1。
+先用哈希表排除 `b` 中存在独有字符的情况。记 `ceil(len(b)/len(a))` 为 `t`，只需尝试 `a` 重复 `t` 次、`t + 1` 次，否则返回 `-1`。
 
 ```java
 /**
  * 分类讨论
  * 空白白喵白。oO
  */
-public int repeatedStringMatch(String a, String b)
-{
-	Set<Character> chars = new HashSet<>();
-	for (char c : a.toCharArray()) chars.add(c);
-	for (char c : b.toCharArray()) if (!chars.contains(c)) return -1;
+public int repeatedStringMatch(String a, String b) {
+	Set<Character> vis = new HashSet<>();
+	for (char c : a.toCharArray()) vis.add(c);
+	for (char c : b.toCharArray()) {
+		if (!vis.contains(c)) return -1;
+	}
 	
 	int t = (int) Math.ceil((double) b.length() / a.length());
 	if (a.repeat(t).contains(b)) return t;
@@ -18845,23 +18846,18 @@ public int lenLongestFibSubseq(int[] arr)
  */
 private int px, py; // 当前 x, y 方向上的增量
 
-public int robotSim(int[] commands, int[][] obstacles)
-{
+public int robotSim(int[] commands, int[][] obstacles) {
 	Set<Integer> ban = new HashSet<>();
-	for (int[] obs : obstacles)
-	{
+	for (int[] obs : obstacles) {
 		ban.add(obs[0] * 12345 + obs[1]); // 哈希函数 x*12345+y 是试出来的
 	}
 	int x = 0, y = 0, ans = 0;
 	px = 0;
 	py = 1;
-	for (int c : commands)
-	{
+	for (int c : commands) {
 		if (c < 0) turn(c == -2 ? 1 : -1); // 向左为 1, 向右为 -1
-		else
-		{
-			for (int k = 0; k < c; k++)
-			{
+		else {
+			for (int k = 0; k < c; k++) {
 				x += px;
 				y += py;
 				if (ban.contains(x * 12345 + y)) // 遇到障碍, 回退一步并 break
@@ -18877,8 +18873,7 @@ public int robotSim(int[] commands, int[][] obstacles)
 	return ans;
 }
 
-private void turn(int c)
-{
+private void turn(int c) {
 	int hold = px;
 	px = px == 0 ? -c * py : 0;
 	py = py == 0 ? c * hold : 0;
@@ -19533,16 +19528,14 @@ private int[] count(String s)
  * 分类讨论
  * 灵茶山艾府
  */
-public int maxSubarraySumCircular(int[] nums)
-{
+public int maxSubarraySumCircular(int[] nums) {
 	int maxS = Integer.MIN_VALUE, minS = 0;
 	int maxF = 0, minF = 0, sum = 0;
-	for (int num : nums)
-	{
+	for (int num : nums) {
 		maxF = Math.max(maxF, 0) + num;
-		maxS = Math.max(maxS, maxF);
+		maxS = Math.max(maxF, maxS);
 		minF = Math.min(minF, 0) + num;
-		minS = Math.min(minS, minF);
+		minS = Math.min(minF, minS);
 		sum += num;
 	}
 	return sum != minS ? Math.max(maxS, sum - minS) : maxS;
@@ -20302,11 +20295,9 @@ private void bt(int n, int l, int k, int cur)
  * 模拟
  * Somnia1337
  */
-public List<Integer> pancakeSort(int[] arr)
-{
+public List<Integer> pancakeSort(int[] arr) {
 	List<Integer> ans = new ArrayList<>();
-	for (int val = arr.length; val > 0; val--) // 倒序处理
-	{
+	for (int val = arr.length; val > 0; val--) { // 倒序处理
 		int idx = getIndex(arr, val);
 		reverse(arr, idx);
 		if (idx != 0) ans.add(idx + 1);
@@ -20316,23 +20307,19 @@ public List<Integer> pancakeSort(int[] arr)
 	return ans;
 }
 
-private int getIndex(int[] arr, int tar)
-{
-	for (int i = 0; i < arr.length; i++)
-	{
+private int getIndex(int[] arr, int tar) {
+	for (int i = 0; i < arr.length; i++) {
 		if (arr[i] == tar) return i;
 	}
 	return -1;
 }
 
-private void reverse(int[] arr, int r)
-{
+private void reverse(int[] arr, int r) {
 	int l = 0;
 	while (l < r) swap(arr, l++, r--);
 }
 
-private void swap(int[] arr, int i, int j)
-{
+private void swap(int[] arr, int i, int j) {
 	int t = arr[j];
 	arr[j] = arr[i];
 	arr[i] = t;

@@ -6571,31 +6571,25 @@ public int takeCharacters(String s, int k) {
 
 #数学 
 
-本题等价于求解`nums`中所有元素的不同质因数个数。
+本题等价于求解 `nums` 中所有元素的不同质因数个数。
 
 ```java
 /**
  * 分解质因数
  * Joey
  */
-public int distinctPrimeFactors(int[] nums)
-{
-	Set<Integer> ans = new HashSet<>(); // 记录所有不同质因数
-	
-	for (int num : nums)
-	{
-		for (int i = 2; i * i <= num; i++)
-		{
-			if (num % i == 0)
-			{
-				ans.add(i); // 加入ans的一定为质数，因为下一行将从2开始把找到的质因子全部除尽
-				while (num % i == 0) num /= i; // 将当前质因子除尽
+public int distinctPrimeFactors(int[] nums) {
+	Set<Integer> vis = new HashSet<>(); // 记录所有不同质因数
+	for (int x : nums) {
+		for (int i = 2; i * i <= x; i++) {
+			if (x % i == 0) {
+				vis.add(i); // 加入 vis 的一定为质数, 因为下一行将从 2 开始把找到的质因子全部除尽
+				while (x % i == 0) x /= i; // 将当前质因子除尽
 			}
 		}
-		if (num > 1) ans.add(num); // 没有除到1，说明num本身为质数
+		if (x > 1) vis.add(x); // 没有除到 1, 说明 x 本身为质数
 	}
-	
-	return ans.size();
+	return vis.size();
 }
 ```
 
@@ -8953,25 +8947,21 @@ public int maxSubarrays(int[] nums)
 
 #暴力 
 
-用 `sufMax[i]` 记录 `nums[i:]` 的最大值，遍历 `nums`，用 `max` 记录遍历到的最大值并作为 `nums[i]`，当前元素作为 `nums[j]`，`sufMax[j + 1]` 作为 `nums[k]`，更新 `max((nums[i] - nums[j]) * nums[k])`。
+用 `sufMax[i]` 记录 `nums` 的后缀最大值，遍历 `nums`，用 `max` 记录遍历到的最大值并作为 `nums[i]`，当前元素作为 `nums[j]`，`sufMax[j + 1]` 作为 `nums[k]`，更新 `max((nums[i] - nums[j]) * nums[k])`。
 
 ```java
 /**
  * 枚举
  * Somnia1337
  */
-public long maximumTripletValue(int[] nums)
-{
-	int len = nums.length;
+public long maximumTripletValue(int[] nums) {
+	int n = nums.length, max = nums[0]; // 前缀最大值作为 nums[i]
 	long ans = 0;
-	int max = nums[0]; // 前缀最大值作为nums[i]
-	int[] sufMax = Arrays.copyOf(nums, len); // 后缀最大值作为nums[k]
-	for (int i = len - 2; i >= 0; i--)
-	{
+	int[] sufMax = Arrays.copyOf(nums, n); // 后缀最大值作为 nums[k]
+	for (int i = n - 2; i >= 0; i--) {
 		sufMax[i] = Math.max(sufMax[i + 1], sufMax[i]);
 	}
-	for (int j = 1; j < len - 1; j++) // 遍历，中间元素作为nums[j]
-	{
+	for (int j = 1; j < n - 1; j++) { // 遍历, 中间元素作为 nums[j]
 		if (nums[j] >= max) max = nums[j];
 		else ans = Math.max((long) (max - nums[j]) * sufMax[j + 1], ans);
 	}
@@ -8979,22 +8969,23 @@ public long maximumTripletValue(int[] nums)
 }
 ```
 
-优化：一次遍历，用 `deltaMax` 记录的最大 `nums[i] - nums[j]`，用 `preMax` 记录前缀最大值，遍历时将 `num` 依次作为 `nums[k]`、`nums[j]`、`nums[i]` 更新 `ans`、`deltaMax`、`preMax`。
+优化：一次遍历，用 `deltaMax` 记录的最大 `nums[i] - nums[j]`，用 `preMax` 记录前缀最大值，遍历时将 `x` 依次作为 `nums[k]`、`nums[j]`、`nums[i]` 更新 `ans`、`deltaMax`、`preMax`。
 
 ```java
 /**
  * 枚举
  * ?
  */
-public long maximumTripletValue(int[] nums)
-{
-	long ans = 0;
+public long maximumTripletValue(int[] nums) {
 	int deltaMax = 0, preMax = 0;
-	for (int num : nums)
-	{
-		ans = Math.max((long) deltaMax * num, ans); // 将num作为nums[k]，更新ans
-		deltaMax = Math.max(preMax - num, deltaMax); // 将num作为nums[j]，更新deltaMax
-		preMax = Math.max(num, preMax); // 将num作为nums[i]，更新preMax
+	long ans = 0;
+	for (int x : nums) {
+		// 将 x 作为 nums[k], 更新 ans
+		ans = Math.max((long) deltaMax * x, ans);
+		// 将 x 作为 nums[j], 更新 deltaMax
+		deltaMax = Math.max(preMax - x, deltaMax);
+		// 将 x 作为 nums[i], 更新 preMax
+		preMax = Math.max(x, preMax);
 	}
 	return ans;
 }
@@ -9496,13 +9487,11 @@ public int findChampion(int n, int[][] edges) {
  * 数学
  * 灵茶山艾府
  */
-public long distributeCandies(int n, int limit)
-{
+public long distributeCandies(int n, int limit) {
 	return c2(n + 2) - 3 * c2(n - limit + 1) + 3 * c2(n - 2 * limit) - c2(n - 3 * limit - 1);
 }
 
-private long c2(int n)
-{
+private long c2(int n) {
 	return n > 1 ? (long) n * (n - 1) / 2 : 0;
 }
 ```
@@ -9516,18 +9505,15 @@ private long c2(int n)
  * 枚举
  * 不上guardian不改名
  */
-public long distributeCandies(int n, int limit)
-{
+public long distributeCandies(int n, int limit) {
 	long ans = 0;
-	for (int i = 0; i <= Math.min(n, limit); i++)
-	{
+	for (int i = 0; i <= Math.min(n, limit); i++) {
 		ans += helper(n - i, limit);
 	}
 	return ans;
 }
 
-private long helper(int n, int l)
-{
+private long helper(int n, int l) {
 	long a = Math.min(n, l), b = Math.max(n - l, 0);
 	return Math.max(a - b + 1, 0);
 }
