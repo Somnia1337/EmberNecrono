@@ -3997,46 +3997,40 @@ private boolean inBound(int x, int y) {
  * 宫水三叶
  */
 private long[] hash, prime;
+private int n;
 
-public String longestDupSubstring(String s)
-{
+public String longestDupSubstring(String s) {
 	final int PRIME = 1313131;
-	int len = s.length();
+	n = s.length();
 	
 	// 预处理哈希数组与质数幂数组
-	hash = new long[len + 1];
-	prime = new long[len + 1];
+	hash = new long[n + 1];
+	prime = new long[n + 1];
 	prime[0] = 1;
-	for (int i = 0; i < len; i++)
-	{
+	for (int i = 0; i < n; i++) {
 		prime[i + 1] = prime[i] * PRIME;
 		hash[i + 1] = hash[i] * PRIME + s.charAt(i);
 	}
 	
-	// 二分查找
-	int left = 0, right = len - 1, start = -1;
-	while (left <= right)
-	{
-		int mid = left + right >> 1;
-		int index = check(s, mid);
-		if (index >= 0)
-		{
-			start = index;
-			left = mid + 1;
+	// 二分
+	int l = 0, r = n - 1, st = -1;
+	while (l <= r) {
+		int m = l + r >> 1, idx = check(s, m);
+		if (idx >= 0) {
+			st = idx;
+			l = m + 1;
 		}
-		else right = mid - 1;
+		else r = m - 1;
 	}
-	return start >= 0 ? s.substring(start, start + left - 1) : "";
+	return st >= 0 ? s.substring(st, st + l - 1) : "";
 }
 
-// 检查是否有重复的长为l的子串
-private int check(String s, int l)
-{
-	Set<Long> hashes = new HashSet<>();
-	for (int i = 1, j = i + l - 1; j <= s.length(); i++, j++) // i为起点，j为终点
-	{
-		long ha = this.hash[j] - this.hash[i - 1] * prime[j - i + 1]; // 计算哈希值
-		if (!hashes.add(ha)) return i - 1; // 哈希值重复，说明有重复子串
+// 检查是否有长为 l 的重复子串
+private int check(String s, int l) {
+	Set<Long> vis = new HashSet<>();
+	for (int i = 1, j = i + l - 1; j <= n; i++, j++) { // i 为起点, j 为终点
+		long h = this.hash[j] - this.hash[i - 1] * prime[j - i + 1]; // 计算哈希值
+		if (!vis.add(h)) return i - 1; // 哈希值重复, 说明有重复子串
 	}
 	return -1;
 }
@@ -4122,24 +4116,27 @@ public int longestDecomposition(String s) {
  * 贪心
  * 啥时候才能全a啊
  */
+private final long BASE = 131131;
+private char[] chs;
+
 public int longestDecomposition(String text) {
-	return solve(text, 0, text.length() - 1);
+	chs = text.toCharArray();
+	return solve(0, text.length() - 1);
 }
 
-private int solve(String text, int l, int r) {
-	final long BASE = 131131;
+private int solve(int l, int r) {
 	if (l == r) return 1;
 	if (l > r) return 0;
 	long h1 = 0, h2 = 0, c = 1;
 	while (l <= r) {
-		h1 = h1 * BASE + text.charAt(l);
-		h2 += text.charAt(r) * c;
+		h1 = h1 * BASE + chs[l];
+		h2 += chs[r] * c;
 		c *= BASE;
 		l++;
 		r--;
 		if (h1 == h2) break;
 	}
-	if (h1 == h2) return solve(text, l, r) + 2;
+	if (h1 == h2) return solve(l, r) + 2;
 	return 1;
 }
 ```
@@ -5749,7 +5746,7 @@ private boolean check(int[] c, int[] r, int m, long b) {
 
 双指针的移动符合单调性：`r` 右移时，区间越短、开销在预算以内的可能性越大。
 
-用同向双指针，仍然用单调队列维护下标，枚举 `r`，右移 `l` 直到有效，再更新答案。
+同向双指针，仍然用单调队列维护下标，枚举 `r`，右移 `l` 直到有效，再更新答案。
 
 ```java
 /**
@@ -6776,6 +6773,7 @@ public int maxFrequencyScore(int[] nums, long k) {
 	Arrays.sort(nums);
 	long[] pre = new long[nums.length + 1];
 	for (int i = 1; i < nums.length + 1; i++) pre[i] = pre[i - 1] + nums[i - 1];
+	
 	int ans = 1;
 	for (int l = 0, r = 1; r < nums.length; r++) {
 		while (cost(nums, pre, l, r) > k) l++;

@@ -273,23 +273,23 @@
 
 ### 栈 / 单调栈
 
-| 题目 | 难度 | 价值 |
-| ---- | ---- | ---- |
-| [1944. 队列中可以看到的人数](https://leetcode.cn/problems/number-of-visible-people-in-a-queue/) | 🔴 | 5 |
-| [856. 括号的分数](https://leetcode.cn/problems/score-of-parentheses/) | 🟡 | 5 |
-| [1856. 子数组最小乘积的最大值](https://leetcode.cn/problems/maximum-subarray-min-product/) | 🟡 | 5 |
-| [2454. 下一个更大元素 IV](https://leetcode.cn/problems/next-greater-element-iv/) | 🟡 | 5 |
-| [155. 最小栈](https://leetcode.cn/problems/min-stack/) | 🟡 | 4 |
-| [2390. 从字符串中移除星号](https://leetcode.cn/problems/removing-stars-from-a-string/) | 🟡 | 4 |
-| [2434. 使用机器人打印字典序最小的字符串](https://leetcode.cn/problems/using-a-robot-to-print-the-lexicographically-smallest-string/) | 🟡 | 4 |
-| [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/) | 🟡 | 3 |
-| [394. 字符串解码](https://leetcode.cn/problems/decode-string/) | 🟡 | 3 |
-| [503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii/) | 🟡 | 3 |
-| [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/) | 🟡 | 3 |
-| [769. 最多能完成排序的块](https://leetcode.cn/problems/max-chunks-to-make-sorted/) | 🟡 | 3 |
-| [1762. 能看到海景的建筑物](https://leetcode.cn/problems/buildings-with-an-ocean-view/) | 🟡 | 3 |
-| [71. 简化路径](https://leetcode.cn/problems/simplify-path/) | 🟡 | 2 |
-| [735. 行星碰撞](https://leetcode.cn/problems/asteroid-collision/) | 🟡 | 2 |
+| 题目                                                                                                                   | 难度  | 价值  |
+| -------------------------------------------------------------------------------------------------------------------- | --- | --- |
+| [1944. 队列中可以看到的人数](https://leetcode.cn/problems/number-of-visible-people-in-a-queue/)                                | 🔴  | 5   |
+| [2454. 下一个更大元素 IV](https://leetcode.cn/problems/next-greater-element-iv/)                                            | 🔴  | 5   |
+| [856. 括号的分数](https://leetcode.cn/problems/score-of-parentheses/)                                                     | 🟡  | 5   |
+| [1856. 子数组最小乘积的最大值](https://leetcode.cn/problems/maximum-subarray-min-product/)                                      | 🟡  | 5   |
+| [155. 最小栈](https://leetcode.cn/problems/min-stack/)                                                                  | 🟡  | 4   |
+| [2390. 从字符串中移除星号](https://leetcode.cn/problems/removing-stars-from-a-string/)                                        | 🟡  | 4   |
+| [2434. 使用机器人打印字典序最小的字符串](https://leetcode.cn/problems/using-a-robot-to-print-the-lexicographically-smallest-string/) | 🟡  | 4   |
+| [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)                                      | 🟡  | 3   |
+| [394. 字符串解码](https://leetcode.cn/problems/decode-string/)                                                            | 🟡  | 3   |
+| [503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii/)                                             | 🟡  | 3   |
+| [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/)                                                        | 🟡  | 3   |
+| [769. 最多能完成排序的块](https://leetcode.cn/problems/max-chunks-to-make-sorted/)                                            | 🟡  | 3   |
+| [1762. 能看到海景的建筑物](https://leetcode.cn/problems/buildings-with-an-ocean-view/)                                        | 🟡  | 3   |
+| [71. 简化路径](https://leetcode.cn/problems/simplify-path/)                                                              | 🟡  | 2   |
+| [735. 行星碰撞](https://leetcode.cn/problems/asteroid-collision/)                                                        | 🟡  | 2   |
 
 ### 堆
 
@@ -365,26 +365,25 @@
 
 ### 滑动窗口
 
-| 题目 | 难度 | 价值 |
-| ---- | ---- | ---- |
-| [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/) | 🟡 | 4 |
-| [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/) | 🟡 | 4 |
-| [487. 最大连续1的个数 II](https://leetcode.cn/problems/max-consecutive-ones-ii/) | 🟡 | 4 |
-| [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/) | 🟡 | 4 |
-| [2134. 最少交换次数来组合所有的 1 II](https://leetcode.cn/problems/minimum-swaps-to-group-all-1s-together-ii/) | 🟡 | 4 |
-| [2779. 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation/) | 🟡 | 4 |
-| [1044. 最长重复子串](https://leetcode.cn/problems/longest-duplicate-substring/) | 🔴 | 3 |
-| [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | 🟡 | 3 |
-| [658. 找到 K 个最接近的元素](https://leetcode.cn/problems/find-k-closest-elements/) | 🟡 | 3 |
-| [930. 和相同的二元子数组](https://leetcode.cn/problems/binary-subarrays-with-sum/) | 🟡 | 3 |
-| [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner/) | 🟡 | 3 |
-| [1297. 子串的最大出现次数](https://leetcode.cn/problems/maximum-number-of-occurrences-of-a-substring/) | 🟡 | 3 |
-| [1456. 定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | 🟡 | 3 |
-| [2653. 滑动子数组的美丽值](https://leetcode.cn/problems/sliding-subarray-beauty/) | 🟡 | 3 |
-| [2730. 找到最长的半重复子字符串](https://leetcode.cn/problems/find-the-longest-semi-repetitive-substring/) | 🟡 | 3 |
-| [2841. 几乎唯一子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-almost-unique-subarray/) | 🟡 | 3 |
-| [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 🟡 | 2 |
-| [567. 字符串的排列](https://leetcode.cn/problems/permutation-in-string/) | 🟡 | 2 |
+| 题目                                                                                                          | 难度  | 价值  |
+| ----------------------------------------------------------------------------------------------------------- | --- | --- |
+| [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/)                    | 🟡  | 4   |
+| [487. 最大连续1的个数 II](https://leetcode.cn/problems/max-consecutive-ones-ii/)                                   | 🟡  | 4   |
+| [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/)                    | 🟡  | 4   |
+| [2134. 最少交换次数来组合所有的 1 II](https://leetcode.cn/problems/minimum-swaps-to-group-all-1s-together-ii/)          | 🟡  | 4   |
+| [2779. 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation/)         | 🟡  | 4   |
+| [1044. 最长重复子串](https://leetcode.cn/problems/longest-duplicate-substring/)                                   | 🔴  | 3   |
+| [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)               | 🟡  | 3   |
+| [658. 找到 K 个最接近的元素](https://leetcode.cn/problems/find-k-closest-elements/)                                  | 🟡  | 3   |
+| [930. 和相同的二元子数组](https://leetcode.cn/problems/binary-subarrays-with-sum/)                                   | 🟡  | 3   |
+| [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner/)                                      | 🟡  | 3   |
+| [1297. 子串的最大出现次数](https://leetcode.cn/problems/maximum-number-of-occurrences-of-a-substring/)               | 🟡  | 3   |
+| [1456. 定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | 🟡  | 3   |
+| [2653. 滑动子数组的美丽值](https://leetcode.cn/problems/sliding-subarray-beauty/)                                    | 🟡  | 3   |
+| [2730. 找到最长的半重复子字符串](https://leetcode.cn/problems/find-the-longest-semi-repetitive-substring/)              | 🟡  | 3   |
+| [2841. 几乎唯一子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-almost-unique-subarray/)                    | 🟡  | 3   |
+| [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/)                           | 🟡  | 2   |
+| [567. 字符串的排列](https://leetcode.cn/problems/permutation-in-string/)                                          | 🟡  | 2   |
 
 ### 前缀和
 

@@ -1691,7 +1691,7 @@ public boolean canJump(int[] nums)
 
 #数组 
 
-将 `intervals` 根据先头后尾双单增排序，记录每段答案区间的首尾，当下一段输入区间无法被连接时，开始记录新的答案区间。
+将 `intervals` 根据先头后尾双单增排序，记录每段答案区间的首尾，当下一段输入区间无法并入时，开始记录新的答案区间。
 
 ```java
 /**
@@ -3313,20 +3313,19 @@ public boolean isPalindrome(String s)
  */
 private Map<Node, Node> memo;
 
-public Node cloneGraph(Node node)
-{
+public Node cloneGraph(Node node) {
 	memo = new HashMap<>();
 	return dfs(node);
 }
 
-private Node dfs(Node node)
-{
+private Node dfs(Node node) {
 	if (node == null) return null;
 	if (memo.containsKey(node)) return memo.get(node); // node 已经被克隆
 	
 	Node clone = new Node(node.val, new ArrayList<>());
 	memo.put(node, clone);
-	for (Node neighbor : node.neighbors) clone.neighbors.add(dfs(neighbor)); // 向 clone.neighbors 添加原始节点 node 的所有邻居的克隆
+	for (Node nb : node.neighbors)
+		clone.neighbors.add(dfs(nb)); // 向 clone.neighbors 添加原始节点 node 的所有邻居的克隆
 	
 	return clone;
 }
@@ -3472,17 +3471,15 @@ public int singleNumber(int[] nums)
  */
 private Map<Node, Node> memo; // 记录已经克隆的节点
 
-public Node copyRandomList(Node head)
-{
+public Node copyRandomList(Node head) {
 	memo = new HashMap<>();
 	return dfs(head);
 }
 
-private Node dfs(Node node)
-{
+private Node dfs(Node node) {
 	if (node == null) return null;
 	if (memo.containsKey(node)) return memo.get(node);
-
+	
 	Node clone = new Node(node.val); // 新建克隆节点
 	memo.put(node, clone);
 	clone.next = dfs(node.next); // 克隆 next
@@ -4602,32 +4599,23 @@ private int dfs(List<List<Integer>> adj, int i) {
 
 #滑动窗口 #双指针 
 
-用快慢双指针一次遍历，维护当前窗口内元素和与窗口长度，当元素和不小于`target`时，用`slow`将窗口左端点右移，并更新满足条件窗口的最小长度。
+双指针，维护当前窗口内元素和与窗口长度，当元素和不小于 `target` 时，右移 `l`，并更新满足条件窗口的最小长度。
 
 ```java
 /**
  * 滑动窗口
  * Somnia1337
  */
-public int minSubArrayLen(int target, int[] nums)
-{
-	int len = nums.length;
-	int currentLen = 0, currentSum = 0;
-	int ans = Integer.MAX_VALUE;
-	
-	for (int fast = 0, slow = 0; fast < len; fast++)
-	{
-		currentSum += nums[fast];
-		currentLen++;
-		while (currentSum >= target)
-		{
-			ans = Math.min(currentLen, ans);
-			currentSum -= nums[slow++];
-			currentLen--;
+public int minSubArrayLen(int target, int[] nums) {
+	int n = nums.length, sum = 0, l = 0, r = 0, ans = Integer.MAX_VALUE;
+	while (r < n) {
+		sum += nums[r++];
+		while (sum >= target) {
+			ans = Math.min(r - l, ans);
+			sum -= nums[l++];
 		}
 	}
-	
-	return ans != Integer.MAX_VALUE ? ans : 0;
+	return ans < Integer.MAX_VALUE ? ans : 0;
 }
 ```
 
@@ -7284,31 +7272,25 @@ public String removeDuplicateLetters(String s)
  * 位运算
  * Somnia1337
  */
-public int maxProduct(String[] words)
-{
-	int len = words.length;
-	int[] values = new int[len];
-	for (int i = 0; i < len; i++)
-	{
+public int maxProduct(String[] words) {
+	int n = words.length;
+	int[] val = new int[n];
+	for (int i = 0; i < n; i++) {
 		String s = words[i];
 		char[] v = new char[26];
 		Arrays.fill(v, '0');
 		for (int k = 0; k < s.length(); k++) v[s.charAt(k) - 'a'] = '1';
-		values[i] = Integer.parseInt(new String(v), 2);
+		val[i] = Integer.parseInt(new String(v), 2);
 	}
 	
 	int ans = 0;
-	for (int i = 0; i < len; i++)
-	{
-		for (int j = i + 1; j < len; j++)
-		{
-			if ((values[i] & values[j]) == 0)
-			{
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if ((val[i] & val[j]) == 0) {
 				ans = Math.max(words[i].length() * words[j].length(), ans);
 			}
 		}
 	}
-	
 	return ans;
 }
 ```
@@ -7317,8 +7299,7 @@ public int maxProduct(String[] words)
 
 ```java
 int mask = 0;
-for (int k = 0; k < s.length(); k++)
-{
+for (int k = 0; k < s.length(); k++) {
 	mask |= (1 << (s.charAt(k) - 'a'));
 }
 ```
@@ -7330,34 +7311,26 @@ for (int k = 0; k < s.length(); k++)
  * 位运算
  * ChatGPT
  */
-public int maxProduct(String[] words)
-{
-	int len = words.length;
-	int[] values = new int[len];
-	
-	for (int i = 0; i < len; i++)
-	{
+public int maxProduct(String[] words) {
+	int n = words.length;
+	int[] val = new int[n];
+	for (int i = 0; i < n; i++) {
 		String s = words[i];
 		int mask = 0;
-		for (int k = 0; k < s.length(); k++)
-		{
+		for (int k = 0; k < s.length(); k++) {
 			mask |= (1 << (s.charAt(k) - 'a'));
 		}
-		values[i] = mask;
+		val[i] = mask;
 	}
 	
 	int ans = 0;
-	for (int i = 0; i < len; i++)
-	{
-		for (int j = i + 1; j < len; j++)
-		{
-			if ((values[i] & values[j]) == 0)
-			{
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if ((val[i] & val[j]) == 0) {
 				ans = Math.max(ans, words[i].length() * words[j].length());
 			}
 		}
 	}
-	
 	return ans;
 }
 ```
@@ -9686,31 +9659,26 @@ public int countBattleships(char[][] board)
  * 哈希表
  * 灵茶山艾府
  */
-public int findMaximumXOR(int[] nums)
-{
+public int findMaximumXOR(int[] nums) {
 	int max = 0;
 	for (int x : nums) max = Math.max(x, max);
 	int high = 31 - Integer.numberOfLeadingZeros(max);
 	Set<Integer> vis = new HashSet<>();
 	int mask = 0, ans = 0;
 	
-	for (int i = high; i >= 0; i--)
-	{
+	for (int i = high; i >= 0; i--) {
 		vis.clear();
 		mask |= 1 << i;
 		int newAns = ans | (1 << i);
-		for (int x : nums)
-		{
+		for (int x : nums) {
 			x &= mask;
-			if (vis.contains(newAns ^ x))
-			{
+			if (vis.contains(newAns ^ x)) {
 				ans = newAns;
 				break;
 			}
 			vis.add(x);
 		}
 	}
-	
 	return ans;
 }
 ```
@@ -10334,25 +10302,21 @@ public int numberOfBoomerangs(int[][] points) {
  * 字符统计
  * Somnia1337
  */
-public String frequencySort(String s)
-{
-	List<Character> chars = new ArrayList<>();
+public String frequencySort(String s) {
+	List<Character> chs = new ArrayList<>();
 	Map<Character, Integer> count = new HashMap<>();
-	for (char c : s.toCharArray())
-	{
-		chars.add(c);
+	for (char c : s.toCharArray()) {
+		chs.add(c);
 		count.merge(c, 1, Integer::sum);
 	}
-	Comparator comparator = (o1, o2) -> {
-		char c1 = (char) o1, c2 = (char) o2;
+	chs.sort((c1, c2) -> {
 		int a = count.get(c1), b = count.get(c2);
 		return a != b ? a - b : c1 - c2;
-	};
-	chars.sort(comparator);
+	});
+	
 	StringBuilder ans = new StringBuilder();
-	for (char c : chars) ans.append(c);
-	return ans.reverse()
-			  .toString();
+	for (char c : chs) ans.append(c);
+	return ans.reverse().toString();
 }
 ```
 
@@ -10363,23 +10327,16 @@ public String frequencySort(String s)
  * 字符统计
  * Somnia1337
  */
-public String frequencySort(String s)
-{
+public String frequencySort(String s) {
 	Map<Character, Integer> count = new HashMap<>();
-	for (char c : s.toCharArray())
-	{
-		count.merge(c, 1, Integer::sum);
-	}
-	List<Character> chars = new ArrayList<>(count.keySet());
-	chars.sort(Comparator.comparing(count::get));
+	for (char c : s.toCharArray()) count.merge(c, 1, Integer::sum);
+	List<Character> chs = new ArrayList<>(count.keySet());
+	chs.sort(Comparator.comparing(count::get));
 	StringBuilder ans = new StringBuilder();
-	for (char c : chars)
-	{
-		ans.append(String.valueOf(c)
-						 .repeat(count.get(c)));
+	for (char c : chs) {
+		ans.append(String.valueOf(c).repeat(count.get(c)));
 	}
-	return ans.reverse()
-			  .toString();
+	return ans.reverse().toString();
 }
 ```
 
@@ -14373,25 +14330,20 @@ public boolean isPossible(int[] nums)
  * 一次遍历
  * Somnia1337
  */
-public boolean checkPossibility(int[] nums)
-{
+public boolean checkPossibility(int[] nums) {
 	int peak = -1;
-	for (int i = 0; i < nums.length - 1; i++)
-	{
-		if (nums[i] > nums[i + 1])
-		{
-			if (peak >= 0) return false;
+	for (int i = 0; i < nums.length - 1; i++) {
+		if (nums[i] > nums[i + 1]) {
+			if (peak >= 0) return false; // 出现 2 个逆序对
 			peak = i;
 		}
 	}
 	return check(nums, peak) || check(nums, peak + 1);
 }
 
-private boolean check(int[] nums, int ban)
-{
+private boolean check(int[] nums, int ban) {
 	int pre = Integer.MIN_VALUE;
-	for (int i = 0; i < nums.length; i++)
-	{
+	for (int i = 0; i < nums.length; i++) {
 		if (i == ban) continue;
 		if (nums[i] < pre) return false;
 		pre = nums[i];
@@ -17826,7 +17778,7 @@ public int numFriendRequests(int[] ages)
 
 1. 二分查找
 
-将难度与利润组合，按先难度递减、再利润递减排序，由于难度大不意味着利润大，需要将所有利润更新为后缀最大值。
+将难度与利润组合，按先难度再利润双递减排序，由于难度大不意味着利润大，需要将所有利润更新为后缀最大值。
 
 再进行二分查找，累加每个工人能够完成的最难工作对应的利润。
 
@@ -17835,34 +17787,29 @@ public int numFriendRequests(int[] ages)
  * 二分查找
  * Somnia1337
  */
-public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker)
-{
-	int len = difficulty.length;
-	int[][] join = new int[len][2];
-	for (int i = 0; i < len; i++)
-	{
+public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
+	int n = difficulty.length;
+	int[][] join = new int[n][2];
+	for (int i = 0; i < n; i++) {
 		join[i][0] = difficulty[i];
 		join[i][1] = profit[i];
 	}
 	Arrays.sort(join, (a, b) -> a[0] != b[0] ? b[0] - a[0] : b[1] - a[1]);
 	int max = 0;
-	for (int i = len - 1; i >= 0; i--)
-	{
+	for (int i = n - 1; i >= 0; i--) {
 		max = Math.max(join[i][1], max);
 		join[i][1] = max;
 	}
 	
 	int ans = 0;
-	for (int w : worker)
-	{
-		int l = 0, r = len - 1;
-		while (l <= r)
-		{
+	for (int w : worker) {
+		int l = 0, r = n - 1;
+		while (l <= r) {
 			int m = l + r >> 1;
 			if (join[m][0] <= w) r = m - 1;
 			else l = m + 1;
 		}
-		if (l < len) ans += join[l][1];
+		if (l < n) ans += join[l][1];
 	}
 	return ans;
 }
@@ -17870,32 +17817,29 @@ public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker)
 
 2. 计数排序
 
-用 `int[maxDif + 1]` 记录每种难度对应的最大利润，一次遍历写入 `difficulty` 和 `profit`，再取前缀最大值，最后遍历 `worker` 累加每个工人其能力对应的最大利润。
+用 `int[maxDif + 1]` 记录每种难度对应的最大利润，一次遍历写入 `difficulty` 和 `profit`，再取前缀最大值，最后遍历 `worker` 累加每个工人的能力对应的最大利润。
 
 ```java
 /**
  * 计数排序
  * ?
  */
-public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker)
-{
+public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
 	int maxDif = 0;
 	for (int dif : difficulty) maxDif = Math.max(dif, maxDif);
-	int[] pros = new int[maxDif + 1];
-	for (int i = 0; i < difficulty.length; i++)
-	{
-		pros[difficulty[i]] = Math.max(profit[i], pros[difficulty[i]]);
+	int[] maxPro = new int[maxDif + 1];
+	for (int i = 0; i < difficulty.length; i++) {
+		maxPro[difficulty[i]] = Math.max(profit[i], maxPro[difficulty[i]]);
 	}
 	
-	int maxPro = 0;
-	for (int i = 0; i <= maxDif; i++)
-	{
-		maxPro = Math.max(pros[i], maxPro);
-		pros[i] = Math.max(maxPro, pros[i]);
+	int maxP = 0;
+	for (int i = 0; i <= maxDif; i++) {
+		maxP = Math.max(maxPro[i], maxP);
+		maxPro[i] = Math.max(maxP, maxPro[i]);
 	}
 	
 	int ans = 0;
-	for (int w : worker) ans += pros[Math.min(w, maxDif)];
+	for (int w : worker) ans += maxPro[Math.min(w, maxDif)];
 	return ans;
 }
 ```
@@ -18526,13 +18470,12 @@ public int carFleet(int target, int[] position, int[] speed)
  */
 private int it = 0;
 
-public int scoreOfParentheses(String s)
-{
-	int ans = 0;
-	while (it < s.length() && s.charAt(it) == '(')
-	{
+public int scoreOfParentheses(String s) {
+	char[] chs = s.toCharArray();
+	int n = chs.length, ans = 0;
+	while (it < n && chs[it] == '(') {
 		it++;
-		if (s.charAt(it) == ')') ans++; // 没有子结点
+		if (chs[it] == ')') ans++; // 没有子结点
 		else ans += scoreOfParentheses(s) * 2; // 有子结点
 		it++;
 	}
@@ -18544,10 +18487,10 @@ public int scoreOfParentheses(String s)
 
 定义空串的分数为 0，遍历：
 
-- 遇到 '(' 时，压入 0，作为暂时的分数。
-- 遇到 ')' 时，弹出的分数为当前括号对之间的分数，将其乘 2，与 1 取较大者，加上再次弹出的分数
+- 遇到 `'('` 时，压入 `0`，作为暂时的分数。
+- 遇到 `')'` 时，弹出的分数为当前括号对之间的分数，将其乘 `2`，与 `1` 取较大者，加上再次弹出的分数
 
-以 "(()(()))" 为例，展示这个过程：
+以 `"(()(()))"` 为例，展示这个过程：
 
 ```text
 i  c  stk
@@ -18567,13 +18510,11 @@ i  c  stk
  * 栈
  * 力扣官方题解
  */
-public int scoreOfParentheses(String s)
-{
+public int scoreOfParentheses(String s) {
 	Deque<Integer> stk = new ArrayDeque<>();
 	stk.push(0); // 初始时压入 0
-	for (int i = 0; i < s.length(); i++)
-	{
-		if (s.charAt(i) == '(') stk.push(0); // 压栈
+	for (char c : s.toCharArray()) {
+		if (c == '(') stk.push(0); // 压栈
 		else stk.push(Math.max(2 * stk.pop(), 1) + stk.pop()); // 更新栈顶
 	}
 	return stk.peek(); // 栈顶元素即为答案
@@ -19169,31 +19110,28 @@ private String hash(String s)
 枚举每个子数组的终点 `i`，嵌套向前枚举起点 `j`，用 `arr[i]` 更新 `arr[j]`，这样保证了每个先前元素都包含后续元素的所有位：
 
 ```text
-arr:  [5,1,7,6,4,3,9,8,2]
+ arr: [ 5, 1, 7, 6, 4, 3, 9, 8,2]
 arr': [15,15,15,15,15,11,11,10,2]
 ```
 
-因此内层出现更新后与原来相同 `(arr[j] | arr[i]) == arr[j]` 时，再向前也无法有效更新，可以停止。
+因此内层出现更新后与原来相同 `(arr[j] | arr[i]) == arr[j]` 时，再向前也不可能有效更新，可以停止。
 
 ```java
 /**
  * 位运算
  * hundanLi
  */
-public int subarrayBitwiseORs(int[] arr)
-{
-	Set<Integer> ors = new HashSet<>();
-	for (int i = 0; i < arr.length; i++)
-	{
-		ors.add(arr[i]);
-		for (int j = i - 1; j >= 0; j--)
-		{
+public int subarrayBitwiseORs(int[] arr) {
+	Set<Integer> vis = new HashSet<>();
+	for (int i = 0; i < arr.length; i++) {
+		vis.add(arr[i]);
+		for (int j = i - 1; j >= 0; j--) {
 			if ((arr[j] | arr[i]) == arr[j]) break;
 			arr[j] |= arr[i];
-			ors.add(arr[j]);
+			vis.add(arr[j]);
 		}
 	}
-	return ors.size();
+	return vis.size();
 }
 ```
 

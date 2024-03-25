@@ -2118,14 +2118,29 @@ public int minNumberOfFrogs(String croakOfFrogs) {
 
 #滑动窗口 
 
-要从牌堆的两端拿走 `k` 张牌，剩余的 `n - k` 张构成一个子数组。对牌堆求和，用长为 `n - k` 的滑动窗口找到和最小的子数组，从总和中减去。
+要从牌堆的两端拿走共 `k` 张牌，则剩余的 `n - k` 张构成一个连续的子数组。
+
+对牌堆求和，用长为 `n - k` 的滑动窗口计算和最小的子数组，从总和中减去。
 
 ```java
 /**
  * 滑动窗口
  * Somnia1337
  */
-
+public int maxScore(int[] cardPoints, int k) {
+	int n = cardPoints.length, sum = 0;
+	for (int cp : cardPoints) sum += cp;
+	if (k == n) return sum;
+	
+	int cur = 0;
+	for (int i = 0; i < n - k; i++) cur += cardPoints[i];
+	int ans = sum - cur;
+	for (int i = n - k; i < n; i++) {
+		cur += cardPoints[i] - cardPoints[i + k - n];
+		ans = Math.max(sum - cur, ans);
+	}
+	return ans;
+}
 ```
 
 #### [1456. 定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/)
@@ -3827,7 +3842,9 @@ public int longestBeautifulSubstring(String word) {
 
 `subArr` 的最小乘积 = `min(subArr) * sum(subArr)`，`sum(subArr)` 不易枚举，可以枚举 `min(subArr)`，也就是枚举所有 `nums[i]` 作为某个子数组的 `min(subArr)` 时的最小乘积。
 
-当 `nums[i]` 确定，最小乘积的最大值需要满足 `sum(subArr)` 尽可能大，`nums` 元素非负，因此该 `subArr` 应在保证其 `min` 为 `nums[i]` 的前提下尽可能长。只需找到 `nums[i]` 两侧比其小的值 `l`、`r`，那么该 `subArr` 就确定为 `nums[l+1:r]`，其最小乘积为 `nums[i]*(pSum[r] - pSum[l+1])`。
+确定 `nums[i]` 之后，要获得最小乘积的最大值，需要满足 `sum(subArr)` 尽可能大。
+
+`nums[i]` 元素非负，因此该 `subArr` 应在保证其 `min` 为 `nums[i]` 的前提下尽可能长。只需找到 `nums[i]` 两侧比其小的值位置 `l`、`r`，那么该 `subArr` 就确定为 `nums[l+1:r]`，其最小乘积为 `nums[i] * (pSum[r] - pSum[l+1])`。
 
 也就是说，对每个 `nums[i]`，要找到其两侧比其小的元素的位置，可用单调栈实现。找到 `l`、`r` 后，`sum(subArr)` 可用前缀和计算。
 
@@ -3836,32 +3853,27 @@ public int longestBeautifulSubstring(String word) {
  * 单调栈
  * lhp15575865420
  */
-public int maxSumMinProduct(int[] nums)
-{
-	int len = nums.length;
-	long[] pSum = new long[len + 1];
-	for (int i = 1; i < len + 1; i++) pSum[i] = pSum[i - 1] + nums[i - 1];
+public int maxSumMinProduct(int[] nums) {
+	int n = nums.length;
+	long[] pSum = new long[n + 1];
+	for (int i = 1; i < n + 1; i++) pSum[i] = pSum[i - 1] + nums[i - 1];
 	Deque<Integer> stk = new ArrayDeque<>(); // 存储下标
-	stk.push(-1); // 避免了判空，只需stk.size()>1即有元素
+	stk.push(-1); // 避免了判空, 只需 stk.size()>1 即有元素
 	
 	long ans = 0;
-	for (int i = 0; i < len; i++)
-	{
-		while (stk.size() > 1 && nums[stk.peek()] > nums[i])
-		{
-			// 这一句是计算以nums[栈顶]为min的子数组最小乘积
-			// 先pop()，再peek()就是l
-			// r为i，因为这是进入if的条件
+	for (int i = 0; i < n; i++) {
+		while (stk.size() > 1 && nums[stk.peek()] > nums[i]) {
+			// 计算以 nums[栈顶] 为 min 的子数组最小乘积
+			// 先 pop(), 再 peek(), 即为 l
+			// r 为 i, 因为是进入 if 的条件
 			ans = Math.max(nums[stk.pop()] * (pSum[i] - pSum[stk.peek() + 1]), ans);
 		}
 		stk.push(i);
 	}
-	while (stk.size() > 1)
-	{
-		// l仍为弹栈后的栈顶，r为len
-		ans = Math.max(nums[stk.pop()] * (pSum[len] - pSum[stk.peek() + 1]), ans);
+	while (stk.size() > 1) {
+		// l 仍为弹栈后的栈顶, r 为 n
+		ans = Math.max(nums[stk.pop()] * (pSum[n] - pSum[stk.peek() + 1]), ans);
 	}
-	
 	return (int) (ans % 1000000007);
 }
 ```
@@ -4769,13 +4781,13 @@ public int nextBeautifulNumber(int n) {
  */
 public int maxTwoEvents(int[][] events) {
 	Arrays.sort(events, Comparator.comparingInt(a -> a[0]));
-	Queue<int[]> q = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+	Queue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
 	int max = 0, ans = 0;
 	for (int[] e : events) {
-		// 弹出所有不与 e 重叠的活动
-		while (!q.isEmpty() && q.peek()[1] < e[0]) max = Math.max(q.poll()[2], max);
-		q.offer(e);
-		ans = Math.max(max + e[2], ans); // 更新答案
+		// 弹出所有不与 e 重叠的活动并更新 max
+		while (!pq.isEmpty() && pq.peek()[1] < e[0]) max = Math.max(pq.poll()[2], max);
+		pq.offer(e);
+		ans = Math.max(max + e[2], ans);
 	}
 	return ans;
 }
@@ -6031,37 +6043,33 @@ public int maximumRows(int[][] mat, int numSelect) {
 
 #位运算 
 
-1. 枚举
-
 优雅子数组需满足任意两个数按位与 `== 0`，即任意两个数对应的 01 数组没有交集。
 
 在 $10^9$ 范围内，满足条件的子数组最长为 `30`，可枚举子数组右端点，向左扩展左端点。
 
-`or` 表示子数组中所有元素的按位或，当扩展到 `(or & nums[l]) > 0` 时，说明再加入 `nums[l]` 将导致出现两个按位与 `!= 0` 的元素，停止扩展。
+`or` 表示子数组中所有元素的按位或，当扩展到 `(or & nums[l]) > 0` 时，说明再加入 `nums[l]` 将导致出现两个按位与 `> 0` 的元素，停止扩展。
 
 ```java
 /**
- * 枚举
+ * 双指针
  * 灵茶山艾府
  */
 public int longestNiceSubarray(int[] nums) {
 	int ans = 0;
-	for (int r = 0; r < nums.length; r++) {
-		int l = r, or = 0;
+	for (int r = 0; r < nums.length; r++) { // 枚举右端点
+		int l = r, or = 0; // 向左移动左端点, or 表示子数组的按位或
 		while (l >= 0 && (or & nums[l]) == 0) or |= nums[l--];
-		if ((ans = Math.max(r - l, ans)) == 30) return 30;
+		if ((ans = Math.max(r - l, ans)) == 30) break;
 	}
 	return ans;
 }
 ```
 
-2. 双指针
-
-将上述过程改为双指针遍历，`or` 表示指针之间子数组中所有元素的按位或，加入 `nums[r]` 之前，在 `(or & nums[r]) > 0` 时，说明加入 `nums[r]` 的子数组不是优雅的，持续用按位异或操作“弹出” `nums[l]`。
+改为同向双指针，`or` 表示指针之间子数组中所有元素的按位或，加入 `nums[r]` 之前，在 `(or & nums[r]) > 0` 时，说明加入 `nums[r]` 的子数组不是优雅的，持续用按位异或操作“弹出” `nums[l]`。
 
 ```java
 /**
- * 双指针
+ * 同向双指针
  * 灵茶山艾府
  */
 public int longestNiceSubarray(int[] nums) {
@@ -6912,7 +6920,7 @@ public long countFairPairs(int[] nums, int lower, int upper) {
 
 #哈希表 #位运算 
 
-查询时，等式 `x^q[0] == q[1]` 的两侧同时异或 `q[0]`，得 `x^q[0]^q[0] == q[1]^q[0]`，进而化简为 `x == q[0]^q[1]`，也就是要对每个查询找到 `s` 中最靠左侧的值为 `q[0]^q[1]` 的子串的起止下标。
+查询等式 `x^q[0] == q[1]` 的两侧同时异或 `q[0]`，得 `x^q[0]^q[0] == q[1]^q[0]`，进而化简为 `x == q[0]^q[1]`，也就是要对每个查询找到 `s` 中最靠左侧的、值为 `q[0]^q[1]` 的子串的起止下标。
 
 预处理 `s`，由于无需考虑长度 `> 30` 的子串，可以枚举每个子串，哈希表记录 `<数值, 最优下标{l,r}>`，首次遇到键 `x` 的下标即为最优（固定 `x`，其二进制长度固定为 `L`，小于 `L` 的串值一定不会是 `x`，那么从左向右遍历 `s`，首次出现 `x` 就是最靠左侧的位置）。
 
@@ -6935,7 +6943,7 @@ public int[][] substringXorQueries(String s, int[][] queries) {
 		}
 	}
 	
-	int[][] ans = new int[queries.length][];
+	int[][] ans = new int[queries.length][2];
 	for (i = 0; i < queries.length; i++) ans[i] = map.getOrDefault(queries[i][0] ^ queries[i][1], NOT_FOUND);
 	return ans;
 }
@@ -7389,9 +7397,9 @@ public int matrixSum(int[][] nums)
 
 #位运算 #前后缀分解 
 
-要答案最大，答案的二进制位数应最多，将 `k` 次 `* 2` 全部分配给同一个元素更有可能得到更多的位数。
+要答案最大，答案的二进制位数应最多，将 `k` 次 `* 2` 全部分配给同一个元素才有可能得到最多的位数。
 
-对每个元素计算 `pre[i]` 和 `suf[i]`，分别表示前后缀元素的按位或，再枚举每个元素左移 `k` 位，更新答案。
+对每个位置 `i` 计算 `pre[i]` 和 `suf[i]`，分别表示前后缀元素的按位或，再枚举每个元素左移 `k` 位，更新答案。
 
 ```java
 /**
@@ -7405,6 +7413,7 @@ public long maximumOr(int[] nums, int k) {
 	for (int i = 1; i < n; i++) pre[i] = or |= nums[i - 1];
 	or = 0;
 	for (int i = n - 2; i >= 0; i--) suf[i] = or |= nums[i + 1];
+	
 	long ans = 0;
 	for (int i = 0; i < n; i++) ans = Math.max(((long) nums[i] << k) | pre[i] | suf[i], ans);
 	return ans;
@@ -9603,19 +9612,16 @@ private int f(int l1, int l2, int[] a, int[] b) {
  * 两次遍历
  * Somnia1337
  */
-public long minimumSteps(String s)
-{
-	int l = s.length(), b = 0;
-	for (int i = 0; i < l; i++)
-	{
-		if (s.charAt(i) == '1') b++;
+public long minimumSteps(String s) {
+	char[] chs = s.toCharArray();
+	int n = chs.length, b = 0;
+	for (char c : chs) {
+		if (c == '1') b++;
 	}
 	long ans = 0;
-	for (int i = 0; i < l; i++)
-	{
-		if (s.charAt(i) == '1')
-		{
-			ans += l - b - i;
+	for (int i = 0; i < n; i++) {
+		if (chs[i] == '1') {
+			ans += n - b - i;
 			b--;
 		}
 	}
@@ -9625,19 +9631,17 @@ public long minimumSteps(String s)
 
 2. 一次遍历
 
-遍历统计黑球，如果为白球，累加将其移至左侧的距离，即当前的黑球数。
+遍历统计黑球，如果为白球，累加将其移至左侧的距离，即当前见过的黑球个数。
 
 ```java
 /**
  * 一次遍历
  * 灵茶山艾府
  */
-public long minimumSteps(String s)
-{
-	long ans = 0;
+public long minimumSteps(String s) {
 	int cnt1 = 0;
-	for (char c : s.toCharArray())
-	{
+	long ans = 0;
+	for (char c : s.toCharArray()) {
 		if (c == '1') cnt1++;
 		else ans += cnt1;
 	}
