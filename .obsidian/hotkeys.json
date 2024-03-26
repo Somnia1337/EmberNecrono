@@ -185,14 +185,6 @@
       "key": "P"
     }
   ],
-  "editor:toggle-bullet-list": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "R"
-    }
-  ],
   "obsidian-quiet-outline:quiet-outline": [
     {
       "modifiers": [
@@ -319,7 +311,15 @@
       "modifiers": [
         "Alt"
       ],
-      "key": "1"
+      "key": "R"
+    }
+  ],
+  "editor:toggle-bullet-list": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
     }
   ]
 }
