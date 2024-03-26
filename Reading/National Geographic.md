@@ -59,6 +59,7 @@
 | [Visit the picturesque Swiss valley preserving the art of watchmaking](https://www.nationalgeographic.com/travel/article/watchmaking-switzerland-jura-mountains-vallee-de-joux) | @2023.12.28 | 3          | 3    |
 | [How do you avoid the crowds in national parks? Visit during winter.](https://www.nationalgeographic.com/travel/article/top-winter-adventures-in-lesser-crowded-national-parks) | @2024.01.08 | 3          | 2    |
 | [How Minnesota helped me find the magic of winter](https://www.nationalgeographic.com/travel/article/minnesota-winter-climate-change)                                           | @2024.02.26 | 3          | 2    |
+| [Inside the 124-year-old observatory that birthed modern astrophysics](https://www.nationalgeographic.com/culture/article/yerkes-astronomical-observatory-wisconsin)            | @2024.03.26 | 3          | 3    |
 
 ### Health
 

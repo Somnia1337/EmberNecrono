@@ -687,36 +687,24 @@ public int[] findIndices(int[] nums, int indexDifference, int valueDifference)
  * 枚举
  * Somnia1337
  */
-public String shortestBeautifulSubstring(String s, int k)
-{
-	if (k == 1 && s.contains("1")) return "1";
-	int len = s.length();
-	char[] chars = s.toCharArray();
+public String shortestBeautifulSubstring(String s, int k) {
+	char[] chs = s.toCharArray();
+	int n = chs.length;
+	int[] pre = new int[n + 1];
+	for (int i = 1; i <= n; i++) pre[i] = pre[i - 1] + chs[i - 1] - '0';
 	
-	// 求前缀和
-	int[] preSum = new int[len + 1];
-	preSum[0] = 0; // 前0个元素没有1
-	for (int i = 1; i < len + 1; i++)
-	{
-		preSum[i] = preSum[i - 1] + chars[i - 1] - '0';
-	}
-	
-	int minL = len + 1, start = -1;
-	for (int i = 1; i < len + 1; i++) // 枚举终点
-	{
-		for (int j = Math.max(0, i - minL); j < i; j++) // 枚举起点
-		{
-			// 更新最小长度与起点
-			// 条件：(1的个数为k)&(start未更新|i-j<minL|新串字典序小于旧串)
-			if (preSum[i] - preSum[j] == k && (start == -1 || minL > i - j || s.substring(j, j + minL).compareTo(s.substring(start,start + minL)) < 0))
-			{
+	int minL = n + 1, st = -1;
+	for (int i = 1; i < n + 1; i++) { // 枚举终点
+		for (int j = Math.max(0, i - minL); j < i; j++) { // 枚举起点
+			// 更新最小长度和起点
+			// 1 的个数为 k && (st 未更新 || i-j<minL || 新串字典序更小)
+			if (pre[i] - pre[j] == k && (st == -1 || minL > i - j || s.substring(j, j + minL).compareTo(s.substring(st, st + minL)) < 0)) {
 				minL = i - j;
-				start = j;
+				st = j;
 			}
 		}
 	}
-	
-	return start >= 0 ? s.substring(start, start + minL) : "";
+	return st >= 0 ? s.substring(st, st + minL) : "";
 }
 ```
 

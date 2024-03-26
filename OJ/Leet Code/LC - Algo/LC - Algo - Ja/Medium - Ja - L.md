@@ -2844,16 +2844,12 @@ private void dfs(String s, int k, int idx) {
 #回溯 
 
 ```java
-// 分别回溯左侧、右侧的不同的二叉搜索树
-List<TreeNode> leftTrees = bt(start, i - 1);
-List<TreeNode> rightTrees = bt(i + 1, end);
-
-// 将左侧、右侧的二叉搜索树两两组合
-for (TreeNode left : leftTrees)
-{
-	for (TreeNode right : rightTrees)
-	{
-		ans.add(clone(i, left, right));
+// 分别回溯左侧 & 右侧的不同的二叉搜索树
+List<TreeNode> L = bt(start, i - 1), R = bt(i + 1, end);
+// 将左侧 & 右侧的二叉搜索树两两组合
+for (TreeNode l : L) {
+	for (TreeNode r : R) {
+		ans.add(clone(i, l, r));
 	}
 }
 ```
@@ -2865,44 +2861,34 @@ for (TreeNode left : leftTrees)
  * 回溯
  * 力扣官方题解
  */
-public List<TreeNode> generateTrees(int n)
-{
-	return bt(1, n);
+public List<TreeNode> generateTrees(int n) {
+    return bt(1, n);
 }
 
-public List<TreeNode> bt(int start, int end)
-{
-	List<TreeNode> ans = new ArrayList<>();
-	if (start > end)
-	{
-		ans.add(null);
-		return ans;
-	}
-	
-	for (int i = start; i <= end; i++)
-	{
-		// 分别回溯左侧、右侧的不同的二叉搜索树
-		List<TreeNode> leftTrees = bt(start, i - 1);
-		List<TreeNode> rightTrees = bt(i + 1, end);
-		
-		// 将左侧、右侧的二叉搜索树两两组合
-		for (TreeNode left : leftTrees)
-		{
-			for (TreeNode right : rightTrees)
-			{
-				ans.add(clone(i, left, right));
-			}
-		}
-	}
-	return ans;
+private List<TreeNode> bt(int start, int end) {
+    List<TreeNode> ans = new ArrayList<>();
+    if (start > end) {
+        ans.add(null);
+        return ans;
+    }
+    for (int i = start; i <= end; i++) {
+        // 分别回溯左侧 & 右侧的不同的二叉搜索树
+        List<TreeNode> L = bt(start, i - 1), R = bt(i + 1, end);
+        // 将左侧 & 右侧的二叉搜索树两两组合
+        for (TreeNode l : L) {
+            for (TreeNode r : R) {
+                ans.add(clone(i, l, r));
+            }
+        }
+    }
+    return ans;
 }
 
-public TreeNode clone(int val, TreeNode left, TreeNode right)
-{
-	TreeNode clone = new TreeNode(val);
-	clone.left = left;
-	clone.right = right;
-	return clone;
+private TreeNode clone(int val, TreeNode l, TreeNode r) {
+    TreeNode clone = new TreeNode(val);
+    clone.left = l;
+    clone.right = r;
+    return clone;
 }
 ```
 
@@ -4903,7 +4889,7 @@ void bucketSort(int[] nums)
  */
 public int findKthLargest(int[] nums, int k)
 {
-	PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+	Queue<Integer> minHeap = new PriorityQueue<>();
 	for (int num : nums)
 	{
 		if (minHeap.size() < k)
@@ -5351,24 +5337,17 @@ public boolean searchMatrix(int[][] matrix, int target)
  * 分治
  * Somnia1337
  */
-public List<Integer> diffWaysToCompute(String expression)
-{
-	int len = expression.length();
-	// 输入表达式中的所有整数值在范围 [0, 99], 2 位为终止条件
-	if (len <= 2) return new ArrayList<>(List.of(Integer.parseInt(expression)));
-	
+public List<Integer> diffWaysToCompute(String expression) {
+	int n = expression.length();
+	// 输入表达式中的所有整数值在范围 [0, 99], 2 位为终止条件
+	if (n <= 2) return new ArrayList<>(List.of(Integer.parseInt(expression)));
 	List<Integer> ans = new ArrayList<>();
-	for (int i = 0; i < len; i++)
-	{
+	for (int i = 0; i < n; i++) {
 		char c = expression.charAt(i);
-		// 在运算符处进行分治
-		if (!Character.isDigit(c))
-		{
+		if (!Character.isDigit(c)) { // 在运算符处进行分治
 			List<Integer> left = diffWaysToCompute(expression.substring(0, i)), right = diffWaysToCompute(expression.substring(i + 1));
-			for (int l : left)
-			{
-				for (int r : right)
-				{
+			for (int l : left) {
+				for (int r : right) {
 					if (c == '+') ans.add(l + r);
 					else if (c == '-') ans.add(l - r);
 					else ans.add(l * r);
@@ -5376,7 +5355,6 @@ public List<Integer> diffWaysToCompute(String expression)
 			}
 		}
 	}
-	
 	return ans;
 }
 ```
@@ -7145,41 +7123,32 @@ public int maxProfit(int[] prices) {
  * 拓扑排序
  * Somnia1337
  */
-public List<Integer> findMinHeightTrees(int n, int[][] edges)
-{
-	int[] deg = new int[n];
-	Map<Integer, List<Integer>> next = new HashMap<>();
-	for (int i = 0; i < n; i++) next.put(i, new ArrayList<>());
-	for (int[] edge : edges)
-	{
-		deg[edge[0]]++;
-		deg[edge[1]]++;
-		next.get(edge[0])
-			.add(edge[1]);
-		next.get(edge[1])
-			.add(edge[0]);
-	}
-	
-	Queue<Integer> leaves = new LinkedList<>();
-	for (int i = 0; i < n; i++)
-	{
-		if (deg[i] <= 1) leaves.add(i);
-	}
-	while (n > 2)
-	{
-		int size = leaves.size();
-		n -= size;
-		for (int i = 0; i < size; i++) // 按进入循环时的整组更新
-		{
-			for (int node : next.get(leaves.poll()))
-			{
-				deg[node]--;
-				if (deg[node] == 1) leaves.add(node);
-			}
-		}
-	}
-	
-	return new ArrayList<>(leaves);
+public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+    int[] deg = new int[n];
+    Map<Integer, List<Integer>> next = new HashMap<>();
+    for (int i = 0; i < n; i++) next.put(i, new ArrayList<>());
+    for (int[] edge : edges) {
+        deg[edge[0]]++;
+        deg[edge[1]]++;
+        next.get(edge[0]).add(edge[1]);
+        next.get(edge[1]).add(edge[0]);
+    }
+    
+    Queue<Integer> leaves = new LinkedList<>();
+    for (int i = 0; i < n; i++) {
+        if (deg[i] <= 1) leaves.add(i);
+    }
+    while (n > 2) {
+        int size = leaves.size();
+        n -= size;
+        for (int i = 0; i < size; i++) { // 按进入循环时的整组更新
+            for (int nx : next.get(leaves.poll())) {
+                deg[nx]--;
+                if (deg[nx] == 1) leaves.add(nx);
+            }
+        }
+    }
+    return new ArrayList<>(leaves);
 }
 ```
 
@@ -8347,40 +8316,34 @@ private int gcd(int a, int b) {
  * 动态规划
  * Somnia1337
  */
-public List<Integer> largestDivisibleSubset(int[] nums)
-{
-	int len = nums.length;
-	int[] dp = new int[len];
-	Arrays.fill(dp, 1); // 对每个i，nums[i]必须选择
-	
-	// 排序后遍历
-	Arrays.sort(nums);
-	int max = 0; // 最大子集大小
-	for (int i = 0; i < len; i++) // 枚举i
-	{
-		for (int j = 0; j < i; j++) // 枚举j=0..i
-		{
-			if (nums[i] % nums[j] == 0) dp[i] = Math.max(dp[j] + 1, dp[i]); // nums[i]可扩充以nums[j]结尾的子集
-		}
-		max = Math.max(dp[i], max);
-	}
-	
-	// 倒序遍历，添加到解集
-	int it = len - 1, pre = 0; // pre表示目标子集的任意元素，用于判断一个元素是否属于目标子集 // 最初不知道目标子集的任何元素，初始化为0，找到任何元素
-	List<Integer> ans = new ArrayList<>();
-	while (max > 0)
-	{
-		// 判断是否属于目标子集
-		if (dp[it] == max && pre % nums[it] == 0)
-		{
-			ans.add(nums[it]);
-			pre = nums[it];
-			max--;
-		}
-		it--;
-	}
-	
-	return ans;
+public List<Integer> largestDivisibleSubset(int[] nums) {
+    int n = nums.length;
+    int[] dp = new int[n];
+    Arrays.fill(dp, 1); // 对每个 i, nums[i] 必须选择
+    
+    // 排序后遍历
+    Arrays.sort(nums);
+    int max = 0; // 最大子集大小
+    for (int i = 0; i < n; i++) { // 枚举i
+        for (int j = 0; j < i; j++) { // 枚举j=0..i
+            if (nums[i] % nums[j] == 0) dp[i] = Math.max(dp[j] + 1, dp[i]); // nums[i]可扩充以nums[j]结尾的子集
+        }
+        max = Math.max(dp[i], max);
+    }
+    
+    // 倒序遍历，添加到解集
+    int it = n - 1, pre = 0; // pre表示目标子集的任意元素，用于判断一个元素是否属于目标子集 // 最初不知道目标子集的任何元素，初始化为0，找到任何元素
+    List<Integer> ans = new ArrayList<>();
+    while (max > 0) {
+        // 判断是否属于目标子集
+        if (dp[it] == max && pre % nums[it] == 0) {
+            ans.add(nums[it]);
+            pre = nums[it];
+            max--;
+        }
+        it--;
+    }
+    return ans;
 }
 ```
 
@@ -11697,23 +11660,19 @@ public boolean isSubSequence(String src, String tar)
  * 前缀和
  * Somnia1337
  */
-public boolean checkSubarraySum(int[] nums, int k)
-{
-	Map<Integer, Integer> preSum = new HashMap<>();
-	preSum.put(nums[0], 0);
-	
-	for (int i = 1; i < nums.length; i++)
-	{
-		nums[i] += nums[i - 1]; // 求前缀和
-		if (nums[i] % k == 0) return true;
-		for (int j = 0; j <= nums[i]; j += k)
-		{
-			if (preSum.containsKey(nums[i] - j) && i - preSum.get(nums[i] - j) >= 2) return true; // 查找补数，检查子数组长度
-		}
-		preSum.merge(nums[i], i, Math::min);
-	}
-	
-	return false;
+public boolean checkSubarraySum(int[] nums, int k) {
+    Map<Integer, Integer> pre = new HashMap<>();
+    pre.put(nums[0], 0);
+    for (int i = 1; i < nums.length; i++) {
+        nums[i] += nums[i - 1];
+        if (nums[i] % k == 0) return true;
+        for (int j = 0; j <= nums[i]; j += k) {
+            // 查找补数, 检查子数组长度
+            if (pre.containsKey(nums[i] - j) && i - pre.get(nums[i] - j) >= 2) return true;
+        }
+        pre.merge(nums[i], i, Math::min);
+    }
+    return false;
 }
 ```
 
@@ -11726,20 +11685,17 @@ public boolean checkSubarraySum(int[] nums, int k)
  * 前缀和
  * 宫水三叶
  */
-public boolean checkSubarraySum(int[] nums, int k)
-{
-	int len = nums.length;
-	int[] preSum = new int[len + 1];
-	Set<Integer> mods = new HashSet<>();
-	
-	for (int i = 1; i <= len; i++) preSum[i] = preSum[i - 1] + nums[i - 1]; // 求前缀和
-	for (int i = 2; i <= len; i++) // 从2开始
-	{
-		mods.add(preSum[i - 2] % k); // 记录2个以前的前缀和对k的余数
-		if (mods.contains(preSum[i] % k)) return true; // 同余，找到子数组
-	}
-	
-	return false;
+public boolean checkSubarraySum(int[] nums, int k) {
+    int n = nums.length;
+    int[] pre = new int[n + 1];
+    for (int i = 1; i <= n; i++) pre[i] = pre[i - 1] + nums[i - 1];
+    
+    Set<Integer> mod = new HashSet<>();
+    for (int i = 2; i <= n; i++) { // 从 2 开始
+        mod.add(pre[i - 2] % k); // 记录 2 个以前的前缀和对 k 的余数
+        if (mod.contains(pre[i] % k)) return true; // 同余, 找到子数组
+    }
+    return false;
 }
 ```
 
@@ -11787,29 +11743,25 @@ public boolean isSubSequence(String src, String tar)
 
 #前缀和 
 
-计算前缀和，`preSum[i]` 的意义是前 `i` 个元素中 1 的数量，循环检查 `j = 0..i`，如果满足 `i - j == n * 2` 且 `preSum[i] - preSum[j] == n`，说明从 `j` 到 `i` 中有 `n` 个 0 及 `n` 个 1，更新 `ans`。
+计算前缀和，`preSum[i]` 的意义是前 `i` 个元素中 1 的数量，循环检查 `j = 0..i`，如果满足 `i - j == n * 2` 且 `preSum[i] - preSum[j] == n`，说明从 `j` 到 `i` 中有 `n` 个 `0` 及 `n` 个 `1`，更新 `ans`。
 
 ```java
 /**
  * 前缀和
  * Somnia1337
  */
-public int findMaxLength(int[] nums)
-{
-	int ans = 0;
-	for (int i = 1; i < nums.length; i++)
-	{
-		nums[i] += nums[i - 1];
-		for (int j = ans; i - 2 * j >= -1; j++)
-		{
-			if (i - 2 * j == -1)
-			{
-				if (nums[i] == j) ans = j;
-			}
-			else if (nums[i - 2 * j] == nums[i] - j) ans = j;
-		}
-	}
-	return ans * 2;
+public int findMaxLength(int[] nums) {
+    int ans = 0;
+    for (int i = 1; i < nums.length; i++) {
+        nums[i] += nums[i - 1];
+        for (int j = ans; i - 2 * j >= -1; j++) {
+            if (i - 2 * j == -1) {
+                if (nums[i] == j) ans = j;
+            }
+            else if (nums[i - 2 * j] == nums[i] - j) ans = j;
+        }
+    }
+    return ans * 2;
 }
 ```
 
@@ -11820,24 +11772,16 @@ public int findMaxLength(int[] nums)
  * 前缀和
  * ?
  */
-public int findMaxLength(int[] nums)
-{
-	Map<Integer, Integer> indices = new HashMap<>();
-	indices.put(0, -1); // 定义-1处的前缀和为0
-	int preSum = 0, ans = 0;
-	for (int i = 0; i < nums.length; i++)
-	{
-		preSum += (nums[i] == 1 ? 1 : -1); // 计算前缀和
-		if (indices.containsKey(preSum))
-		{
-			ans = Math.max(i - indices.get(preSum), ans);
-		}
-		else
-		{
-			indices.put(preSum, i);
-		}
-	}
-	return ans;
+public int findMaxLength(int[] nums) {
+    Map<Integer, Integer> idx = new HashMap<>();
+    idx.put(0, -1); // 定义 -1 处的前缀和为 0
+    int pre = 0, ans = 0;
+    for (int i = 0; i < nums.length; i++) {
+        pre += (nums[i] == 1 ? 1 : -1); // 计算前缀和
+        if (idx.containsKey(pre)) ans = Math.max(i - idx.get(pre), ans);
+        else idx.put(pre, i);
+    }
+    return ans;
 }
 ```
 
@@ -15105,30 +15049,26 @@ private void bfs(int[][] grid, int x, int y)
  * 回溯
  * Somnia1337
  */
-public boolean canPartitionKSubsets(int[] nums, int k)
-{
-	Arrays.sort(nums);
-	int sum = 0;
-	for (int num : nums) sum += num;
-	
-	if (sum % k != 0) return false;
-	int tar = sum / k;
-	int[] subsets = new int[k];
-	return bt(nums, subsets, tar, nums.length - 1);
+public boolean canPartitionKSubsets(int[] nums, int k) {
+    Arrays.sort(nums);
+    int sum = 0;
+    for (int x : nums) sum += x;
+    if (sum % k != 0) return false;
+    int tar = sum / k;
+    int[] subs = new int[k];
+    return bt(nums, subs, tar, nums.length - 1);
 }
 
-private boolean bt(int[] nums, int[] subsets, int tar, int idx)
-{
-	if (idx == -1) return true;
-	for (int i = subsets.length - 1; i >= 0; i--)
-	{
-		if (subsets[i] + nums[idx] > tar) continue;
-		subsets[i] += nums[idx];
-		if (bt(nums, subsets, tar, idx - 1)) return true;
-		subsets[i] -= nums[idx];
-		if (subsets[i] == 0 || subsets[i] + nums[idx] == tar) return false;
-	}
-	return false;
+private boolean bt(int[] nums, int[] subs, int tar, int idx) {
+    if (idx == -1) return true;
+    for (int i = subs.length - 1; i >= 0; i--) {
+        if (subs[i] + nums[idx] > tar) continue;
+        subs[i] += nums[idx];
+        if (bt(nums, subs, tar, idx - 1)) return true;
+        subs[i] -= nums[idx];
+        if (subs[i] == 0 || subs[i] + nums[idx] == tar) return false;
+    }
+    return false;
 }
 ```
 
@@ -17253,35 +17193,30 @@ public double champagneTower(int poured, int query_row, int query_glass)
  * 拓扑排序
  * Somnia1337
  */
-public List<Integer> eventualSafeNodes(int[][] graph)
-{
-	int n = graph.length;
-	List<List<Integer>> ins = new ArrayList<>(); // 入度源
-	for (int i = 0; i < n; i++) ins.add(new ArrayList<>());
-	int[] deg = new int[n]; // 出度
-	for (int i = 0; i < n; i++)
-	{
-		deg[i] = graph[i].length;
-		for (int node : graph[i]) ins.get(node).add(i);
-	}
-	
-	List<Integer> ans = new ArrayList<>();
-	Queue<Integer> q = new LinkedList<>();
-	for (int i = 0; i < n; i++)
-	{
-		if (deg[i] == 0) q.add(i);
-	}
-	while (!q.isEmpty())
-	{
-		int node = q.poll();
-		ans.add(node);
-		for (int i : ins.get(node))
-		{
-			if (--deg[i] == 0) q.add(i);
-		}
-	}
-	Collections.sort(ans);
-	return ans;
+public List<Integer> eventualSafeNodes(int[][] graph) {
+    int n = graph.length;
+    List<List<Integer>> ins = new ArrayList<>(); // 入度源
+    for (int i = 0; i < n; i++) ins.add(new ArrayList<>());
+    int[] deg = new int[n]; // 出度
+    for (int i = 0; i < n; i++) {
+        deg[i] = graph[i].length;
+        for (int node : graph[i]) ins.get(node).add(i);
+    }
+    
+    List<Integer> ans = new ArrayList<>();
+    Queue<Integer> q = new LinkedList<>();
+    for (int i = 0; i < n; i++) {
+        if (deg[i] == 0) q.add(i);
+    }
+    while (!q.isEmpty()) {
+        int node = q.poll();
+        ans.add(node);
+        for (int i : ins.get(node)) {
+            if (--deg[i] == 0) q.add(i);
+        }
+    }
+    Collections.sort(ans);
+    return ans;
 }
 ```
 
@@ -17292,37 +17227,30 @@ public List<Integer> eventualSafeNodes(int[][] graph)
  * 拓扑排序
  * 力扣官方题解
  */
-public List<Integer> eventualSafeNodes(int[][] graph)
-{
-	int n = graph.length;
-	List<List<Integer>> ins = new ArrayList<>(); // 入度源
-	for (int i = 0; i < n; i++) ins.add(new ArrayList<>());
-	int[] deg = new int[n]; // 出度
-	for (int i = 0; i < n; i++)
-	{
-		deg[i] = graph[i].length;
-		for (int node : graph[i]) ins.get(node).add(i);
-	}
-	
-	Queue<Integer> q = new LinkedList<>();
-	for (int i = 0; i < n; i++)
-	{
-		if (deg[i] == 0) q.add(i);
-	}
-	while (!q.isEmpty())
-	{
-		for (int i : ins.get(q.poll()))
-		{
-			if (--deg[i] == 0) q.add(i);
-		}
-	}
-	
-	List<Integer> ans = new ArrayList<>();
-	for (int i = 0; i < n; i++)
-	{
-		if (deg[i] == 0) ans.add(i);
-	}
-	return ans;
+public List<Integer> eventualSafeNodes(int[][] graph) {
+    int n = graph.length;
+    List<List<Integer>> ins = new ArrayList<>(); // 入度源
+    for (int i = 0; i < n; i++) ins.add(new ArrayList<>());
+    int[] deg = new int[n]; // 出度
+    for (int i = 0; i < n; i++) {
+        deg[i] = graph[i].length;
+        for (int node : graph[i]) ins.get(node).add(i);
+    }
+    
+    Queue<Integer> q = new LinkedList<>();
+    for (int i = 0; i < n; i++) {
+        if (deg[i] == 0) q.add(i);
+    }
+    while (!q.isEmpty()) {
+        for (int i : ins.get(q.poll())) {
+            if (--deg[i] == 0) q.add(i);
+        }
+    }
+    List<Integer> ans = new ArrayList<>();
+    for (int i = 0; i < n; i++) {
+        if (deg[i] == 0) ans.add(i);
+    }
+    return ans;
 }
 ```
 
@@ -17348,28 +17276,24 @@ public List<Integer> eventualSafeNodes(int[][] graph)
  */
 private int[] color;
 
-public List<Integer> eventualSafeNodes(int[][] graph)
-{
-	int n = graph.length;
-	color = new int[n];
-	List<Integer> ans = new ArrayList<>();
-	for (int i = 0; i < n; i++)
-	{
-		if (safe(graph, i)) ans.add(i);
-	}
-	return ans;
+public List<Integer> eventualSafeNodes(int[][] graph) {
+    int n = graph.length;
+    color = new int[n];
+    List<Integer> ans = new ArrayList<>();
+    for (int i = 0; i < n; i++) {
+        if (safe(graph, i)) ans.add(i);
+    }
+    return ans;
 }
 
-private boolean safe(int[][] graph, int node)
-{
-	if (color[node] != 0) return color[node] == 1;
-	color[node] = -1;
-	for (int i : graph[node])
-	{
-		if (!safe(graph, i)) return false;
-	}
-	color[node] = 1;
-	return true;
+private boolean safe(int[][] graph, int node) {
+    if (color[node] != 0) return color[node] == 1;
+    color[node] = -1;
+    for (int i : graph[node]) {
+        if (!safe(graph, i)) return false;
+    }
+    color[node] = 1;
+    return true;
 }
 ```
 
@@ -17639,32 +17563,30 @@ public int flipgame(int[] fronts, int[] backs) {
  * 记忆化搜索
  * Somnia1337
  */
-private Set<Integer> vals;
+private int[] arr;
+private Set<Integer> val;
 private Map<Integer, Long> memo;
 
-public int numFactoredBinaryTrees(int[] arr)
-{
-	vals = new HashSet<>();
-	for (int n : arr) vals.add(n);
-	memo = new HashMap<>();
-	long ans = 0;
-	for (int n : arr) ans += dfs(n, arr);
-	return (int) (ans % (1e9 + 7));
+public int numFactoredBinaryTrees(int[] arr) {
+    this.arr = arr;
+    val = new HashSet<>();
+    for (int n : arr) val.add(n);
+    memo = new HashMap<>();
+    long ans = 0;
+    for (int n : arr) ans += dfs(n);
+    return (int) (ans % (1e9 + 7));
 }
 
-private long dfs(int val, int[] arr)
-{
-	if (memo.containsKey(val)) return memo.get(val);
-	long ret = 1;
-	for (int n : arr)
-	{
-		if (val % n == 0 && vals.contains(val / n))
-		{
-			ret += dfs(n, arr) * dfs(val / n, arr);
-		}
-	}
-	memo.put(val, ret);
-	return ret;
+private long dfs(int val) {
+    if (memo.containsKey(val)) return memo.get(val);
+    long ret = 1;
+    for (int n : arr) {
+        if (val % n == 0 && this.val.contains(val / n)) {
+            ret += dfs(n) * dfs(val / n);
+        }
+    }
+    memo.put(val, ret);
+    return ret;
 }
 ```
 
@@ -17677,24 +17599,20 @@ private long dfs(int val, int[] arr)
  * 动态规划
  * 灵茶山艾府
  */
-public int numFactoredBinaryTrees(int[] arr)
-{
+public int numFactoredBinaryTrees(int[] arr) {
 	Arrays.sort(arr);
-	int len = arr.length;
+	int n = arr.length;
 	Map<Integer, Integer> idx = new HashMap<>();
-	for (int i = 0; i < len; i++) idx.put(arr[i], i);
+	for (int i = 0; i < n; i++) idx.put(arr[i], i);
 	
-	long[] dp = new long[len];
+	long[] dp = new long[n];
 	long ans = 0;
-	for (int i = 0; i < len; i++)
-	{
+	for (int i = 0; i < n; i++) {
 		int v1 = arr[i];
 		dp[i] = 1;
-		for (int j = 0; j < i; j++)
-		{
+		for (int j = 0; j < i; j++) {
 			int v2 = arr[j];
-			if (v1 % v2 == 0 && idx.containsKey(v1 / v2))
-			{
+			if (v1 % v2 == 0 && idx.containsKey(v1 / v2)) {
 				dp[i] += dp[j] * dp[idx.get(v1 / v2)];
 			}
 		}
@@ -17711,34 +17629,29 @@ public int numFactoredBinaryTrees(int[] arr)
  * 动态规划
  * 灵茶山艾府 Somnia1337
  */
-public int numFactoredBinaryTrees(int[] arr)
-{
-	Arrays.sort(arr);
-	int len = arr.length;
-	Map<Integer, Integer> idx = new HashMap<>();
-	for (int i = 0; i < len; i++) idx.put(arr[i], i);
-	
-	long[] dp = new long[len];
-	long ans = 0;
-	for (int i = 0; i < len; i++)
-	{
-		int v1 = arr[i];
-		dp[i] = 1;
-		int max = (int) Math.sqrt(v1);
-		for (int j = 0; j < i && arr[j] <= max; j++)
-		{
-			if (v1 % arr[j] == 0)
-			{
-				int v2 = arr[j], q = v1 / v2;
-				if (idx.containsKey(q))
-				{
-					dp[i] += dp[j] * dp[idx.get(q)] * (q != v2 ? 2 : 1);
-				}
-			}
-		}
-		ans += dp[i];
-	}
-	return (int) (ans % (1e9 + 7));
+public int numFactoredBinaryTrees(int[] arr) {
+    Arrays.sort(arr);
+    int n = arr.length;
+    Map<Integer, Integer> idx = new HashMap<>();
+    for (int i = 0; i < n; i++) idx.put(arr[i], i);
+    
+    long[] dp = new long[n];
+    long ans = 0;
+    for (int i = 0; i < n; i++) {
+        int v1 = arr[i];
+        dp[i] = 1;
+        int max = (int) Math.sqrt(v1);
+        for (int j = 0; j < i && arr[j] <= max; j++) {
+            if (v1 % arr[j] == 0) {
+                int v2 = arr[j], q = v1 / v2;
+                if (idx.containsKey(q)) {
+                    dp[i] += dp[j] * dp[idx.get(q)] * (q != v2 ? 2 : 1);
+                }
+            }
+        }
+        ans += dp[i];
+    }
+    return (int) (ans % (1e9 + 7));
 }
 ```
 
@@ -20392,21 +20305,15 @@ public List<Integer> powerfulIntegers(int x, int y, int bound) {
  * 哈希表
  * Somnia1337
  */
-public int subarraysDivByK(int[] nums, int k)
-{
-	Map<Integer, Integer> mods = new HashMap<>();
-	mods.put(0, 1); // 前0个元素和为0，余数为0，计数为1
-	int preSum = 0, ans = 0;
-	
-	for (int num : nums)
-	{
-		preSum += num;
-		int mod = Math.floorMod(preSum, k); // 取正余数
-		ans += mods.getOrDefault(mod, 0);
-		mods.merge(mod, 1, Integer::sum);
-	}
-	
-	return ans;
+public int subarraysDivByK(int[] nums, int k) {
+    Map<Integer, Integer> mods = new HashMap<>();
+    mods.put(0, 1); // 前 0 个元素和为 0, 余数为 0, 计数为 1
+    int pre = 0, ans = 0;
+    for (int x : nums) {
+        int mod = Math.floorMod(pre += x, k); // 取正余数
+        ans += mods.merge(mod, 1, Integer::sum) - 1;
+    }
+    return ans;
 }
 ```
 

@@ -2551,7 +2551,7 @@ public int findKthNumber(int n, int k) {
 	long cur = 1; // 从 1 出发
 	k--; // 消除 1 的偏差
 	while (k > 0) {
-		int total = getNodes(n, cur); // 当前结点子树中有效数字的数量
+		int total = getTotal(n, cur); // 当前结点子树中有效数字的数量
 		if (total <= k) { // 向右走 total 步
 			k -= total;
 			cur++;
@@ -2565,9 +2565,8 @@ public int findKthNumber(int n, int k) {
 }
 
 // 计算以 cur 为根的子树的有效结点数量
-private int getNodes(int n, long cur) {
+private int getTotal(int n, long cur) {
 	long next = cur + 1, total = 0; // next: 当前节点右侧右边节点的值
-	long 
 	while (cur <= n) {
 		total += Math.min(n - cur + 1, next - cur);
 		next *= 10;
@@ -2881,7 +2880,7 @@ private int dfs(int t, int idx) {
 反悔贪心，按 `lastDay` 升序排序，大顶堆维护所有已选课程的 `duration`，`day` 维护修读完所有已选课程的天数，遍历 `courses`：
 
 - 如果当前课程 `duration + day <= lastDay`，贪心地修读。
-- 否则，检查之前已选的 `duration` 最大的课程，如果当前课程更短，则进行反悔：取消之前那门课程，转而修读当前课程。这样，节省的时间可能可以修读更多课程。
+- 否则，检查之前已选的 `duration` 最大的课程，如果当前课程更短，则进行反悔：取消之前那门课程，转而修读当前课程。这样，更可能用节省的时间修读更多课程。
 
 ```java
 /**
@@ -2890,7 +2889,7 @@ private int dfs(int t, int idx) {
  */
 public int scheduleCourse(int[][] courses) {
 	Arrays.sort(courses, Comparator.comparingInt(a -> a[1]));
-	PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+	Queue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 	int day = 0;
 	for (int[] c : courses) {
 		int duration = c[0], lastDay = c[1];
@@ -4845,36 +4844,32 @@ private int lowerBound(List<Integer> g, int tar) {
  * 二分查找 + 回溯
  * Somnia1337
  */
-public int minimumTimeRequired(int[] jobs, int k)
-{
-	int len = jobs.length;
-	Arrays.sort(jobs); // 排序，随后优先分配耗时长的工作
-	
-	int l = jobs[len - 1], r = 0; // l初始化为max(jobs)
-	for (int job : jobs) r += job; // r初始化为sum(jobs)
-	while (l <= r)
-	{
-		int m = l + r >> 1;
-		int[] workers = new int[k];
-		if (bt(jobs, workers, m, len - 1)) r = m - 1;
-		else l = m + 1;
-	}
-	
-	return l;
+public int minimumTimeRequired(int[] jobs, int k) {
+    int n = jobs.length;
+    Arrays.sort(jobs); // 排序, 随后优先分配耗时长的工作
+    int l = jobs[n - 1], r = 0; // l 初始化为 max(jobs)
+    for (int job : jobs) r += job; // r 初始化为 sum(jobs)
+    while (l <= r) {
+        int m = l + r >> 1;
+        int[] workers = new int[k];
+        if (bt(jobs, workers, m, n - 1)) r = m - 1;
+        else l = m + 1;
+    }
+    return l;
 }
 
-private boolean bt(int[] jobs, int[] workers, int time, int idx)
-{
-	if (idx == -1) return true;
-	for (int i = workers.length - 1; i >= 0; i--)
-	{
-		if (workers[i] + jobs[idx] > time) continue;
-		workers[i] += jobs[idx];
-		if (bt(jobs, workers, time, idx - 1)) return true;
-		workers[i] -= jobs[idx];
-		if (workers[i] == 0 || workers[i] + jobs[idx] == time) return false; // 剪枝3 // 特别特别重要！2241ms->0ms！！
-	}
-	return false;
+private boolean bt(int[] jobs, int[] workers, int time, int idx) {
+    if (idx == -1) return true;
+    for (int i = workers.length - 1; i >= 0; i--) {
+        if (workers[i] + jobs[idx] > time) continue;
+        workers[i] += jobs[idx];
+        if (bt(jobs, workers, time, idx - 1)) return true;
+        workers[i] -= jobs[idx];
+        // 剪枝 3
+        // 特别特别重要(2241ms -> 0ms)
+        if (workers[i] == 0 || workers[i] + jobs[idx] == time) return false;
+    }
+    return false;
 }
 ```
 
@@ -6116,12 +6111,12 @@ private int[] dp(int x, int fa)
 
 排序，枚举子序列的最大值。设数列 `[a,b,c,d,e]`，取以 `d` 结尾（即作为最大值）的子序列组，讨论最小值：
 
-- 选 `a`，则 `[b,c]` 的选择与否不影响结果，共 $2^2$ 种方案，力量和为 $2^2 \times d^2 \times a$。
-- 选 `b`，则 `[c]` 的选择与否不影响结果，共 $2^1$ 种方案，力量和为 $2^1 \times d^2 \times b$。
+- 选 `a`，则 `[b,c]` 选择与否不影响结果，共 $2^2$ 种方案，力量和为 $2^2 \times d^2 \times a$。
+- 选 `b`，则 `[c]` 选择与否不影响结果，共 $2^1$ 种方案，力量和为 $2^1 \times d^2 \times b$。
 - 选 `c`，共 $2^0$ 种方案，力量和为 $1 \times d^2 \times c$。
 - 选 `d` 本身，即子序列为 `[d]`，力量和为 $d^3$。
 
-因此，以 `d` 结尾时，`d` 及其左侧元素对答案的贡献为 $d^3 + d^2 \times (2^2 \times a + 2^1 \times b + 2^0 \times c)$，令 `s =` $2^2 \times a + 2^1 \times b + 2^0 \times c$，则为 $d^3 + d^2 \times s = d^2 \times (d + s)$。
+因此，以 `d` 结尾时，`d` 及其左侧元素对答案的贡献为 $d^3 + d^2 \times (2^2 \times a + 2^1 \times b + 2^0 \times c)$，记 $2^2 \times a + 2^1 \times b + 2^0 \times c$ 为 `s`，则为 $d^3 + d^2 \times s = d^2 \times (d + s)$。
 
 再以 `e` 结尾，得 $e^3 + e^2 \times (2^3 \times a + 2^2 \times b + 2^1 \times c + 2^0 \times d) = 2 \times s + d$。
 

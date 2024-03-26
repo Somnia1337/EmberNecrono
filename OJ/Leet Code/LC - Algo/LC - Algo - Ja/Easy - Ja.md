@@ -7990,7 +7990,7 @@ public boolean isBoomerang(int[][] points)
 }
 ```
 
-$\vec{P_1P_2}$与$\vec{P_2P_3}$不共线$\iff$$\vec{P_1P_2} \times \vec{P_2P_3} \neq 0$。
+$\vec{P_1P_2}$ 与 $\vec{P_2P_3}$ 不共线 <=> $\vec{P_1P_2} \times \vec{P_2P_3} \neq 0$。
 
 ```java
 /**
@@ -8020,13 +8020,11 @@ public boolean isBoomerang(int[][] points)
  * 模拟
  * Somnia1337
  */
-public int lastStoneWeight(int[] stones)
-{
+public int lastStoneWeight(int[] stones) {
 	int len = stones.length;
 	if (len == 1) return stones[0];
 	else if (len == 2) return Math.abs(stones[0] - stones[1]);
-	while (true)
-	{
+	while (true) {
 		Arrays.sort(stones);
 		if (stones[len - 2] == 0) return stones[len - 1];
 		stones[len - 1] -= stones[len - 2];
@@ -8042,21 +8040,15 @@ public int lastStoneWeight(int[] stones)
  * 最大堆
  * 力扣官方题解
  */
-public int lastStoneWeight(int[] stones)
-{
-	PriorityQueue<Integer> pq = new PriorityQueue<Integer>((a, b) -> b - a);
-	for (int stone : stones)
-	{
+public int lastStoneWeight(int[] stones) {
+	Queue<Integer> pq = new PriorityQueue<Integer>((a, b) -> b - a);
+	for (int stone : stones) {
 		pq.offer(stone);
 	}
-	while (pq.size() > 1)
-	{
+	while (pq.size() > 1) {
 		int a = pq.poll();
 		int b = pq.poll();
-		if (a > b)
-		{
-			pq.offer(a - b);
-		}
+		if (a > b) pq.offer(a - b);
 	}
 	return pq.isEmpty() ? 0 : pq.poll();
 }

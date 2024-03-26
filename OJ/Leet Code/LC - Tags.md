@@ -406,12 +406,12 @@
 
 ### 前后缀分解
 
-| 题目 | 难度 | 价值 |
-| ---- | ---- | ---- |
-| [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/) | 🔴 | 4 |
-| [2680. 最大或值](https://leetcode.cn/problems/maximum-or/) | 🟡 | 4 |
-| [2909. 元素和最小的山形三元组 II](https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/) | 🟡 | 4 |
-| [1737. 满足三条件之一需改变的最少字符数](https://leetcode.cn/problems/change-minimum-characters-to-satisfy-one-of-three-conditions/) | 🟡 | 4 |
+| 题目                                                                                                                   | 难度  | 价值  |
+| -------------------------------------------------------------------------------------------------------------------- | --- | --- |
+| [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/)               | 🔴  | 4   |
+| [1737. 满足三条件之一需改变的最少字符数](https://leetcode.cn/problems/change-minimum-characters-to-satisfy-one-of-three-conditions/) | 🟡  | 4   |
+| [2680. 最大或值](https://leetcode.cn/problems/maximum-or/)                                                               | 🟡  | 4   |
+| [2909. 元素和最小的山形三元组 II](https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/)                            | 🟡  | 4   |
 
 ### 变化量
 

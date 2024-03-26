@@ -1452,7 +1452,7 @@ public int balancedString(String s) {
 
 #前缀和 #哈希表 
 
-`preOdds[i]` 记录前 `i` 个元素中的奇数个数，哈希表计数，累加 `odds.get(preOdds[i] - k)`。
+`pre[i]` 表示前 `i` 个元素中的奇数个数，哈希表计数，累加 `odd.get(pre[i] - k)`。
 
 ```java
 /**
@@ -1466,7 +1466,7 @@ public int numberOfSubarrays(int[] nums, int k) {
 	odd.put(0, 1);
 	int ans = 0;
 	for (int i = 1; i < n + 1; i++) {
-		odd.merge(pre[i] = pre[i - 1] + nums[i - 1] % 2, 1, Integer::sum);
+		odd.merge(pre[i] = pre[i - 1] + (nums[i - 1] & 1), 1, Integer::sum);
 		ans += odd.getOrDefault(pre[i] - k, 0);
 	}
 	return ans;
@@ -1475,7 +1475,7 @@ public int numberOfSubarrays(int[] nums, int k) {
 
 优化：
 
-- 由于 `preOdds[i]` 最大只到 `len`，因此可以用 `int[]` 代替 `Map` 计数。
+- 由于 `pre[i]` 最大只到 `n`，可以用 `int[]` 代替 `Map` 计数。
 - 用 `int` 代替 `int[]`，记录目前为止的奇数个数。
 
 ```java
@@ -4887,7 +4887,7 @@ class Robot {
 
 #变化量 
 
-统计每个值的所有下标，遍历 `values() p`，对每个 `List` 两次遍历，第一次计算首元素的间隔和，第二次计算余下元素的间隔和，每次间隔和的变化为：
+哈希表统计每个值的所有下标，遍历 `values() p`，对每个 List 两次遍历，第一次计算首元素的间隔和，第二次计算其余元素的间隔和，每次间隔和的变化为：
 
 - 左侧有 `i` 个元素的间隔加长了 `p[i] - p[i - 1]`
 - 右侧有 `l - i` 个元素的间隔缩短了 `p[i] - p[i - 1]`
@@ -4899,29 +4899,23 @@ class Robot {
  * 哈希表
  * 灵茶山艾府
  */
-public long[] getDistances(int[] arr)
-{
-	Map<Integer, List<Integer>> pos = new HashMap<>();
-	for (int i = 0; i < arr.length; i++)
-	{
-		pos.putIfAbsent(arr[i], new ArrayList<>());
-		pos.get(arr[i]).add(i);
-	}
-	
-	long[] ans = new long[arr.length];
-	for (List<Integer> p : pos.values())
-	{
-		long cur = 0, l = p.size(); // cur: 当前元素的间隔和
-		for (int idx : p) cur += idx - p.get(0);
-		ans[p.get(0)] = cur;
-		for (int i = 1; i < l; i++)
-		{
-			cur += (2L * i - l) * (p.get(i) - p.get(i - 1));
-			ans[p.get(i)] = cur;
-		}
-	}
-	
-	return ans;
+public long[] getDistances(int[] arr) {
+    Map<Integer, List<Integer>> pos = new HashMap<>();
+    for (int i = 0; i < arr.length; i++) {
+        pos.computeIfAbsent(arr[i], e -> new ArrayList<>()).add(i);
+    }
+    
+    long[] ans = new long[arr.length];
+    for (List<Integer> p : pos.values()) {
+        long cur = 0, l = p.size(); // cur: 当前元素的间隔和
+        for (int idx : p) cur += idx - p.get(0);
+        ans[p.get(0)] = cur;
+        for (int i = 1; i < l; i++) {
+            cur += (2L * i - l) * (p.get(i) - p.get(i - 1));
+            ans[p.get(i)] = cur;
+        }
+    }
+    return ans;
 }
 ```
 
@@ -5381,7 +5375,7 @@ public int minPathCost(int[][] grid, int[][] moveCost) {
 
 #二分查找 #回溯 
 
-与 [1723. 完成所有工作的最短时间](https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs/) 相似。二分查找 + 回溯检查。
+与 [1723. 完成所有工作的最短时间](https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs/) 相似，二分查找 + 回溯检查。
 
 ```java
 /**
@@ -7476,9 +7470,9 @@ public int countCompleteComponents(int n, int[][] edges) {
 		vis[e[0]] = vis[e[1]] = true;
 	}
 	
-	// 每个结点所属分量内的结点列表
-	// 事实上只会用到代表元的表
-	// 哈希表作用是去重
+	// 每个结点所属分量内的结点列表,
+	// 事实上只会用到代表元的表,
+	// 哈希表去重
 	Set<Integer>[] g = new HashSet[n];
 	Arrays.setAll(g, k -> new HashSet<>());
 	for (int[] e : edges) {
@@ -9159,45 +9153,33 @@ public List<String> getWordsInLongestSubsequence(int n, String[] words, int[] gr
 
 #暴力 #前缀和 
 
-求前缀和，`preSum[i]` 表示前 `i` 个字符中 `'1'` 的数量。
+求前缀和，`pre[i]` 表示前 `i` 个字符中 `'1'` 的数量。
 
-维护最小长度与起点，枚举终点与可能的起点，满足条件时更新最小长度与起点。
+维护最小长度与起点，枚举终点和可能的起点，满足条件时更新最小长度和起点。
 
 ```java
 /**
  * 枚举
  * Somnia1337
  */
-public String shortestBeautifulSubstring(String s, int k)
-{
-	if (k == 1 && s.contains("1")) return "1";
-	int len = s.length();
-	char[] chars = s.toCharArray();
+public String shortestBeautifulSubstring(String s, int k) {
+	char[] chs = s.toCharArray();
+	int n = chs.length;
+	int[] pre = new int[n + 1];
+	for (int i = 1; i <= n; i++) pre[i] = pre[i - 1] + chs[i - 1] - '0';
 	
-	// 求前缀和
-	int[] preSum = new int[len + 1];
-	preSum[0] = 0; // 前0个元素没有1
-	for (int i = 1; i < len + 1; i++)
-	{
-		preSum[i] = preSum[i - 1] + chars[i - 1] - '0';
-	}
-	
-	int minL = len + 1, start = -1;
-	for (int i = 1; i < len + 1; i++) // 枚举终点
-	{
-		for (int j = Math.max(0, i - minL); j < i; j++) // 枚举起点
-		{
-			// 更新最小长度与起点
-			// 条件：(1的个数为k)&(start未更新|i-j<minL|新串字典序小于旧串)
-			if (preSum[i] - preSum[j] == k && (start == -1 || minL > i - j || s.substring(j, j + minL).compareTo(s.substring(start,start + minL)) < 0))
-			{
+	int minL = n + 1, st = -1;
+	for (int i = 1; i < n + 1; i++) { // 枚举终点
+		for (int j = Math.max(0, i - minL); j < i; j++) { // 枚举起点
+			// 更新最小长度和起点
+			// 1 的个数为 k && (st 未更新 || i-j<minL || 新串字典序更小)
+			if (pre[i] - pre[j] == k && (st == -1 || minL > i - j || s.substring(j, j + minL).compareTo(s.substring(st, st + minL)) < 0)) {
 				minL = i - j;
-				start = j;
+				st = j;
 			}
 		}
 	}
-	
-	return start >= 0 ? s.substring(start, start + minL) : "";
+	return st >= 0 ? s.substring(st, st + minL) : "";
 }
 ```
 
@@ -9306,30 +9288,26 @@ private long[] productExceptSelf(long[] nums)
  * 前后缀分解
  * 陈梁
  */
-public int minimumSum(int[] nums)
-{
-	int len = nums.length;
-	int[] lMin = new int[len];
-	int[] rMin = new int[len];
-	
-	lMin[0] = nums[0];
-	for (int i = 1; i < len; i++)
-	{
-		lMin[i] = Math.min(lMin[i - 1], nums[i]);
-	}
-	rMin[len - 1] = nums[len - 1];
-	for (int i = len - 2; i >= 0; i--)
-	{
-		rMin[i] = Math.min(rMin[i + 1], nums[i]);
-	}
-	
-	int ans = Integer.MAX_VALUE;
-	for (int j = 1; j < len - 1; j++)
-	{
-		if (nums[j] > lMin[j] && nums[j] > rMin[j]) ans = Math.min(lMin[j] + nums[j] + rMin[j], ans);
-	}
-	
-	return ans < Integer.MAX_VALUE ? ans : -1;
+public int minimumSum(int[] nums) {
+    int n = nums.length;
+    int[] lMin = new int[n], rMin = new int[n];
+    
+    lMin[0] = nums[0];
+    for (int i = 1; i < n; i++) {
+        lMin[i] = Math.min(lMin[i - 1], nums[i]);
+    }
+    rMin[n - 1] = nums[n - 1];
+    for (int i = n - 2; i >= 0; i--) {
+        rMin[i] = Math.min(rMin[i + 1], nums[i]);
+    }
+    
+    int ans = Integer.MAX_VALUE;
+    for (int j = 1; j < n - 1; j++) {
+        if (nums[j] > lMin[j] && nums[j] > rMin[j]) {
+            ans = Math.min(lMin[j] + nums[j] + rMin[j], ans);
+        }
+    }
+    return ans < Integer.MAX_VALUE ? ans : -1;
 }
 ```
 
@@ -9371,7 +9349,7 @@ public int minChanges(String s)
 }
 ```
 
-另一种思路：美丽 $\iff$ 对于每个偶数下标 `i`，有 `s[i] == s[i+1]`，如果不符合，改变一个字符即可。
+另一种思路：美丽 <=> 对于每个偶数下标 `i`，有 `s[i] == s[i+1]`，如果不符合，改变一个字符即可。
 
 ```java
 /**
