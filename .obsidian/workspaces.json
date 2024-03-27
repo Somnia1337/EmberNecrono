@@ -157,9 +157,9 @@
                   "state": {
                     "file": "Private/Plan/Plan - Index.canvas",
                     "viewState": {
-                      "x": -1090,
-                      "y": -450,
-                      "zoom": -0.36274041943342
+                      "x": -900,
+                      "y": -260,
+                      "zoom": -0.2818204240498526
                     }
                   },
                   "pinned": true
@@ -180,8 +180,7 @@
                   "pinned": true
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "vertical"
@@ -247,7 +246,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Private/Plan/Plan - Daily.md"
+                    "file": "Private/Plan/Plan - Index.canvas"
                   }
                 }
               },
@@ -295,8 +294,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "dac8b449968fa3df",
-      "mtime": "2024-03-24T21:45:46+08:00"
+      "active": "33b2492862674a03",
+      "mtime": "2024-03-27T10:00:49+08:00"
     },
     "Intro": {
       "main": {

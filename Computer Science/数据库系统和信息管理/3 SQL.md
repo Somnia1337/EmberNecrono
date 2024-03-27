@@ -354,3 +354,5 @@ HAVING
 	SUM(sale_amount) > SOME (SELECT sale_amount FROM Sales) 
 	AND SUM(sale_amount) <= ALL (SELECT sale_amount FROM Sales);
 ```
+
+👉 [[4 中级 SQL]]

@@ -8324,15 +8324,17 @@ public List<Integer> largestDivisibleSubset(int[] nums) {
     // 排序后遍历
     Arrays.sort(nums);
     int max = 0; // 最大子集大小
-    for (int i = 0; i < n; i++) { // 枚举i
-        for (int j = 0; j < i; j++) { // 枚举j=0..i
-            if (nums[i] % nums[j] == 0) dp[i] = Math.max(dp[j] + 1, dp[i]); // nums[i]可扩充以nums[j]结尾的子集
+    for (int i = 0; i < n; i++) { // 枚举 i
+        for (int j = 0; j < i; j++) { // 枚举 j=0..i
+            if (nums[i] % nums[j] == 0) dp[i] = Math.max(dp[j] + 1, dp[i]); // nums[i] 可扩充以 nums[j] 结尾的子集
         }
         max = Math.max(dp[i], max);
     }
     
-    // 倒序遍历，添加到解集
-    int it = n - 1, pre = 0; // pre表示目标子集的任意元素，用于判断一个元素是否属于目标子集 // 最初不知道目标子集的任何元素，初始化为0，找到任何元素
+    // 倒序遍历, 添加到解集
+    // pre 表示目标子集的任意元素, 用于判断一个元素是否属于目标子集
+    // 最初不知道目标子集的任何元素, 初始化为 0
+    int it = n - 1, pre = 0;
     List<Integer> ans = new ArrayList<>();
     while (max > 0) {
         // 判断是否属于目标子集
@@ -10604,22 +10606,21 @@ private boolean canWin(int state, int n, int m)
  * 动态规划
  * Somnia1337
  */
-public int findSubstringInWraproundString(String s)
-{
-	int last = 1, cur;
-	int[] end = new int[26];
-	end[s.charAt(0) - 'a'] = 1;
-	for (int i = 1; i < s.length(); i++)
-	{
-		char c = s.charAt(i);
-		if ((c + 26 - s.charAt(i - 1)) % 26 == 1) cur = last + 1;
-		else cur = 1;
-		end[c - 'a'] = Math.max(cur, end[c - 'a']);
-		last = cur;
-	}
-	int ans = 0;
-	for (int e : end) ans += e;
-	return ans;
+public int findSubstringInWraproundString(String s) {
+    int pre = 1, cur;
+    int[] end = new int[26];
+    end[s.charAt(0) - 'a'] = 1;
+    for (int i = 1; i < s.length(); i++) {
+        char c = s.charAt(i);
+        if ((c + 26 - s.charAt(i - 1)) % 26 == 1) cur = pre + 1;
+        else cur = 1;
+        end[c - 'a'] = Math.max(cur, end[c - 'a']);
+        pre = cur;
+    }
+    
+    int ans = 0;
+    for (int e : end) ans += e;
+    return ans;
 }
 ```
 
@@ -18619,39 +18620,36 @@ public int[] advantageCount(int[] nums1, int[] nums2)
  * 枚举
  * Somnia1337
  */
-public int lenLongestFibSubseq(int[] arr)
-{
-	int len = arr.length;
-	Set<Integer> pos = new HashSet<>();
-	for (int n : arr) pos.add(n);
-	
-	int ans = 0;
-	for (int i = 0; i < len - 2; i++)
-	{
-		int n1 = arr[i];
-		for (int j = i + 1; j < len - 1; j++)
-		{
-			int n2 = arr[j], n3 = n1 + n2, cur = 2, hold = n3;
-			while (pos.contains(n3))
-			{
-				cur++;
-				n1 = n2;
-				n2 = n3;
-				n3 = n1 + n2;
-			}
-			if (n3 != hold) ans = Math.max(cur, ans);
-			n1 = arr[i];
-		}
-	}
-	return ans;
+public int lenLongestFibSubseq(int[] arr) {
+    int n = arr.length;
+    Set<Integer> vis = new HashSet<>();
+    for (int x : arr) vis.add(x);
+    
+    int ans = 0;
+    for (int i = 0; i < n - 2; i++) {
+        int x1 = arr[i];
+        for (int j = i + 1; j < n - 1; j++) {
+            int x2 = arr[j], x3 = x1 + x2;
+            int cur = 2, hold = x3;
+            while (vis.contains(x3)) { // 题目保证了严格递增
+                cur++;
+                x1 = x2;
+                x2 = x3;
+                x3 = x1 + x2;
+            }
+            if (x3 != hold) ans = Math.max(cur, ans);
+            x1 = arr[i];
+        }
+    }
+    return ans;
 }
 ```
 
 2. 动态规划
 
-`dp[i][j]` 表示 `arr[i]` 为末元素、`arr[j]` 为次末元素时子问题的答案，用哈希表存储 `<元素, 下标>`。
+`dp[i][j]` 表示以 `arr[i]` 为末元素、`arr[j]` 为次末元素的子问题答案，哈希表记录 `<元素, 下标>`。
 
-从 0 正序枚举 `i`，从 `i - 1` 倒序枚举 `j`，`dp[i][j]` 对应的上个元素为 `arr[i] - arr[j]`，如果存在，状态转移方程 `dp[i][j] = max(dp[j][pos.get(arr[i] - arr[j])] + 1, 3)`，3 表示只要 `arr[i] - arr[j]` 存在就已经凑出了长为 3 的子序列。
+从 `0` 正序枚举 `i`，从 `i - 1` 倒序枚举 `j`，`dp[i][j]` 对应的上个元素为 `arr[i] - arr[j]`，如果存在，状态转移方程 `dp[i][j] = max(dp[j][pos[arr[i] - arr[j]]] + 1, 3)`，3 表示只要 `arr[i] - arr[j]` 存在就已经凑出了长为 3 的子序列。
 
 剪枝：
 
@@ -18663,25 +18661,22 @@ public int lenLongestFibSubseq(int[] arr)
  * 动态规划
  * 宫水三叶
  */
-public int lenLongestFibSubseq(int[] arr)
-{
-	int len = arr.length;
-	Map<Integer, Integer> pos = new HashMap<>();
-	for (int i = 0; i < len; i++) pos.put(arr[i], i);
-	
-	int[][] dp = new int[len][len];
-	int ans = 0;
-	for (int i = 0; i < len; i++)
-	{
-		for (int j = i - 1; j >= 0 && j + 2 > ans; j--) // 剪枝 2
-		{
-			if (arr[i] - arr[j] >= arr[j]) break; // 剪枝 1
-			if (!pos.containsKey(arr[i] - arr[j])) continue;
-			dp[i][j] = Math.max(dp[j][pos.get(arr[i] - arr[j])] + 1, 3);
-			ans = Math.max(ans, dp[i][j]);
-		}
-	}
-	return ans;
+public int lenLongestFibSubseq(int[] arr) {
+    int n = arr.length;
+    Map<Integer, Integer> pos = new HashMap<>();
+    for (int i = 0; i < n; i++) pos.put(arr[i], i);
+    
+    int[][] dp = new int[n][n];
+    int ans = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i - 1; j >= 0 && j + 2 > ans; j--) { // 剪枝 2
+            if (arr[i] - arr[j] >= arr[j]) break; // 剪枝 1
+            if (!pos.containsKey(arr[i] - arr[j])) continue;
+            dp[i][j] = Math.max(dp[j][pos.get(arr[i] - arr[j])] + 1, 3);
+            ans = Math.max(dp[i][j], ans);
+        }
+    }
+    return ans;
 }
 ```
 
@@ -20325,8 +20320,8 @@ public int subarraysDivByK(int[] nums, int k) {
 
 DFS：
 
-- 如果不够，直接向父结点要，不用管父结点够不够（父结点也向父节点要，因此最终都会有）
-- 如果多余，多出的值给父结点
+- 如果不够，直接向父结点要，不用管父结点够不够（父结点也向父节点要，因此最终都会有）。
+- 如果多余，多出的值给父结点。
 
 ```java
 /**
@@ -20335,19 +20330,17 @@ DFS：
  */
 private int ans;
 
-public int distributeCoins(TreeNode root)
-{
-	ans = 0;
-	dfs(root);
-	return ans;
+public int distributeCoins(TreeNode root) {
+    ans = 0;
+    dfs(root);
+    return ans;
 }
 
-private int dfs(TreeNode root)
-{
-	if (root == null) return 0;
-	int need = 1 - (root.val - dfs(root.left) - dfs(root.right)); // 与 1 的差距
-	ans += Math.abs(need);
-	return need;
+private int dfs(TreeNode root) {
+    if (root == null) return 0;
+    int need = 1 - (root.val - dfs(root.left) - dfs(root.right)); // 与 1 的差距
+    ans += Math.abs(need);
+    return need;
 }
 ```
 

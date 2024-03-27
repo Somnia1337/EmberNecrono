@@ -297,7 +297,7 @@ public int maxUncrossedLines(int[] nums1, int[] nums2) {
 
 #动态规划 
 
-`dp[i]` 表示 `arr[0:i]` 的子问题答案。以 `arr=[1,9,6,3], k=3` 为例：
+`dp[i]` 表示 `arr[0:i]` 的子问题答案， `arr=[1,9,6,3], k=3` 为例：
 
 - `dp[1] = 1*1 = 1`。
 - `dp[2] = 2*9 = 18`。

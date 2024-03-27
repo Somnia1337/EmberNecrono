@@ -977,23 +977,20 @@ public int maximalRectangle(char[][] matrix) {
  * 动态规划
  * Somnia1337
  */
-public int numDistinct(String s, String t)
-{
-	int l1 = s.length(), l2 = t.length();
-	if (l1 < l2) return 0;
-	int[][] dp = new int[l1 + 1][l2 + 1];
-	for (int i = 0; i <= l1; i++) dp[i][0] = 1;
-	for (int i = 1; i < l1 + 1; i++)
-	{
-		char c1 = s.charAt(i - 1);
-		for (int j = 1; j < l2 + 1; j++)
-		{
-			char c2 = t.charAt(j - 1);
-			dp[i][j] = dp[i - 1][j];
-			if (c1 == c2) dp[i][j] += dp[i - 1][j - 1];
-		}
-	}
-	return dp[l1][l2];
+public int numDistinct(String s, String t) {
+    int n1 = s.length(), n2 = t.length();
+    if (n1 < n2) return 0;
+    int[][] dp = new int[n1 + 1][n2 + 1];
+    for (int i = 0; i <= n1; i++) dp[i][0] = 1;
+    for (int i = 1; i < n1 + 1; i++) {
+        char c1 = s.charAt(i - 1);
+        for (int j = 1; j < n2 + 1; j++) {
+            char c2 = t.charAt(j - 1);
+            dp[i][j] = dp[i - 1][j];
+            if (c1 == c2) dp[i][j] += dp[i - 1][j - 1];
+        }
+    }
+    return dp[n1][n2];
 }
 ```
 
@@ -1576,94 +1573,87 @@ public int maxProfit(int k, int[] prices)
 - 遍历 `word`，如果存在未在 `board` 中出现的字母，必然搜不到，不必继续。
 - 针对题目测试用例，对于开头多个字母相同的情况，如 `"aaaaab"`，将其反转后进行搜索。因为反转不会影响搜索的结果，且先搜索 `'b'` 显然更优。
 
-后一条尤为重要，仅此一个反转，runtime 从超时优化到 17 ms beats 99%。
+后一条尤为重要，仅此一个反转，从超时优化到 17 ms 99%。
 
 ```java
 /**
  * 回溯
  * Somnia1337
  */
-private boolean[] found; // 记录words中已经找到的单词
+private final int[] dirs = {0, 1, 0, -1, 0};
+private int rows, cols;
+private boolean[][] vis;
+private boolean[] found; // 记录 words 中已经找到的单词
 
-public List<String> findWords(char[][] board, String[] words)
-{
-	int rows = board.length, cols = board[0].length;
-	int len = words.length;
-	found = new boolean[len];
-	
-	// 记录每个字母在board中的所有位置
-	Map<Character, List<List<Integer>>> pos = new HashMap<>();
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			List<List<Integer>> p = pos.getOrDefault(board[i][j], new ArrayList<>());
-			p.add(List.of(i, j));
-			pos.put(board[i][j], p);
-		}
-	}
-	
-	// 搜索words中的每个单词
-	boolean[][] vis = new boolean[rows][cols];
-	for (int k = 0; k < len; k++)
-	{
-		String word = words[k];
-		
-		// 检查是否有可能搜索到
-		boolean valid = true;
-		for (char c : word.toCharArray())
-		{
-			// 如果board中根本未出现word的某个字母，则不可能搜索到
-			if (!pos.containsKey(c))
-			{
-				valid = false;
-				break;
-			}
-		}
-		if (!valid) continue;
-		
-		// 剪枝：如果开头出现很多重复字母，如"aaaaab"，则将word反转
-		// 因为反转字母的顺序不会影响搜索的结果，以'b'为起点显然更优
-		if (word.length() >= 5 && word.startsWith(word.substring(0, 1).repeat(3)))
-		{
-			StringBuilder reverse = new StringBuilder(word);
-			word = reverse.reverse().toString();
-		}
-		
-		// 以首字母出现的所有位置为起点，开始搜索
-		List<List<Integer>> p = pos.get(word.charAt(0));
-		for (List<Integer> xy : p)
-		{
-			dfs(board, word, xy.get(0), xy.get(1), vis, 0, k);
-			// 剪枝：已经找到，不再搜索
-			if (found[k]) break;
-		}
-	}
-	
-	// 添加到解集
-	List<String> ans = new ArrayList<>();
-	for (int k = 0; k < len; k++)
-	{
-		if (found[k]) ans.add(words[k]);
-	}
-	return ans;
+public List<String> findWords(char[][] board, String[] words) {
+    rows = board.length;
+    cols = board[0].length;
+    int n = words.length;
+    found = new boolean[n];
+    
+    // 记录每个字母在 board 中的所有位置
+    List<int[]>[] pos = new List[26];
+    Arrays.setAll(pos, e -> new ArrayList<>());
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            pos[board[i][j] - 'a'].add(new int[]{i, j});
+        }
+    }
+    
+    vis = new boolean[rows][cols];
+    for (int k = 0; k < n; k++) {
+        String word = words[k];
+        
+        // 检查是否有可能搜索到
+        boolean valid = true;
+        for (char c : word.toCharArray()) {
+            // 如果 board 中根本未出现 word 的某个字母, 则不可能搜索到
+            if (pos[c - 'a'].isEmpty()) {
+                valid = false;
+                break;
+            }
+        }
+        if (!valid) continue;
+        
+        // 剪枝: 如果开头出现很多重复字母, 如 "aaaaab", 则反转 word
+        if (word.length() >= 5 && word.startsWith(word.substring(0, 1).repeat(3))) {
+            StringBuilder rev = new StringBuilder(word);
+            word = rev.reverse().toString();
+        }
+        
+        // 以首字母出现的所有位置为起点, 开始搜索
+        for (int[] xy : pos[word.charAt(0) - 'a']) {
+            dfs(board, word, xy[0], xy[1], 0, k);
+            // 剪枝: 已经找到, 停止搜索
+            if (found[k]) break;
+        }
+    }
+    
+    // 添加到解集
+    List<String> ans = new ArrayList<>();
+    for (int k = 0; k < n; k++) {
+        if (found[k]) ans.add(words[k]);
+    }
+    return ans;
 }
 
-private void dfs(char[][] board, String tar, int x, int y, boolean[][] vis, int idx, int k)
-{
-	if (idx == tar.length())
-	{
-		found[k] = true;
-		return;
-	}
-	if (found[k] || !(x >= 0 && x < board.length && y >= 0 && y < board[0].length) || vis[x][y] || board[x][y] != tar.charAt(idx)) return;
-	
-	vis[x][y] = true;
-	dfs(board, tar, x - 1, y, vis, idx + 1, k);
-	dfs(board, tar, x + 1, y, vis, idx + 1, k);
-	dfs(board, tar, x, y - 1, vis, idx + 1, k);
-	dfs(board, tar, x, y + 1, vis, idx + 1, k);
-	vis[x][y] = false;
+private void dfs(char[][] b, String t, int x, int y, int idx, int k) {
+    if (idx == t.length()) {
+        found[k] = true;
+        return;
+    }
+    if (!inBound(x, y) || vis[x][y] || b[x][y] != t.charAt(idx)) return;
+    
+    vis[x][y] = true;
+    for (int p = 0; p < 4; p++) {
+        dfs(b, t, x + dirs[p], y + dirs[p + 1], idx + 1, k);
+        if (found[k]) break;
+    }
+    vis[x][y] = false;
+}
+
+private boolean inBound(int x, int y) {
+    return x >= 0 && x < rows && y >= 0 && y < cols;
 }
 ```
 
@@ -2434,22 +2424,19 @@ class Point
  * 动态规划
  * livorth
  */
-public boolean canCross(int[] stones)
-{
-	int len = stones.length;
-	boolean[][] dp = new boolean[len][len];
-	dp[0][0] = true;
-	for (int i = 1; i < len; i++)
-	{
-		for (int j = i - 1; j >= 0; j--)
-		{
-			int k = stones[i] - stones[j];
-			if (k > j + 1) break;
-			dp[i][k] = dp[j][k - 1] || dp[j][k] || dp[j][k + 1];
-			if (i == len - 1 && dp[i][k]) return true;
-		}
-	}
-	return false;
+public boolean canCross(int[] stones) {
+    int n = stones.length;
+    boolean[][] dp = new boolean[n][n];
+    dp[0][0] = true;
+    for (int i = 1; i < n; i++) {
+        for (int j = i - 1; j >= 0; j--) {
+            int k = stones[i] - stones[j];
+            if (k > j + 1) break;
+            dp[i][k] = dp[j][k - 1] || dp[j][k] || dp[j][k + 1];
+            if (i == n - 1 && dp[i][k]) return true;
+        }
+    }
+    return false;
 }
 ```
 
@@ -4066,6 +4053,7 @@ public String shortestCommonSupersequence(String str1, String str2) {
 			else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
 		}
 	}
+	
 	StringBuilder ans = new StringBuilder();
 	int i = l1, j = l2;
 	while (i > 0 || j > 0) {
@@ -5772,7 +5760,9 @@ public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
 
 #动态规划 
 
-`dp` 开到 `[rows+1][cols+1][k]`，`dp[i][j][v]` 表示到达 `grid[i-1][j-1]` 的对 `k` 余数为 `v` 的方案数，答案即为 `dp[rows][cols][0]`。初始化 `dp[1][0][0]` 或 `dp[0][1][0]` 为 `1`，转移方程见代码。
+`dp` 开到 `[rows+1][cols+1][k]`，`dp[i][j][v]` 表示到达 `grid[i-1][j-1]` 的、余 `k` 得 `v` 的方案数，答案即为 `dp[rows][cols][0]`。
+
+初始化 `dp[1][0][0]` 或 `dp[0][1][0]` 为 `1`，转移方程见代码。
 
 ```java
 /**

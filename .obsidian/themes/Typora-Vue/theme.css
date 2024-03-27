@@ -26,7 +26,7 @@ body {
   --text-normal: #34495e;
   --background-secondary: #ffffff;
   --code-background: #f8f8f8;
-  --cus-inline-code-text: #e96900;
+  --cus-inline-code-text: var(--interactive-accent);
   --cus-code-block-border: #f4f4f4;
   --cus-table-header: #f2f2f2;
   --cus-table-gap-tr: #fafafa;
@@ -230,5 +230,29 @@ img {
 }
 
 .markdown-rendered li code {
+  color: var(--cus-inline-code-text);
+}
+
+.markdown-rendered h1 code {
+  color: var(--cus-inline-code-text);
+}
+
+.markdown-rendered h2 code {
+  color: var(--cus-inline-code-text);
+}
+
+.markdown-rendered h3 code {
+  color: var(--cus-inline-code-text);
+}
+
+.markdown-rendered h4 code {
+  color: var(--cus-inline-code-text);
+}
+
+.markdown-rendered h5 code {
+  color: var(--cus-inline-code-text);
+}
+
+.markdown-rendered h6 code {
   color: var(--cus-inline-code-text);
 }

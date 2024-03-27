@@ -89,6 +89,7 @@
 | [SpaceX ship reaches space but ends in fireball](https://www.nationalgeographic.com/science/article/spacex-starship-rocket-test-mars)                                                                         | @2024.03.15 | 3          | 4    |
 | [Why the equinox ushers in the arrival of spring](https://www.nationalgeographic.com/science/article/equinoxes)                                                                                               | @2024.03.17 | 2          | 1    |
 | [Is chocolate actually good for you?](https://www.nationalgeographic.com/science/article/chocolate-health-benefits)                                                                                           | @2024.03.24 | 2          | 4    |
+| [Want to strengthen your bones? Look beyond vitamin D](https://www.nationalgeographic.com/premium/article/vitamin-d-a-b-c-e-k-bone-health)                                                                    | @2024.03.27 | 3          | 4    |
 
 ### History & Culture
 
