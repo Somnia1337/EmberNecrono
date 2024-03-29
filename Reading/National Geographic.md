@@ -114,3 +114,4 @@
 | [The ancient—and mysterious—history of ‘abracadabra’](https://www.nationalgeographic.com/premium/article/abracadabra-meaning-malaria-spell-magic)                                         | @2024.03.04 | 3          | 3    |
 | [Film on Uganda’s ‘People’s President' Bobi Wine gains Oscar nomination](https://www.nationalgeographic.com/culture/article/interview-bobi-wine-uganda-peoples-president-arrest)          | @2024.03.10 | 2          | 2    |
 | [Who was Saint Patrick and why does he have a day?](https://www.nationalgeographic.com/culture/article/saint-patricks-day)                                                                | @2024.03.18 | 3          | 1    |
+| [What exactly is a Yankee?](https://www.nationalgeographic.com/history/article/yankee-origin-mlb-dutch-colonists)                                                                         | @2024.03.29 | 2          | 2    |

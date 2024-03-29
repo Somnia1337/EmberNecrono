@@ -153,4 +153,65 @@ code ends
 end start
 ```
 
+### 批量数据的传递
+
+需要传递给子程序的参数较多时，将它们保存在内存中，然后将该内存空间的首地址保存在寄存器中。
+
+将 `data` 段的字符串转换为大写：
+
+```asmatmel
+assume cs:code
+
+data segment
+	db 'conversation'
+data ends
+
+code segment
+start:  mov ax, data
+		mov ds, ax
+		mov si, 0  ; ds:si 指向字符串所在空间的首地址
+		mov cx, 12 ; cx 存放字符串的长度
+		call capital
+		mov ax, 4C00H
+		int 21H
+		
+capital:and byte ptr [si], 11011111B
+		inc si
+		loop capital
+		ret
+code ends
+end start
+```
+
+### 寄存器冲突的问题
+
+修改上文的程序，使字符串以 `0` 结尾：
+
+```asmatmel
+data segment
+	db 'conversation', 0
+data ends
+```
+
+现在，可以检测 `0` 判断字符串结束：
+
+```asmatmel
+capital:mov cl, [si]
+		mov ch, 0
+		jcxz done
+		and byte ptr [si], 11011111B
+		inc si
+		jmp short capital
+done:   ret
+```
+
+现在，caller 和 callee 在 CX 的使用上产生冲突，只需在调用 callee 前保存 caller 的上下文即可，框架如：
+
+```text
+子程序: 子程序的寄存器入栈
+		子程序内容
+		子程序的寄存器出栈
+		ret / retf
+```
+
 👉 
