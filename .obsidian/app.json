@@ -25,5 +25,6 @@
   "foldIndent": true,
   "legacyEditor": false,
   "autoPairMarkdown": true,
-  "smartIndentList": true
+  "smartIndentList": true,
+  "useTab": true
 }
