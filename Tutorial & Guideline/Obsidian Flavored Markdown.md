@@ -97,3 +97,65 @@ some code
 表格的第 2 行使用任意数量的 `-` 将内容与标题分隔，`:` 指示了对齐方式。
 
 表格末行对于一段长文本使用 `<br>` 进行换行（HTML 语法），以免该列过长。
+
+# 6. 标注
+
+> 这是一个引用。
+
+除了引用，Obsidian 还支持很多标注，即特定类型的文本块，使用：
+
+```markdown
+> [!<tag>] <title>
+```
+
+> [!note] 一个 Note（自定义标题，默认为类型对应的单词）
+> 
+> `[!note]`
+
+> [!abstract]
+> 
+> `[!abstract]` / `[!summary]` / `[!tldr]`
+
+> [!info]
+> 
+> `[!info]`
+
+> [!todo]
+> 
+> `[!todo]`
+
+> [!tip]
+> 
+> `[!tip]` / `[!hint]` / `[!important]`
+
+> [!success]
+> 
+> `[!success]` / `[!check]` / `[!done]`
+
+> [!question]
+> 
+> `[!question]` / `[!help]` / `[!faq]`
+
+> [!warning]
+> 
+> `[!warning]` / `[!caution]` / `[!attention]`
+
+> [!failure]
+> 
+> `[!failure]` / `[!fail]` / `[!missing]`
+
+> [!danger]
+> 
+> `[!danger]` / `[!error]`
+
+> [!bug]
+> 
+> `[!bug]`
+
+> [!example]
+> 
+> `[!example]`
+
+> [!quote]
+> 
+> `[!quote]` / `[!site]`

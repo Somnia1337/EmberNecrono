@@ -1773,11 +1773,11 @@ public int countDigitOne(int n)
 public int[] maxSlidingWindow(int[] nums, int k) {
 	int n = nums.length;
 	Deque<Integer> dq = new ArrayDeque<>();
-	int[] ans = new int[n - k + 1];
 	for (int i = 0; i < k; i++) {
 		while (!dq.isEmpty() && nums[dq.peek()] < nums[i]) dq.poll();
 		dq.push(i);
 	}
+	int[] ans = new int[n - k + 1];
 	ans[0] = nums[dq.peekLast()];
 	for (int i = k; i < n; i++) {
 		if (dq.peekLast() < i - k + 1) dq.pollLast();
