@@ -10,16 +10,12 @@ mov ax, [0]
 
 `[bx]` 也表示一个内存单元，与 `[0]` 的区别在于其偏移地址为 `bx` 中的数据。
 
----
-
-用 `(x)` 表示一个寄存器或内存单元中的内容，如：
+以后，用 `(x)` 表示一个寄存器或内存单元中的内容，如：
 
 - `(ax)` <=> AX 中的内容。
 - `(21000H) = 0010H` <=> `2000:1000` 处的内容为 `0010H`。
 - `(ax) = ((ds)*16 + 2)` <=> `mov ax, [2]`。
 - `(sp) = (sp) - 2`，`((ss)*16 + (sp)) = ax` <=> `push ax`。
-
----
 
 用 `idata` 表示常数，如 `mov ax, [idata]` <=> `mov ax, [1]` ... `mov ax, [n]` ...
 
@@ -46,17 +42,18 @@ CPU 执行 `loop` 指令的过程：
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov ax, 2
+	
 	mov cx, 11
 s:  add ax, ax
 	loop s
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
@@ -66,17 +63,18 @@ end
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov ax, 0
+	
 	mov cx, 123
 s:  add ax, 456
 	loop s
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
@@ -85,27 +83,28 @@ end
 计算 `FFFF:0006` 单元中的数值 $\times$ $3$，结果存储在 DX 中：
 
 - 一个字节型数据的范围在 $[0, 255]$，乘以 $3$ 后不会超出 DX 字型数据所能容纳的 $65535$。
-- 将该数据赋给 AX，用 DX 进行累加（执行 3 次 `(dx) = (dx) + (ax)`。
+- 将该数据赋给 AX，用 DX 进行累加（执行 3 次 `(dx) = (dx) + (ax)`）。
 - 将一个字节型数据赋给一个 $16$ 位寄存器，应该令 `(ah) = 0`、`(al) = FFFF:0006H`。
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov ax, 0FFFFH ; FFFFH 必须加前导 0
 	mov ds, ax
 	mov bx, 6
 	mov al, [bx]
 	mov ah, 0
 	mov dx, 0
+	
 	mov cx, 3
 s:  add dx, ax
 	loop s
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
@@ -168,8 +167,8 @@ mov ax, ds:[0]
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov ax, 0FFFFH
 	mov ds, ax
 	mov dx, 0
@@ -190,12 +189,12 @@ code segment
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
-有大量重复的相似片段：
+有大量重复的片段：
 
 ```asmatmel
 mov al, ds:[XH]
@@ -207,14 +206,14 @@ add dx, ax
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov ax, 0FFFFH
 	mov ds, ax
 	mov bx, 0      ; 初始化 ds:bx 指向 FFFF:0
 	mov dx, 0      ; 初始化累加寄存器 (dx)=0
-	mov cx, 12     ; 初始化循环计数寄存器 (cx)=12
 	
+	mov cx, 12     ; 初始化循环计数寄存器 (cx)=12
 s:  mov al, [bx]
 	mov ah, 0
 	add dx, ax     ; 间接向 (dx) 加上 ((ds)*16 + (bx))
@@ -223,8 +222,8 @@ s:  mov al, [bx]
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
@@ -253,7 +252,7 @@ mov ax, ss:[0]
 
 将 `FFFF:0` ~ `FFFF:B` 中的数据复制到 `0:0200` ~ `0:020B`：
 
-目标内存段可以被 `0020:0` ~ `0020:B` 等价描述，以与源内存段使用相同的偏移地址访问。
+目标内存段可由 `0020:0` ~ `0020:B` 等价描述，以与源内存段的偏移地址相同。
 
 初始化 `x = 0`，循环 `BH` 次：
 
@@ -262,11 +261,11 @@ mov ax, ss:[0]
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov bx, 0      ; 偏移地址从 0 开始
-	mov cx, 12     ; 循环 12 次
 	
+	mov cx, 12     ; 循环 12 次
 s:  mov ax, 0FFFFH
 	mov ds, ax     ; (ds) = 0FFFFH
 	mov dl, [bx]   ; 将 FFFF:bx 中的数据送入 DL
@@ -278,8 +277,8 @@ s:  mov ax, 0FFFFH
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
@@ -287,16 +286,15 @@ end
 
 ```asmatmel
 assume cs:code
-code segment
 
+code segment
 	mov ax, 0FFFFH
 	mov ds, ax
 	mov ax, 0020H
 	mov es, ax      ; 用 ES 存储目标内存段的段地址
-	
 	mov bx, 0
-	mov cx, 12
 	
+	mov cx, 12
 s:  mov dl, [bx]
 	mov es:[bx], dl ; 使用段前缀显式指定段地址
 	inc bx
@@ -304,8 +302,8 @@ s:  mov dl, [bx]
 	
 	mov ax, 4C00H
 	int 21H
-
 code ends
+
 end
 ```
 
