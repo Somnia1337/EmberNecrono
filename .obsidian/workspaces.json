@@ -157,9 +157,9 @@
                   "state": {
                     "file": "Private/Plan/Plan - Index.canvas",
                     "viewState": {
-                      "x": -900,
+                      "x": -890,
                       "y": -270,
-                      "zoom": -0.2538060478802562
+                      "zoom": 0
                     }
                   },
                   "pinned": true
@@ -295,7 +295,7 @@
         }
       },
       "active": "33b2492862674a03",
-      "mtime": "2024-03-29T11:26:02+08:00"
+      "mtime": "2024-03-31T21:28:51+08:00"
     },
     "Intro": {
       "main": {
