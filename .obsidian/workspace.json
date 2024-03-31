@@ -29,7 +29,7 @@
               "type": "markdown",
               "state": {
                 "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -151,8 +151,10 @@
   },
   "active": "67fbb707231150bd",
   "lastOpenFiles": [
-    "Private/Plan/Plan - Daily.md",
     "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+    "README.md",
+    "README-ZH.md",
+    "Private/Plan/Plan - Daily.md",
     "未命名.md",
     "DRAFT.md",
     "OJ/蓝桥杯/蓝桥杯 - A 组/蓝桥杯 - 2023 A.md",
@@ -161,7 +163,6 @@
     "Computer Science/深入理解计算机系统/3 程序的机器级表示.md",
     "Private/Plan/Plan - 2024/Plan - 2024 - Weekly.md",
     "Private/Plan/Plan - Index.canvas",
-    "README.md",
     "Private/Diary/Diary - 2024/Diary - 2024.03.md",
     "_Attachment/Private/Diary/Diary - 2024/Snipaste_240330_235709.png",
     "GIT.md",
@@ -179,7 +180,6 @@
     "Computer Science/系统级编程.md",
     "_Attachment/Week 05.pdf",
     "Computer Science/汇编语言/8 数据处理的两个基本问题.md",
-    "Computer Science/计算机网络/2 应用层.md",
     "_Attachment/Computer Science/计算机网络/Snipaste_240328_172811.png",
     "_Attachment/Computer Science/计算机网络/Snipaste_240328_172525.png",
     "_Attachment/Computer Science/计算机网络/Snipaste_240328_172114.png",
