@@ -233,6 +233,10 @@ img {
   color: var(--cus-inline-code-text);
 }
 
+.markdown-rendered table code {
+  color: var(--cus-inline-code-text);
+}
+
 .markdown-rendered h1 code {
   color: var(--cus-inline-code-text);
 }
