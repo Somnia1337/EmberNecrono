@@ -1,7 +1,5 @@
 @2024.04.02 | Week 06
 
-卢剑歌 2022141461145
-
 ### 1. `nslookup`
 
 > 1\. Run nslookup to obtain the IP address of a Web server in Asia. What is the IP address of that server?
