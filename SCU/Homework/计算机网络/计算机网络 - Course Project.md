@@ -1,11 +1,11 @@
-### wavefront_sentinel (Web Server)
+### [WavefrontSentinel](https://github.com/Somnia1337/WavefrontSentinel) (Web Server)
 
 > [!info] Requirements
 > 
 > - The web server should respond to HTTP requests from user agents correctly.
 > - The web server should be capable of serving at least 2 HTTP user agents simultaneously.
 
-### echo_unity_archivist (Email User Agent)
+### EchoUnityArchivist (Email User Agent)
 
 > [!info] Requirements
 > 
@@ -13,7 +13,7 @@
 > - Users can send their emails through the agent.
 > - The agent can access at least 2 real email servers.
 
-### quest_resonance_spreader (Query-flooding-based Resource Sharer)
+### QuestResonanceSpreader (Query-flooding-based Resource Sharer)
 
 > [!info] Requirements
 > 
@@ -21,7 +21,7 @@
 > - Each peer can search for the needed resource using the query flooding approach.
 > - Peers can download the resource from the first peer who sent the query hit message in C/S mode.
 
-### infinite_mingle_universe (Instant Messaging Utility)
+### InfiniteMingleUniverse (Instant Messaging Utility)
 
 > [!info] Requirements
 > 
