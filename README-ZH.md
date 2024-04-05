@@ -1,6 +1,6 @@
 [English](https://github.com/Somnia1337/EmberNecrono/blob/main/README.md)
 
-# [EmberNecrono](https://github.com/Somnia1337/EmberNecrono)
+# [炽烬死灵录](https://github.com/Somnia1337/EmberNecrono)
 
 <div align=center>
   <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/EmberNecrono_2048.png?raw=true" width="100px">
