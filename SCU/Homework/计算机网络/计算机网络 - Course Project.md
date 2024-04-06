@@ -5,7 +5,7 @@
 > - The web server should respond to HTTP requests from user agents correctly.
 > - The web server should be capable of serving at least 2 HTTP user agents simultaneously.
 
-### EchoUnityArchivist (Email User Agent)
+### [EchoUnityArchivist](https://github.com/Somnia1337/EchoUnityArchivist) (Email User Agent)
 
 > [!info] Requirements
 > 
