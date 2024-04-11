@@ -32,3 +32,15 @@ private static long pow(long x, long p) {
 	return ret;
 }
 ```
+
+```java
+long ret = 1;
+while (p > 0) {
+	if ((p & 1) == 1) {
+		ret = ret * x;
+	}
+	x = x * x;
+	p >>= 1;
+}
+return ret;
+```
