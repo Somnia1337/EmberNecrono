@@ -44,3 +44,18 @@ while (p > 0) {
 }
 return ret;
 ```
+
+#### 并查集
+
+```java
+private static int find(int[] root, int i) {
+	if (root[i] != i) {
+		root[i] = find(root, root[i]);
+	}
+	return root[i];
+}
+
+private static void union(int[] root, int x, int y) {
+	root[find(root, x)] = find(root, y);
+}
+```
