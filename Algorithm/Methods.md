@@ -214,11 +214,7 @@ private int solve(int n) {
 
 ```java
 private int find(int[] root, int i) {
-	while (root[i] != i) {
-		root[i] = root[root[i]];
-		i = root[i];
-	}
-	return i;
+	return root[i] == i ? i : (root[i] = find(root, root[i]));
 }
 
 private void union(int[] root, int x, int y) {
