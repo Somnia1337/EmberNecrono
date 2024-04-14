@@ -115,3 +115,4 @@
 | [Film on Uganda’s ‘People’s President' Bobi Wine gains Oscar nomination](https://www.nationalgeographic.com/culture/article/interview-bobi-wine-uganda-peoples-president-arrest)          | @2024.03.10 | 2          | 2    |
 | [Who was Saint Patrick and why does he have a day?](https://www.nationalgeographic.com/culture/article/saint-patricks-day)                                                                | @2024.03.18 | 3          | 1    |
 | [What exactly is a Yankee?](https://www.nationalgeographic.com/history/article/yankee-origin-mlb-dutch-colonists)                                                                         | @2024.03.29 | 2          | 2    |
+| [We’re in Mercury retrograde. Here’s what that really means.](https://www.nationalgeographic.com/history/article/mercury-retrograde-astronomy-history)                                    | @2024.04.14 | 2          | 3    |
