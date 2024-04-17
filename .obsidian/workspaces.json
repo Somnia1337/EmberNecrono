@@ -166,21 +166,15 @@
                 }
               },
               {
-                "id": "dac8b449968fa3df",
+                "id": "a950803b60ad2f18",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Private/Plan/Plan - Daily.md",
-                    "mode": "preview",
-                    "backlinks": false,
-                    "source": false
-                  },
-                  "pinned": true
+                  "type": "empty",
+                  "state": {}
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -245,9 +239,7 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "Private/Plan/Plan - Index.canvas"
-                  }
+                  "state": {}
                 }
               },
               {
@@ -310,8 +302,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "33b2492862674a03",
-      "mtime": "2024-04-11T08:29:44+08:00"
+      "active": "a950803b60ad2f18",
+      "mtime": "2024-04-17T11:15:56+08:00"
     },
     "Intro": {
       "main": {

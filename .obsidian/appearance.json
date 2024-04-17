@@ -3,7 +3,7 @@
   "theme": "system",
   "interfaceFontFamily": "Microsoft YaHei UI",
   "textFontFamily": "Inter,钉钉进步体,Microsoft JhengHei",
-  "monospaceFontFamily": "JetBrains Mono,Source Code Pro",
+  "monospaceFontFamily": "JetBrains Mono",
   "translucency": false,
   "nativeMenus": false,
   "baseFontSize": 18,

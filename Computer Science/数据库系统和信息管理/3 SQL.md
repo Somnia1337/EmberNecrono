@@ -51,8 +51,7 @@ ALTER TABLE Section
 
 ```sql
 ALTER TABLE Section
-DROP
-room_number;
+	DROP room_number;
 ```
 
 删除 `Course` 的所有元组：
@@ -127,7 +126,7 @@ WHERE Course.course_id = Section.course_id;
 SELECT title,
        semester
 FROM Course
-         NATURAL JOIN Section;
+	NATURAL JOIN Section;
 ```
 
 ### 字符串
@@ -156,7 +155,7 @@ WHERE title LIKE '_____'; -- 匹配恰好有 5 个字符的字符串
 ```sql
 SELECT title
 FROM Course
-WHERE title LIKE 'abc\%def%'; -- 匹配以 'abc%def' 开头的字符串
+WHERE title LIKE 'abc\%def%' ESCAPE '/'; -- 匹配以 'abc%def' 开头的字符串
 ```
 
 用 `*` 指代全部属性：
@@ -285,9 +284,11 @@ WHERE title IN ('Biology', 'Geology');
 ```sql
 SELECT course_id
 FROM Course
-WHERE credits >= ALL (SELECT credits
-                     FROM Course
-                     WHERE title LIKE '%bio%');
+WHERE credits >= ALL (
+	SELECT credits
+	 FROM Course
+	 WHERE title LIKE '%bio%'
+);
 ```
 
 ---
