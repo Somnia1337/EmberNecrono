@@ -62,7 +62,7 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter out = new PrintWriter(System.out);
         
-        final long POW = (1L << 63) - 1;
+        final long POW = 1L << 62;
         int n = Integer.parseInt(in.readLine());
         
         StringTokenizer st = new StringTokenizer(in.readLine());

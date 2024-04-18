@@ -41,5 +41,39 @@
 
 
 ```java
+import java.io.*;
 
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter out = new PrintWriter(System.out);
+        
+        int n = Integer.parseInt(in.readLine());
+        while (n-- > 0) {
+            char[] s = in.readLine().toCharArray();
+            int ed = s.length - 1;
+            boolean v = false;
+            while (s[ed] == 'l' || s[ed] == 'q' || s[ed] == 'b') {
+                if (s[0] == s[ed] && pal(s, ed)) {
+                    v = true;
+                    break;
+                }
+                ed--;
+            }
+            out.println(v || pal(s, ed) ? "YES" : "NO");
+        }
+        
+        out.flush();
+        out.close();
+    }
+    
+    private static boolean pal(char[] s, int ed) {
+        for (int i = 0, j = ed; i < j; i++, j--) {
+            if (s[i] != s[j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
 ```
