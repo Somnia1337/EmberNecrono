@@ -17,17 +17,25 @@
 输入
 
 ```text
-
+4 4 2
+4 2 3 1
+2 1 2 1
+4 4 1 1
+2 2 2 4
 ```
 
 范围：
 
-- 
+- $1 \leqslant$ `n`，`m`，`T` $\leqslant 10^5$
+- $1 \leqslant$ `R`，`C` $\leqslant 10^8$
+- $1 \leqslant$ `x1`，`x2` $\leqslant$ `n`
+- $1 \leqslant$ `y1`，`y2` $\leqslant$ `m`
 
 输出
 
 ```text
-
+4
+0
 ```
 
 解释：

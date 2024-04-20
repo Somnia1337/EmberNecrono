@@ -158,7 +158,7 @@
                     "file": "Private/Plan/Plan - Index.canvas",
                     "viewState": {
                       "x": -890,
-                      "y": -260,
+                      "y": -235,
                       "zoom": 0
                     }
                   },
@@ -166,7 +166,7 @@
                 }
               },
               {
-                "id": "a950803b60ad2f18",
+                "id": "910b4a226cd0b342",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
@@ -302,8 +302,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "a950803b60ad2f18",
-      "mtime": "2024-04-17T11:15:56+08:00"
+      "active": "910b4a226cd0b342",
+      "mtime": "2024-04-20T15:16:40+08:00"
     },
     "Intro": {
       "main": {

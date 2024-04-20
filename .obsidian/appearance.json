@@ -8,7 +8,7 @@
   "nativeMenus": false,
   "baseFontSize": 18,
   "showViewHeader": true,
-  "cssTheme": "Typora-Vue",
+  "cssTheme": "Ember",
   "enabledCssSnippets": [
     "Code Tab",
     "colors",

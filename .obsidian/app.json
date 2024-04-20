@@ -12,7 +12,7 @@
   "rightToLeft": false,
   "vimMode": false,
   "spellcheckLanguages": null,
-  "spellcheck": false,
+  "spellcheck": true,
   "defaultViewMode": "source",
   "pdfExportSettings": {
     "includeName": true,
@@ -22,9 +22,10 @@
     "downscalePercent": 100
   },
   "focusNewTab": true,
-  "foldIndent": true,
+  "foldIndent": false,
   "legacyEditor": false,
   "autoPairMarkdown": true,
   "smartIndentList": true,
-  "useTab": true
+  "useTab": true,
+  "foldHeading": false
 }
