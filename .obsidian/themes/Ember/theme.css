@@ -26,7 +26,8 @@ body {
 .theme-light {
   --text-normal: #34495e;
   --background-secondary: #ffffff;
-  --code-background: #f8f8f880;
+  /* --code-background: #f8f8f880; */
+  --code-background: hsla(var(--interactive-accent-hsl), 0.1);
   --cus-inline-code-text: var(--interactive-accent);
   --cus-code-block-border: #f4f4f4;
   --cus-table-header: #f2f2f2;
@@ -37,7 +38,7 @@ body {
 
 .theme-dark {
   --text-normal: #eeeeee;
-  --code-background: #1a1a1a;
+  --code-background: #1a1a1a80;
   --cus-inline-code-text: var(--interactive-accent);
   --cus-code-block-border: #1c1c1c;
   --cus-table-header: #171717;
@@ -68,7 +69,8 @@ body {
 
 .markdown-source-view.mod-cm6 .code-block-flair:hover,
 .markdown-rendered button.copy-code-button:hover {
-  background-color: hsla(var(--interactive-accent-hsl), 0.1);
+  /* background-color: hsla(var(--interactive-accent-hsl), 0.1); */
+  background-color: white;
 }
 
 .cm-s-obsidian span.cm-inline-code,
@@ -76,7 +78,7 @@ body {
   color: var(--cus-inline-code-text);
 }
 
-.markdown-rendered pre {
+/* .markdown-rendered pre {
   border: 1px solid var(--cus-code-block-border);
 }
 
@@ -91,7 +93,7 @@ body {
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
   border-left: 1px solid var(--cus-code-block-border);
   border-right: 1px solid var(--cus-code-block-border);
-}
+} */
 
 /* Code Block END */
 
@@ -163,6 +165,11 @@ table {
 .markdown-rendered em {
   color: hsla(var(--interactive-accent-hsl), 0.65);
   text-decoration: underline;
+}
+
+.cm-s-obsidian span.cm-highlight,
+.markdown-rendered mark {
+  background-color: hsla(var(--interactive-accent-hsl), 0.25);
 }
 
 .markdown-rendered li code,

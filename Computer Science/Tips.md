@@ -18,13 +18,11 @@ Get-FileHash <D:\example(不加双引号)> -Algorithm md5 | Format-List
 
 #### 删除只读文件
 
-假设要删除整个目录 `D:\example`，在终端中使用：
+假设要删除整个目录 `D:/example`：
 
-```text
+```sh
 icacls "D:\example" /t /q /c /reset
 ```
-
-这样就可以删除整个目录了。
 
 #### Windows 状态栏时间显秒
 
@@ -33,17 +31,25 @@ icacls "D:\example" /t /q /c /reset
 3. 右键 `Advanced`，新建一个 DWORD 32 位值，命名为 `ShowSecondsInSystemClock`。
 4. 双击新建的值，设置值为 `1`。
 
+#### Powershell 运行 `.exe`
+
+运行当前目录下的 `abc.exe`：
+
+```sh
+./abc
+```
+
 #### 语言更新
 
 ##### Rust
 
-```text
+```sh
 rustup update
 ```
 
 ##### Go
 
-```text
+```sh
 go install golang.org/dl/go<version>@latest
 go<version> download
 ```
