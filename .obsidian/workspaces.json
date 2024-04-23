@@ -166,11 +166,18 @@
                 }
               },
               {
-                "id": "910b4a226cd0b342",
+                "id": "5343738c1efa0fa6",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
-                  "type": "empty",
-                  "state": {}
+                  "type": "markdown",
+                  "state": {
+                    "file": "Private/Plan/Plan - Daily.md",
+                    "mode": "preview",
+                    "backlinks": false,
+                    "source": false
+                  },
+                  "pinned": true
                 }
               }
             ],
@@ -233,13 +240,16 @@
           {
             "id": "9dcd13e17669b1d4",
             "type": "tabs",
+            "dimension": 46.568627450980394,
             "children": [
               {
                 "id": "0ce62af74faa4eb4",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {}
+                  "state": {
+                    "file": "Private/Plan/Plan - Daily.md"
+                  }
                 }
               },
               {
@@ -258,6 +268,7 @@
           {
             "id": "8cf1e91e844c4b04",
             "type": "tabs",
+            "dimension": 53.431372549019606,
             "children": [
               {
                 "id": "4bf01b8ecbb5b957",
@@ -270,16 +281,13 @@
                 }
               },
               {
-                "id": "7183d525bfef2f88",
+                "id": "233dc7f8e9802c66",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
-                  "type": "markdown",
+                  "type": "image",
                   "state": {
-                    "file": "Tutorial & Guideline/Done Manifesto.md",
-                    "mode": "preview",
-                    "backlinks": false,
-                    "source": false
+                    "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
                   },
                   "pinned": true
                 }
@@ -302,8 +310,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "910b4a226cd0b342",
-      "mtime": "2024-04-20T15:16:40+08:00"
+      "active": "5343738c1efa0fa6",
+      "mtime": "2024-04-21T23:52:04+08:00"
     },
     "Intro": {
       "main": {

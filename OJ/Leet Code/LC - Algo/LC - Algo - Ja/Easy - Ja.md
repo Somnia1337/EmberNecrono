@@ -3680,15 +3680,14 @@ public int findContentChildren(int[] g, int[] s)
  * 暴力
  * Somnia1337
  */
-public boolean repeatedSubstringPattern(String s)
-{
+public boolean repeatedSubstringPattern(String s) {
 	int len = s.length();
-	for (int i = 1; i <= len / 2; i++)
-	{
+	for (int i = 1; i <= len / 2; i++) {
 		if (len % i != 0) continue;
 		int times = len / i;
-		if (s.equals(s.substring(0, i)
-					  .repeat(times))) return true;
+		if (s.equals(s.substring(0, i).repeat(times))) {
+			return true;
+		}
 	}
 	return false;
 }
@@ -3696,18 +3695,15 @@ public boolean repeatedSubstringPattern(String s)
 
 2. 拼接 + 子串
 
-将两个`s`拼接，去头尾各1个字符，如果仍包含`s`则说明`s`可由子串重复若干次构成。
+将两个 `s` 拼接，去头尾各 1 个字符，如果仍包含 `s` 则说明 `s` 可由子串重复若干次构成。
 
 ```java
 /**
  * 拼接 + 子串
  * Goodlucky
- * @improver Somnia1337
  */
-public boolean repeatedSubstringPattern(String s)
-{
-	return (s + s).substring(1, s.length() * 2 - 1)
-				  .contains(s);
+public boolean repeatedSubstringPattern(String s) {
+	return (s + s).substring(1, s.length() * 2 - 1).contains(s);
 }
 ```
 
