@@ -39,6 +39,14 @@ icacls "D:\example" /t /q /c /reset
 ./abc
 ```
 
+#### Markdown 导出 PDF 强制另起一页
+
+在需要强制另起一页的地方插入：
+
+```html
+<div style="page-break-after: always"></div>
+```
+
 #### 语言更新
 
 ##### Rust
