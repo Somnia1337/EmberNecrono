@@ -2,7 +2,7 @@
   "accentColor": "#3884ff",
   "theme": "system",
   "interfaceFontFamily": "Microsoft YaHei UI",
-  "textFontFamily": "Inter,钉钉进步体",
+  "textFontFamily": "Inter,霞鹜文楷等宽",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": false,
   "nativeMenus": false,
@@ -16,8 +16,8 @@
     "bg_test",
     "grid_background",
     "eye-protection-color",
-    "style_tweaks",
     "cursor_test",
-    "pdf"
+    "pdf",
+    "horizontal"
   ]
 }

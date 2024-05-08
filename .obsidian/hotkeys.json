@@ -305,20 +305,20 @@
       "key": "B"
     }
   ],
-  "editor:toggle-blockquote": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "R"
-    }
-  ],
   "editor:toggle-bullet-list": [
     {
       "modifiers": [
         "Mod"
       ],
       "key": "L"
+    }
+  ],
+  "editor:toggle-blockquote": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "."
     }
   ]
 }

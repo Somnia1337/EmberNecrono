@@ -12,16 +12,3 @@
   background-repeat: space;
   background-attachment: fixed;
 }
-
-/* gradient horizontal bar */
-.markdown-source-view.mod-cm6 hr,
-.markdown-rendered hr {
-  border: 0;
-  height: 2px;
-  background-image: linear-gradient(
-    to right,
-    #ffffff,
-    var(--interactive-accent),
-    #ffffff
-  );
-}
