@@ -4,43 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "8758f12e4949858a",
+        "id": "6f958b5dd0bfa52d",
         "type": "tabs",
         "children": [
           {
-            "id": "33b2492862674a03",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Private/Plan/Plan - Index.canvas",
-                "viewState": {
-                  "x": -930,
-                  "y": -235,
-                  "zoom": 0
-                }
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "5343738c1efa0fa6",
+            "id": "67fbb707231150bd",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Private/Plan/Plan - Daily.md",
+                "file": "README.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "pinned": true
             }
+          },
+          {
+            "id": "be770c7df8b704bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +94,6 @@
       {
         "id": "9dcd13e17669b1d4",
         "type": "tabs",
-        "dimension": 46.568627450980394,
         "children": [
           {
             "id": "0ce62af74faa4eb4",
@@ -107,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Private/Plan/Plan - Daily.md"
+                "file": "README.md"
               }
             }
           },
@@ -127,7 +121,6 @@
       {
         "id": "8cf1e91e844c4b04",
         "type": "tabs",
-        "dimension": 53.431372549019606,
         "children": [
           {
             "id": "4bf01b8ecbb5b957",
@@ -138,21 +131,8 @@
               "state": {},
               "pinned": true
             }
-          },
-          {
-            "id": "233dc7f8e9802c66",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
-              },
-              "pinned": true
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -160,19 +140,36 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": true,
-      "graph:查看关系图谱": true,
       "canvas:新建白板": false,
-      "templates:插入模板": true,
+      "templates:插入模板": false,
+      "graph:查看关系图谱": false,
+      "switcher:打开快速切换": false,
       "workspaces:管理工作区布局": true,
-      "remotely-save:Remotely Save": false,
-      "command-palette:打开命令面板": true
+      "remotely-save:Remotely Save": true,
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "5343738c1efa0fa6",
+  "active": "67fbb707231150bd",
   "lastOpenFiles": [
-    "Private/Plan/Plan - Index.canvas",
     "Private/Plan/Plan - Daily.md",
+    "DRAFT.md",
+    "Private/Plan/Plan - Index.canvas",
+    "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 08-1：Memory Debug.md",
+    "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 08-2：Binary Bomb.md",
+    "SCU/Lab/数据库系统和信息管理 - 实验/数据库系统和信息管理 - 实验 01：SQLite.md",
+    "SCU/Lab/软件工程导论 - 实验/软件工程导论 - 实验 01：UML.md",
+    "SCU/Lab/计算机网络 - 实验/计算机网络 - 实验 01：Intro.md",
+    "SCU/Lab/数据库系统和信息管理 - 实验",
+    "SCU/Lab",
+    "Computer Science/Tips.md",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_172810.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_172301.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_172203.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_171747.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_171735.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_170858.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_170641.png",
+    "_Attachment/SCU/Homework/系统级编程/Snipaste_240512_170432.png",
     "Private/Plan/Plan - 2024/Plan - 02.Spring.md",
     "README.md",
     "Tutorial & Guideline/Obsidian Flavored Markdown.md",
@@ -183,7 +180,6 @@
     "Misc/Minecraft.md",
     "Private/Plan/Plan - 2024/Plan - 2024 - Weekly.md",
     "Private/Plan/Plan - 2024/Plan - 2024 - Archive.md",
-    "DRAFT.md",
     "Private/Diary/Diary - 2023/Diary - 2023.12.md",
     "Private/Diary/Diary - 2023/Diary - 2023.11.md",
     "Private/Diary/Diary - 2023/Diary - 2023.06.md",
@@ -193,30 +189,14 @@
     "Private/Diary/Diary - 2024/Diary - 2024.05.md",
     "Private/Log/Log - 2024/Log - 2024.05.md",
     "Private/Log/Log - 2024/Log - 2024.04.md",
-    "Private/Log/Log - 2024/Log - 2024.03.md",
-    "Private/Log/Log - 2024/Log - 2024.02.md",
-    "Private/Log/Log - 2024/Log - 2024.01.md",
-    "Private/Diary/Diary - 2024/Diary - 2024.04.md",
-    "Private/Diary/Diary - 2024/Diary - 2024.03.md",
-    "Private/Diary/Diary - 2024/Diary - 2024.02.md",
     "SCU/Exercise/毛概 - 习题",
     "Project/Rust Project",
     "Project",
-    "_Attachment/Computer Science/计算机网络/Snipaste_240512_092002.png",
-    "_Attachment/Computer Science/计算机网络/Snipaste_240512_091925.png",
-    "_Attachment/SCU/Homework/系统级编程/Snipaste_240511_101010.png",
-    "_Attachment/SCU/Homework/系统级编程/Snipaste_240511_100804.png",
-    "_Attachment/SCU/Homework/系统级编程/Snipaste_240511_095902.png",
-    "_Attachment/SCU/Homework/系统级编程/Snipaste_240511_095754.png",
-    "_Attachment/SCU/Homework/系统级编程/Snipaste_240511_095708.png",
-    "_Attachment/SCU/Homework/系统级编程/Snipaste_240511_095554.png",
     "_Attachment/SCU/Homework/计算机网络/计算机网络 - 实验/计算机网络 - 实验 07：eNSP 2",
     "_Attachment/SCU/Homework/计算机网络/计算机网络 - 实验/新建文件夹",
     "_Attachment/SCU/Homework/计算机网络/计算机网络 - 实验/计算机网络 - 实验 06：eNSP 1",
     "_Attachment/Computer Science/计算机网络/MSS 与 MTU.png.crswap",
     "_Attachment/SCU/Homework/计算机网络/计算机网络 - 实验/计算机网络 - 实验 06：eNSP",
-    "_Attachment/SCU/Homework/软件工程导论/新建文件夹",
-    "_Attachment/SCU/Homework/软件工程导论",
     "Private/Plan/Plan - Kanban.canvas",
     "未命名.canvas",
     "Start-Up Project.canvas",
