@@ -27,5 +27,6 @@
   "autoPairMarkdown": true,
   "smartIndentList": true,
   "useTab": true,
-  "foldHeading": false
+  "foldHeading": false,
+  "showRibbon": true
 }
