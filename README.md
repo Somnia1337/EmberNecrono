@@ -14,12 +14,4 @@ The notes Somnia1337 took with Obsidian in Markdown.
 
 I recommend using [Obsidian](https://obsidian.md/) - the Markdown editor I've been using - to read & edit my notes, it offers an elegant and fluent experience.
 
-<div align=center>
-  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-1_v0.6.png?raw=true">
-</div>
-
-<div align=center>
-  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-2_v0.6.png?raw=true">
-</div>
-
 Click [here](https://github.com/Somnia1337/EmberNecrono/archive/refs/heads/main.zip) to download all the notes and attachments as a `.zip` file, then unzip it and open the whole folder as an Obsidian vault.
