@@ -4,38 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "6f958b5dd0bfa52d",
+        "id": "8758f12e4949858a",
         "type": "tabs",
         "children": [
           {
-            "id": "67fbb707231150bd",
+            "id": "33b2492862674a03",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Private/Plan/Plan - Index.canvas",
+                "viewState": {
+                  "x": -930,
+                  "y": -235,
+                  "zoom": 0
+                }
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "5343738c1efa0fa6",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Private/Plan/Plan - Daily.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "pinned": true
             }
-          },
-          {
-            "id": "be770c7df8b704bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,6 +99,7 @@
       {
         "id": "9dcd13e17669b1d4",
         "type": "tabs",
+        "dimension": 46.568627450980394,
         "children": [
           {
             "id": "0ce62af74faa4eb4",
@@ -101,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Private/Plan/Plan - Daily.md"
               }
             }
           },
@@ -121,6 +127,7 @@
       {
         "id": "8cf1e91e844c4b04",
         "type": "tabs",
+        "dimension": 53.431372549019606,
         "children": [
           {
             "id": "4bf01b8ecbb5b957",
@@ -131,8 +138,21 @@
               "state": {},
               "pinned": true
             }
+          },
+          {
+            "id": "233dc7f8e9802c66",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
+              },
+              "pinned": true
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -140,18 +160,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": true,
       "canvas:新建白板": false,
-      "templates:插入模板": false,
-      "graph:查看关系图谱": false,
-      "switcher:打开快速切换": false,
+      "templates:插入模板": true,
       "workspaces:管理工作区布局": true,
-      "remotely-save:Remotely Save": true,
-      "command-palette:打开命令面板": false
+      "remotely-save:Remotely Save": false,
+      "command-palette:打开命令面板": true
     }
   },
-  "active": "67fbb707231150bd",
+  "active": "5343738c1efa0fa6",
   "lastOpenFiles": [
+    "Private/Plan/Plan - Index.canvas",
     "Private/Plan/Plan - Daily.md",
+    "Private/Plan/Plan - 2024/Plan - 02.Spring.md",
     "README.md",
     "Tutorial & Guideline/Obsidian Flavored Markdown.md",
     "README-ZH.md",
@@ -160,9 +182,7 @@
     "Private/Pitfall.md",
     "Misc/Minecraft.md",
     "Private/Plan/Plan - 2024/Plan - 2024 - Weekly.md",
-    "Private/Plan/Plan - Index.canvas",
     "Private/Plan/Plan - 2024/Plan - 2024 - Archive.md",
-    "Private/Plan/Plan - 2024/Plan - 24.春.md",
     "DRAFT.md",
     "Private/Diary/Diary - 2023/Diary - 2023.12.md",
     "Private/Diary/Diary - 2023/Diary - 2023.11.md",
@@ -179,7 +199,6 @@
     "Private/Diary/Diary - 2024/Diary - 2024.04.md",
     "Private/Diary/Diary - 2024/Diary - 2024.03.md",
     "Private/Diary/Diary - 2024/Diary - 2024.02.md",
-    "Private/Diary/Diary - 2024/Diary - 2024.01.md",
     "SCU/Exercise/毛概 - 习题",
     "Project/Rust Project",
     "Project",
