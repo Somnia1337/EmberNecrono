@@ -15,11 +15,11 @@ Somnia1337 使用 Obsidian 记录的 Markdown 笔记。
 我推荐使用 [Obsidian](https://obsidian.md/)——我使用的 Markdown 编辑器——对我的笔记进行阅读 & 编辑，它的使用体验优雅、流畅。
 
 <div align=center>
-  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-1_v0.6.png?raw=true">
+  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-1_v0.7.png?raw=true">
 </div>
 
 <div align=center>
-  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-2_v0.6.png?raw=true">
+  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-2_v0.7.png?raw=true">
 </div>
 
 单击 [此处](https://github.com/Somnia1337/EmberNecrono/archive/refs/heads/main.zip) 将所有笔记和附件下载到一个 `.zip` 文件，解压缩后，将整个文件夹作为一个 Obsidian 仓库打开。
