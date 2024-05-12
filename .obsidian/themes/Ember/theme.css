@@ -179,8 +179,18 @@ table {
 .markdown-rendered h3 code,
 .markdown-rendered h4 code,
 .markdown-rendered h5 code,
-.markdown-rendered h6 code {
+.markdown-rendered h6 code,
+.callout code {
   color: var(--cus-inline-code-text);
 }
 
 /* Color Tweak END */
+
+/* Ban Annoying Vault-Profile Hover Tag START */
+
+.workspace-sidedock-vault-profile {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ban Annoying Vault-Profile Hover Tag END */
