@@ -1,12 +1,8 @@
-/*
-[Obsidian-Typora-Vue-Theme](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme) (**v1.0.3**) is a theme for [Obsidian](https://obsidian.md/), which is inspired by [typora-vue-theme](https://github.com/blinkfox/typora-vue-theme)and [Blue Topaz](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/).
-*/
-
-/* The primary color is #42b983 or #42b883. */
+/* The primary color is #027DFD */
 body {
-  --accent-h: 153;
-  --accent-s: 47%;
-  --accent-l: 49%;
+  --accent-h: 211;
+  --accent-s: 98%;
+  --accent-l: 50%;
   --icon-color-hover: hsl(var(--interactive-accent-hsl));
   --background-modifier-message: hsl(var(--interactive-accent-hsl));
   --background-modifier-hover: hsla(var(--interactive-accent-hsl), 0.05);
