@@ -15,9 +15,9 @@
 输入共 `n + 1` 行，第 1 行含一个正整数 `n`，随后 `n` 行各含一个字符串 `s`：
 
 ```text
-3  
-gmgqlq  
-pdlbll  
+3
+gmgqlq
+pdlbll
 aaa
 ```
 

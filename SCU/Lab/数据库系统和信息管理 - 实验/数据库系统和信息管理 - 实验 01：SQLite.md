@@ -1,7 +1,5 @@
 @2024.04.24 | Week 09
 
-==卢剑歌 2022141461145==
-
 所下载数据库 `tennis.sqlite` 有 `Players`，`Rankings`，`Matches` 3 张表。
 
 ### 查询 `Players` 表

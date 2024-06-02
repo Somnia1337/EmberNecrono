@@ -1,7 +1,5 @@
 @2024.05.23 | Week 13
 
-卢剑歌 2022141461145
-
 > [!question] 1.1 What is the variable of `size` and `stride` used for?
 
 - `size` 为读取的数据大小

@@ -1,7 +1,5 @@
 @2024.05.16 | Week 12
 
-卢剑歌 2022141461145
-
 ### Practice 1. Optimizing Analysis
 
 用 CB Profiler 比较程序的性能：

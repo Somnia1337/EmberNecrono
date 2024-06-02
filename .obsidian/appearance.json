@@ -2,11 +2,11 @@
   "accentColor": "",
   "theme": "system",
   "interfaceFontFamily": "Microsoft YaHei UI",
-  "textFontFamily": "Inter,钉钉进步体,霞鹜文楷等宽",
+  "textFontFamily": "Inter Display,钉钉进步体",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": false,
   "nativeMenus": false,
-  "baseFontSize": 18,
+  "baseFontSize": 17,
   "showViewHeader": true,
   "cssTheme": "Ember",
   "enabledCssSnippets": [
@@ -19,5 +19,6 @@
     "cursor_test",
     "pdf",
     "horizontal"
-  ]
+  ],
+  "baseFontSizeAction": true
 }
