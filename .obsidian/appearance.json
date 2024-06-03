@@ -6,7 +6,7 @@
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": false,
   "nativeMenus": false,
-  "baseFontSize": 17,
+  "baseFontSize": 18,
   "showViewHeader": true,
   "cssTheme": "Ember",
   "enabledCssSnippets": [

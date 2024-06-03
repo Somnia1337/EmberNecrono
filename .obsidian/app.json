@@ -15,11 +15,11 @@
   "spellcheck": true,
   "defaultViewMode": "source",
   "pdfExportSettings": {
-    "includeName": false,
+    "includeName": true,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 90
+    "downscalePercent": 85
   },
   "focusNewTab": true,
   "foldIndent": false,
