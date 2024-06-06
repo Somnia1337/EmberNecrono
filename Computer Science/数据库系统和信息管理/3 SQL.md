@@ -302,7 +302,7 @@ WHERE credits >= ALL (
 | customer_id |
 | sale_amount |
 
-> 1\. 选择订单总数和总金额。
+> [!question] 选择订单总数和总金额。
 
 ```sql
 SELECT 
@@ -311,7 +311,7 @@ SELECT
 FROM Sales;
 ```
 
->2\. 选择每种产品的总金额。
+>[!question] 选择每种产品的总金额。
 
 ```sql
 SELECT
@@ -321,7 +321,7 @@ FROM Sales
 GROUP BY product;
 ```
 
-> 3\. 选择售出超过 `10` 件的产品的品名和售出量。
+> [!question] 选择售出超过 `10` 件的产品的品名和售出量。
 
 ```sql
 SELECT
@@ -332,7 +332,7 @@ GROUP BY product
 HAVING total_quantity > 10;
 ```
 
-> 4\. 选择每个订单的金额都大于所有订单的平均金额的产品。
+> [!question] 选择每个订单的金额都大于所有订单的平均金额的产品。
 
 ```sql
 SELECT product
@@ -345,7 +345,7 @@ HAVING
 	);
 ```
 
-> 5\. 选择总金额大于一些订单的金额、但不是大于所有订单的金额的产品。
+> [!question] 选择总金额大于一些订单的金额、但不是大于所有订单的金额的产品。
 
 ```sql
 SELECT product

@@ -10,7 +10,7 @@
   "page-preview": false,
   "daily-notes": false,
   "templates": true,
-  "note-composer": false,
+  "note-composer": true,
   "command-palette": true,
   "slash-command": false,
   "editor-status": true,

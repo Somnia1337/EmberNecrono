@@ -14,7 +14,7 @@ Get-FileHash <D:\example(不加双引号)> -Algorithm md5 | Format-List
 
 #### 禁用 Forticlient 自启动
 
-![[禁用Forticlient自启动.png]]
+![[禁用 Forticlient 自启动.png]]
 
 #### 删除只读文件
 
