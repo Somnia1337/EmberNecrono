@@ -4,17 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "6f958b5dd0bfa52d",
+        "id": "8758f12e4949858a",
         "type": "tabs",
         "children": [
           {
-            "id": "67fbb707231150bd",
+            "id": "33b2492862674a03",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Private/Plan/Plan - Index.canvas",
+                "viewState": {
+                  "x": -890,
+                  "y": -235,
+                  "zoom": 0
+                }
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "5343738c1efa0fa6",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Private/Plan/Plan - Daily.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
@@ -23,19 +40,20 @@
             }
           },
           {
-            "id": "be770c7df8b704bc",
+            "id": "cb5d04261e955872",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
-                "mode": "preview",
+                "file": "DRAFT.md",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,6 +112,7 @@
       {
         "id": "9dcd13e17669b1d4",
         "type": "tabs",
+        "dimension": 46.568627450980394,
         "children": [
           {
             "id": "0ce62af74faa4eb4",
@@ -101,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "DRAFT.md"
               }
             }
           },
@@ -121,6 +140,7 @@
       {
         "id": "8cf1e91e844c4b04",
         "type": "tabs",
+        "dimension": 53.431372549019606,
         "children": [
           {
             "id": "4bf01b8ecbb5b957",
@@ -131,8 +151,21 @@
               "state": {},
               "pinned": true
             }
+          },
+          {
+            "id": "233dc7f8e9802c66",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
+              },
+              "pinned": true
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -140,30 +173,32 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": true,
       "canvas:新建白板": false,
-      "templates:插入模板": false,
-      "graph:查看关系图谱": false,
-      "switcher:打开快速切换": false,
+      "templates:插入模板": true,
       "workspaces:管理工作区布局": true,
-      "remotely-save:Remotely Save": true,
-      "command-palette:打开命令面板": false
+      "remotely-save:Remotely Save": false,
+      "command-palette:打开命令面板": true
     }
   },
-  "active": "67fbb707231150bd",
+  "active": "cb5d04261e955872",
   "lastOpenFiles": [
     "Private/Plan/Plan - Daily.md",
+    "SCU/Exercise/计算机网络 - 习题/计算机网络 - 期末/计算机网络 - 期末 - 20~21 A.md",
+    "Computer Science/计算机网络/4 网络层.md",
+    "Computer Science/计算机网络/3 运输层.md",
+    "Computer Science/计算机网络/2 应用层.md",
+    "Computer Science/计算机网络/5 链路层：链路、接入网和局域网.md",
+    "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 14.1：PE_COFF.md",
+    "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 14.2：Tiny Linker.md",
+    "README.md",
     "SCU/Exercise/毛概 - 习题/0 毛概选择题部分题库.md",
     "DRAFT.md",
     "Computer Science/计算机网络/计算机网络.md",
     "Computer Science/Tips.md",
-    "Computer Science/计算机网络/5 链路层：链路、接入网和局域网.md",
     "SCU/Exercise/系统级编程 - 习题.md",
-    "Computer Science/计算机网络/4 网络层.md",
-    "Computer Science/计算机网络/3 运输层.md",
     "Private/Plan/Plan - Index.canvas",
-    "README.md",
-    "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 14.2：Tiny Linker.md",
-    "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 14.1：PE_COFF.md",
     "Computer Science/系统级编程/系统级编程 复习 - 2.md",
     "Computer Science/系统级编程/系统级编程 复习 - 1.md",
     "Mathematics/离散数学/离散数学.md",
@@ -176,8 +211,6 @@
     "Mathematics/概率论与数理统计/5 正态分布与自然指数分布族.md",
     "Mathematics/概率论与数理统计/4 随机变量的数字特征.md",
     "Mathematics/概率论与数理统计/3 多维随机变量及其分布.md",
-    "Mathematics/概率论与数理统计/2 随机变量及其分布.md",
-    "Mathematics/概率论与数理统计/1 概率论基础知识.md",
     "Computer Science/计算机网络/2 应用层.pdf",
     "_Attachment/Computer Science/计算机网络/DNS_NAT_ARP.png",
     "SCU/Exercise/计算机网络 - 习题/计算机网络 - 期末",
