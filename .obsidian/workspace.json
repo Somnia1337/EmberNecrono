@@ -4,34 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8758f12e4949858a",
+        "id": "6f958b5dd0bfa52d",
         "type": "tabs",
         "children": [
           {
-            "id": "33b2492862674a03",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Private/Plan/Plan - Index.canvas",
-                "viewState": {
-                  "x": -890,
-                  "y": -235,
-                  "zoom": 0
-                }
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "5343738c1efa0fa6",
+            "id": "67fbb707231150bd",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Private/Plan/Plan - Daily.md",
+                "file": "README.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
@@ -40,20 +23,19 @@
             }
           },
           {
-            "id": "cb5d04261e955872",
+            "id": "be770c7df8b704bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DRAFT.md",
-                "mode": "source",
+                "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +94,6 @@
       {
         "id": "9dcd13e17669b1d4",
         "type": "tabs",
-        "dimension": 46.568627450980394,
         "children": [
           {
             "id": "0ce62af74faa4eb4",
@@ -120,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DRAFT.md"
+                "file": "README.md"
               }
             }
           },
@@ -140,7 +121,6 @@
       {
         "id": "8cf1e91e844c4b04",
         "type": "tabs",
-        "dimension": 53.431372549019606,
         "children": [
           {
             "id": "4bf01b8ecbb5b957",
@@ -151,21 +131,8 @@
               "state": {},
               "pinned": true
             }
-          },
-          {
-            "id": "233dc7f8e9802c66",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
-              },
-              "pinned": true
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -173,19 +140,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": true,
-      "graph:查看关系图谱": true,
       "canvas:新建白板": false,
-      "templates:插入模板": true,
+      "templates:插入模板": false,
+      "graph:查看关系图谱": false,
+      "switcher:打开快速切换": false,
       "workspaces:管理工作区布局": true,
-      "remotely-save:Remotely Save": false,
-      "command-palette:打开命令面板": true
+      "remotely-save:Remotely Save": true,
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "cb5d04261e955872",
+  "active": "67fbb707231150bd",
   "lastOpenFiles": [
+    "Private/Plan/Plan - Index.canvas",
     "Private/Plan/Plan - Daily.md",
-    "SCU/Exercise/计算机网络 - 习题/计算机网络 - 期末/计算机网络 - 期末 - 20~21 A.md",
+    "SCU/Exercise/系统级编程 - 习题.md",
+    "SCU/Lab/计算机网络 - 实验/计算机网络 - 实验 10：eNSP 5.md",
+    "Computer Science/软件工程导论/3 建模.md",
+    "Computer Science/软件工程导论/2 软件过程.md",
+    "Computer Science/软件工程导论/1 软件工程.md",
+    "Computer Science/软件工程导论/软件工程导论 - CSDN.md",
+    "GIT.md",
+    "Challenge/Enchantment Rustiness",
+    "SCU/Exercise/数据库系统和信息管理 - 期末/数据库系统和信息管理 - 期末 - 21~22.md",
+    "Computer Science/数据库系统和信息管理/2 关系模型介绍.md",
+    "SCU/Exercise/计算机网络 - 期末/计算机网络 - 期末 - 20~21 B.md",
+    "SCU/Exercise/计算机网络 - 期末/计算机网络 - 期末 - 20~21 A.md",
+    "Computer Science/计算机网络/计算机网络.md",
+    "DRAFT.md",
+    "Computer Science/数据库系统和信息管理/3 SQL.md",
+    "SCU/Exercise/计算机网络 - 习题/计算机网络 - 习题.md",
+    "SCU/Exercise/数据库系统和信息管理 - 期末",
+    "Language/Rust/Rust Exercise.md",
+    "Media Platform/算法题解/20 初心与使命.md",
     "Computer Science/计算机网络/4 网络层.md",
     "Computer Science/计算机网络/3 运输层.md",
     "Computer Science/计算机网络/2 应用层.md",
@@ -193,27 +179,9 @@
     "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 14.1：PE_COFF.md",
     "SCU/Lab/系统级编程 - 实验/系统级编程 - 实验 14.2：Tiny Linker.md",
     "README.md",
-    "SCU/Exercise/毛概 - 习题/0 毛概选择题部分题库.md",
-    "DRAFT.md",
-    "Computer Science/计算机网络/计算机网络.md",
-    "Computer Science/Tips.md",
-    "SCU/Exercise/系统级编程 - 习题.md",
-    "Private/Plan/Plan - Index.canvas",
-    "Computer Science/系统级编程/系统级编程 复习 - 2.md",
-    "Computer Science/系统级编程/系统级编程 复习 - 1.md",
-    "Mathematics/离散数学/离散数学.md",
-    "Mathematics/概率论与数理统计/概率论与数理统计.md",
-    "Mathematics/概率论与数理统计/概率论与数理统计 - 速查表.md",
-    "Mathematics/概率论与数理统计/9 假设检验.md",
-    "Mathematics/概率论与数理统计/8 参数估计.md",
-    "Mathematics/概率论与数理统计/7 数理统计的基础知识.md",
-    "Mathematics/概率论与数理统计/6 极限定理.md",
-    "Mathematics/概率论与数理统计/5 正态分布与自然指数分布族.md",
-    "Mathematics/概率论与数理统计/4 随机变量的数字特征.md",
-    "Mathematics/概率论与数理统计/3 多维随机变量及其分布.md",
     "Computer Science/计算机网络/2 应用层.pdf",
     "_Attachment/Computer Science/计算机网络/DNS_NAT_ARP.png",
-    "SCU/Exercise/计算机网络 - 习题/计算机网络 - 期末",
+    "SCU/Exercise/计算机网络 - 期末",
     "SCU/Exercise/计算机网络 - 习题",
     "Private/Weekly Report/Weekly Report - 2024",
     "Private/Weekly Report",
@@ -229,8 +197,6 @@
     "_Attachment/SCU/Lab/计算机网络 - 实验/交换机 ping.png",
     "Challenge/大挑",
     "Challenge",
-    "_Attachment/SCU/Homework/计算机网络 - 项目/计算机网络 - 项目 - 安装证书",
-    "_Attachment/SCU/Homework/计算机网络 - 项目/计算机网络 - 项目报告",
     "Private/Plan/Plan - Kanban.canvas",
     "未命名.canvas",
     "Start-Up Project.canvas",

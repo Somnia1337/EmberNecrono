@@ -145,43 +145,18 @@
         "type": "split",
         "children": [
           {
-            "id": "8758f12e4949858a",
+            "id": "bc813e368475e0a7",
             "type": "tabs",
             "children": [
               {
-                "id": "33b2492862674a03",
+                "id": "4f47b3760f6fcd2b",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "Private/Plan/Plan - Index.canvas",
-                    "viewState": {
-                      "x": -890,
-                      "y": -235,
-                      "zoom": 0
-                    }
-                  },
-                  "pinned": true
-                }
-              },
-              {
-                "id": "5343738c1efa0fa6",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Private/Plan/Plan - Daily.md",
-                    "mode": "preview",
-                    "backlinks": false,
-                    "source": false
-                  },
-                  "pinned": true
+                  "type": "empty",
+                  "state": {}
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "vertical"
@@ -247,9 +222,7 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "Private/Plan/Plan - Daily.md"
-                  }
+                  "state": {}
                 }
               },
               {
@@ -310,8 +283,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "5343738c1efa0fa6",
-      "mtime": "2024-04-21T23:52:04+08:00"
+      "active": "4f47b3760f6fcd2b",
+      "mtime": "2024-06-10T22:54:18+08:00"
     },
     "Intro": {
       "main": {
@@ -468,5 +441,5 @@
       "mtime": "2024-05-12T16:33:31+08:00"
     }
   },
-  "active": "SStation"
+  "active": "Intro"
 }

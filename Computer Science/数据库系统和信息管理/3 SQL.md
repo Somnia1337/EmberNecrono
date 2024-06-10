@@ -286,8 +286,8 @@ SELECT course_id
 FROM Course
 WHERE credits >= ALL (
 	SELECT credits
-	 FROM Course
-	 WHERE title LIKE '%bio%'
+	FROM Course
+	WHERE title LIKE '%bio%'
 );
 ```
 
