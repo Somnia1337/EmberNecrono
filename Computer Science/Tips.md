@@ -1,3 +1,5 @@
+### Windows
+
 #### 获取文件的哈希值（MD5 算法）
 
 在终端中使用：
@@ -47,25 +49,33 @@ icacls "D:\example" /t /q /c /reset
 <div style="page-break-after: always"></div>
 ```
 
-#### 语言更新
+### Cargo
 
-##### Rust
+#### 以汇编指令查看编译结果
+
+```sh
+rustc -O --emit=asm src/main.rs
+```
+
+### 语言更新
+
+#### Rust
 
 ```sh
 rustup update
 ```
 
-##### Go
+#### Go
 
 ```sh
 go install golang.org/dl/go<version>@latest
 go<version> download
 ```
 
-##### Java
+#### Java
 
 安装新版，从 `Windows 设置 - 应用 - 安装的应用` 卸载旧版。
 
-##### Python
+#### Python
 
 下载新版，安装时选择覆盖旧版。
