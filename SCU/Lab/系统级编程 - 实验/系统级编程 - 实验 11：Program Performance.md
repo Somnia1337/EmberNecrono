@@ -50,7 +50,7 @@ void substitute(CString *data, CString *pattern, CString *replacement)
 可以进行的优化：
 
 - 用变量存储 `pattern->GetLength()` 和 `replacement->GetLength()`，避免重复调用。
-- 更新 `loc` 时每次都从 `0` 位置重新检查，可以改为从 `loc - pattern->GetLength()` 处开始检查（因为此前一定没有匹配）。
+- 更新 `loc` 时每次都从 `0` 位置重新检查，可以改为从 `loc - pattern->GetLength()` 处开始检查（因为此前已经检查过）。
 
 优化后：
 
