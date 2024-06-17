@@ -49,12 +49,31 @@ icacls "D:\example" /t /q /c /reset
 <div style="page-break-after: always"></div>
 ```
 
-### Cargo
+#### Python 虚拟环境
+
+```text
+venv\Scripts\activate
+uvicorn app.main:app --reload
+```
+
+### Cargo / Rustc
 
 #### 以汇编指令查看编译结果
 
 ```sh
 rustc -O --emit=asm src/main.rs
+```
+
+### Git / GitHub
+
+#### 初始化
+
+```sh
+git init
+git remote add origin https://github.com/Somnia1337/xxx.git
+git pull origin main --rebase
+git checkout -b main
+git push -u origin main
 ```
 
 ### 语言更新
