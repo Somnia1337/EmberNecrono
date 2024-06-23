@@ -153,14 +153,6 @@
       "key": "S"
     }
   ],
-  "editor:toggle-code": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "C"
-    }
-  ],
   "obsidian-pandoc:pandoc-export-epub": [
     {
       "modifiers": [
@@ -186,30 +178,6 @@
     }
   ],
   "obsidian-quiet-outline:quiet-outline": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "G"
-    }
-  ],
-  "editor:table-row-copy": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "D"
-    }
-  ],
-  "insert-template": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "T"
-    }
-  ],
-  "editor:table-col-align-center": [
     {
       "modifiers": [
         "Alt"
@@ -263,14 +231,6 @@
   ],
   "typewriter-mode:move-typewriter-down": [],
   "typewriter-mode:move-typewriter-up": [],
-  "typewriter-mode:isPluginActivated": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "T"
-    }
-  ],
   "editor:cycle-list-checklist": [
     {
       "modifiers": [
@@ -305,6 +265,46 @@
       "key": "B"
     }
   ],
+  "editor:toggle-blockquote": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "."
+    }
+  ],
+  "editor:table-row-before": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:table-row-after": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "editor:table-col-after": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "editor:table-col-before": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
   "editor:toggle-bullet-list": [
     {
       "modifiers": [
@@ -313,12 +313,30 @@
       "key": "L"
     }
   ],
-  "editor:toggle-blockquote": [
+  "typewriter-mode:isPluginActivated": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "insert-template": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "."
+      "key": "T"
     }
-  ]
+  ],
+  "obsidian-focus-plugin:toggle-focus-mode": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
+    }
+  ],
+  "obsidian-excalidraw-plugin:save": [],
+  "obsidian-excalidraw-plugin:insert-link": []
 }

@@ -1,6 +1,64 @@
-### 方法
+## 方法
 
-#### 求正则覆盖
+### SQL
+
+```text
+Students(student_id, student_name)
+Courses(course_id, course_name)
+Enrollments(student_id, course_id, grade)
+```
+
+#### 除法查询
+
+查询所有学生，他们选修了 `id` 为 `'123'` 的同学选修的所有课程：
+
+```sql
+SELECT s.student_id, s.student_name
+FROM Students s
+WHERE NOT EXISTS (
+    SELECT e1.course_id
+    FROM Enrollments e1
+    WHERE e1.student_id = '123'
+    EXCEPT
+    SELECT e2.course_id
+    FROM Enrollments e2
+    WHERE e2.student_id = s.student_id
+);
+```
+
+#### 聚集函数查询
+
+查询所有学生都选择的课程的课程号：
+
+```sql
+SELECT course_id
+FROM Enrollments
+GROUP BY course_id
+HAVING COUNT(DISTINCT student_id) = (
+	SELECT COUNT(*)
+	FROM Students
+);
+```
+
+查询所有学生以及课程名和成绩，他们的成绩不低于该门课程所有学生的平均成绩：
+
+```sql
+SELECT s.student_id, s.student_name, c.course_name, e1.grade
+FROM Students s
+	JOIN Enrollments e1 ON s.student_id = e1.student_id
+	JOIN Courses c ON e1.course_id = c.course_id
+WHERE e1.grade >= (
+    SELECT AVG(e2.grade)
+    FROM Enrollments e2
+    WHERE e2.course_id = e1.course_id
+);
+```
+
+### 判断分解结果是否具有依赖保持性
+
+对 $R_1$ 到 $R_n$ 中的所有 $(R_i,\space R_j)$，如果都有 $R_i \cap R_j$ 的属性集 $A$ 为 $R_i$ 或 $R_j$ 的 ==超码==，称该分解具有依赖保持性。
+
+### 求正则覆盖
 
 方法 1（教材）：
 
@@ -15,7 +73,21 @@
 2. 移除左侧冗余：`AB -> C & A+ -> C` ==> `A -> C`
 3. 移除冗余依赖：`A -> B & B -> C & A -> C` ==> 移除 `A -> C`
 
-### 知识
+### 范式分解
+
+#### 2NF 到 3NF
+
+1. 找到问题依赖：`X -> A`，`X` 不是超码且 `A` 不是主属性
+2. 将 `R` 分解为 `R1 = { X -> A }` 和 `R2 = R - { A }`
+3. 重复 `1.` 和 `2.`，直到找不出问题依赖
+
+#### 3NF 到 BCNF
+
+1. 找到问题依赖：`X -> A`，`X` 不含候选码且 `A` 不属于 `X`
+2. 将 `R` 分解为 `R1 = { X -> A }` 和 `R2 = R - { A }`
+3. 重复 `1.` 和 `2.`，直到找不出问题依赖
+
+## 知识
 
 表的 `基数 = 行数`
 
