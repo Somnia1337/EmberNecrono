@@ -145,11 +145,11 @@
         "type": "split",
         "children": [
           {
-            "id": "bc813e368475e0a7",
+            "id": "bc17723c6d571b98",
             "type": "tabs",
             "children": [
               {
-                "id": "4f47b3760f6fcd2b",
+                "id": "5bca0a60c62f3fda",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
@@ -215,7 +215,7 @@
           {
             "id": "9dcd13e17669b1d4",
             "type": "tabs",
-            "dimension": 46.568627450980394,
+            "dimension": 45.588235294117645,
             "children": [
               {
                 "id": "0ce62af74faa4eb4",
@@ -241,7 +241,7 @@
           {
             "id": "8cf1e91e844c4b04",
             "type": "tabs",
-            "dimension": 53.431372549019606,
+            "dimension": 54.41176470588235,
             "children": [
               {
                 "id": "4bf01b8ecbb5b957",
@@ -274,6 +274,7 @@
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
           "switcher:打开快速切换": true,
           "graph:查看关系图谱": true,
           "canvas:新建白板": false,
@@ -283,8 +284,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "4f47b3760f6fcd2b",
-      "mtime": "2024-06-10T22:54:18+08:00"
+      "active": "5bca0a60c62f3fda",
+      "mtime": "2024-06-25T09:35:00+08:00"
     },
     "Intro": {
       "main": {

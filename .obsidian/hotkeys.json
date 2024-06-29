@@ -338,5 +338,13 @@
     }
   ],
   "obsidian-excalidraw-plugin:save": [],
-  "obsidian-excalidraw-plugin:insert-link": []
+  "obsidian-excalidraw-plugin:insert-link": [],
+  "obsidian-prozen:zenmode": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Z"
+    }
+  ]
 }

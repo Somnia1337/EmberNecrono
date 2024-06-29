@@ -150,38 +150,6 @@ table {
 
 /* Align Center END */
 
-/* Color Tweak BEGIN */
-
-.cm-s-obsidian span.cm-strong,
-.markdown-rendered strong {
-  color: hsla(var(--interactive-accent-hsl), 0.65);
-}
-
-.cm-s-obsidian span.cm-em,
-.markdown-rendered em {
-  color: hsla(var(--interactive-accent-hsl), 0.65);
-  text-decoration: underline;
-}
-
-.cm-s-obsidian span.cm-highlight,
-.markdown-rendered mark {
-  background-color: hsla(var(--interactive-accent-hsl), 0.25);
-}
-
-.markdown-rendered li code,
-.markdown-rendered table code,
-.markdown-rendered h1 code,
-.markdown-rendered h2 code,
-.markdown-rendered h3 code,
-.markdown-rendered h4 code,
-.markdown-rendered h5 code,
-.markdown-rendered h6 code,
-.callout code {
-  color: var(--cus-inline-code-text);
-}
-
-/* Color Tweak END */
-
 /* Ban Annoying Vault-Profile Hover Tag START */
 
 .workspace-sidedock-vault-profile {
