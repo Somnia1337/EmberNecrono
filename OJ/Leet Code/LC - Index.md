@@ -14,13 +14,13 @@
 
 ### Algo
 
-| 🌏Lang | 🟢Easy          | 🟡Medium                                  | 🔴Hard          |
-| ------ | --------------- | ----------------------------------------- | --------------- |
-| Java   | [[Easy - Ja]]   | [[Medium - Ja - L]] / [[Medium - Ja - R]] | [[Hard - Ja]]   |
-| Rust   | [[Easy - Rs]] | [[Medium - Rs]]                         | [[Hard - Rs]] |
-| Python | [[Easy - Py]]   | [[Medium - Py]]                           | [[Hard - Py]]   |
-| Go     | [[Easy - Go]]   | [[Medium - Go]]                           | [[Hard - Go]]   |
-| SQL    | [[Easy - SQL]]  | [[Medium - SQL]]                          | [[Hard - SQL]]  |
+| 🌏Lang | 🟢Easy         | 🟡Medium                                  | 🔴Hard        |
+| ------ | -------------- | ----------------------------------------- | ------------- |
+| Java   | [[Easy - Ja]]  | [[Medium - Ja - L]] / [[Medium - Ja - R]] | [[Hard - Ja]] |
+| Rust   | [[Easy - Rs]]  | [[Medium - Rs]]                           | [[Hard - Rs]] |
+| Python | [[Easy - Py]]  | [[Medium - Py]]                           | [[Hard - Py]] |
+| Go     | [[Easy - Go]]  | [[Medium - Go]]                           |               |
+| SQL    | [[Easy - SQL]] | [[Medium - SQL]]                          |               |
 
 ---
 

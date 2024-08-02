@@ -6,22 +6,15 @@
         "type": "split",
         "children": [
           {
-            "id": "fda8d2d1f786bba4",
+            "id": "8b45f0ffbf0f0905",
             "type": "tabs",
             "children": [
               {
-                "id": "557e8f6e3a99f0cc",
+                "id": "e862bbe15d924e99",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "OJ/Leet Code/LC - Index.md",
-                    "mode": "preview",
-                    "backlinks": false,
-                    "source": false
-                  },
-                  "pinned": true
+                  "type": "empty",
+                  "state": {}
                 }
               }
             ]
@@ -83,15 +76,14 @@
           {
             "id": "9dcd13e17669b1d4",
             "type": "tabs",
+            "dimension": 49.137931034482754,
             "children": [
               {
                 "id": "0ce62af74faa4eb4",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "OJ/Leet Code/LC - Index.md"
-                  }
+                  "state": {}
                 }
               },
               {
@@ -110,6 +102,7 @@
           {
             "id": "8cf1e91e844c4b04",
             "type": "tabs",
+            "dimension": 50.86206896551724,
             "children": [
               {
                 "id": "4bf01b8ecbb5b957",
@@ -129,15 +122,18 @@
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
+          "command-palette:打开命令面板": true,
           "switcher:打开快速切换": true,
           "templates:插入模板": true,
           "canvas:新建白板": false,
-          "graph:查看关系图谱": false,
-          "workspaces:管理工作区布局": false,
+          "graph:查看关系图谱": true,
+          "workspaces:管理工作区布局": true,
           "remotely-save:Remotely Save": false
         }
       },
-      "active": "557e8f6e3a99f0cc"
+      "active": "e862bbe15d924e99",
+      "mtime": "2024-08-02T16:21:03+08:00"
     },
     "SStation": {
       "main": {

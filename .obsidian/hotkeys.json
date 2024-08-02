@@ -236,7 +236,7 @@
       "modifiers": [
         "Mod"
       ],
-      "key": "-"
+      "key": "L"
     }
   ],
   "command-palette:open": [
@@ -303,14 +303,6 @@
         "Alt"
       ],
       "key": "ArrowLeft"
-    }
-  ],
-  "editor:toggle-bullet-list": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
     }
   ],
   "typewriter-mode:isPluginActivated": [

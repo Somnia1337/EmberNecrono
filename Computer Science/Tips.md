@@ -76,6 +76,19 @@ git checkout -b main
 git push -u origin main
 ```
 
+### 更新日志
+
+- feat (Feature) 新功能的引入
+- fix (Fix) 缺陷修复
+- docs (Documentation) 文档相关的变更，比如 README 的更新
+- style (Style) 不影响代码逻辑的变更，比如格式化、空格、漏掉的分号等
+- refactor (Refactor) 代码重构，即既不修复缺陷也不增加新功能的代码变更
+- perf (Performance) 提高性能的代码变更
+- test (Tests) 添加或修改测试代码
+- chore (Chore) 构建过程或辅助工具的变更，不影响源代码或测试文件的其他变更
+- build (Build) 影响构建系统或外部依赖的变更，比如 Gradle、Maven、npm 等
+- ci (Continuous Integration) 持续集成相关的变更，比如 Travis、Circle、Jenkins 配置文件的更新
+
 ### 语言更新
 
 #### Rust
