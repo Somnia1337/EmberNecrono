@@ -6,11 +6,11 @@
         "type": "split",
         "children": [
           {
-            "id": "8b45f0ffbf0f0905",
+            "id": "8b96202d2a7d1f44",
             "type": "tabs",
             "children": [
               {
-                "id": "e862bbe15d924e99",
+                "id": "a4c92eb98d401293",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
@@ -76,7 +76,6 @@
           {
             "id": "9dcd13e17669b1d4",
             "type": "tabs",
-            "dimension": 49.137931034482754,
             "children": [
               {
                 "id": "0ce62af74faa4eb4",
@@ -100,9 +99,8 @@
             ]
           },
           {
-            "id": "8cf1e91e844c4b04",
+            "id": "9b8347ef5cdb367b",
             "type": "tabs",
-            "dimension": 50.86206896551724,
             "children": [
               {
                 "id": "4bf01b8ecbb5b957",
@@ -132,8 +130,8 @@
           "remotely-save:Remotely Save": false
         }
       },
-      "active": "e862bbe15d924e99",
-      "mtime": "2024-08-02T16:21:03+08:00"
+      "active": "a4c92eb98d401293",
+      "mtime": "2024-08-03T10:40:37+08:00"
     },
     "SStation": {
       "main": {
@@ -141,15 +139,24 @@
         "type": "split",
         "children": [
           {
-            "id": "bc17723c6d571b98",
+            "id": "65dbeb350b7cfbf0",
             "type": "tabs",
             "children": [
               {
-                "id": "5bca0a60c62f3fda",
+                "id": "1fd09e006123d522",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
-                  "type": "empty",
-                  "state": {}
+                  "type": "canvas",
+                  "state": {
+                    "file": "Private/Plan/Plan - Index.canvas",
+                    "viewState": {
+                      "x": -1130,
+                      "y": -465,
+                      "zoom": -0.4761984692167039
+                    }
+                  },
+                  "pinned": true
                 }
               }
             ]
@@ -211,14 +218,16 @@
           {
             "id": "9dcd13e17669b1d4",
             "type": "tabs",
-            "dimension": 45.588235294117645,
+            "dimension": 45.58823529411765,
             "children": [
               {
                 "id": "0ce62af74faa4eb4",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {}
+                  "state": {
+                    "file": "Private/Plan/Plan - Index.canvas"
+                  }
                 }
               },
               {
@@ -280,8 +289,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "5bca0a60c62f3fda",
-      "mtime": "2024-06-25T09:35:00+08:00"
+      "active": "1fd09e006123d522",
+      "mtime": "2024-09-02T23:52:28+08:00"
     },
     "Intro": {
       "main": {

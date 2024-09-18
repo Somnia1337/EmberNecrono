@@ -1,9 +1,9 @@
 [
   "remotely-save",
   "obsidian-git",
-  "typewriter-mode",
   "better-export-pdf",
   "obsidian-excalidraw-plugin",
   "obsidian-focus-plugin",
-  "obsidian-prozen"
+  "cm-typewriter-scroll-obsidian",
+  "obsidian-export-image"
 ]

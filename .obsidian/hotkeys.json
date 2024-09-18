@@ -161,14 +161,6 @@
       "key": "E"
     }
   ],
-  "cm-typewriter-scroll-obsidian:toggle-typewriter-sroll-zen": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Z"
-    }
-  ],
   "workspace:export-pdf": [
     {
       "modifiers": [
@@ -305,14 +297,6 @@
       "key": "ArrowLeft"
     }
   ],
-  "typewriter-mode:isPluginActivated": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "T"
-    }
-  ],
   "insert-template": [
     {
       "modifiers": [
@@ -337,6 +321,15 @@
         "Alt"
       ],
       "key": "Z"
+    }
+  ],
+  "typewriter-mode:isTypewriterScrollEnabled": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "T"
     }
   ]
 }

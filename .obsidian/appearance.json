@@ -19,8 +19,7 @@
     "cursor_test",
     "pdf",
     "horizontal",
-    "color",
-    "academic-pdf-export"
+    "color"
   ],
   "baseFontSizeAction": true
 }

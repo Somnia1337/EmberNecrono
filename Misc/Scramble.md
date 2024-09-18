@@ -49,3 +49,29 @@ TPS: 2.37
 F B2 D2 L D2 B2 L' F2 D2 R D2 R2 F L' D' L D2 L F R2
 
 D2 L2 B R' F B2 L' B' U F2 D B2 U B2 U' L2 D2 R2 U' L2
+
+**F2 L' D2 U L2 B2 U B2 F2 D F2 B D' B U L2 F2 U'**
+
+inspection: y'
+
+C: R U' R U R' U' F
+
+z2 y
+
+F1: R' U R U' R' U' R
+
+F2: U R U' R' U2 y' R' U' R
+
+F3: y' R U' R2 U R
+
+F4: R U R' U' R U R'
+
+O: y2 R U B' U' R' U R B R'
+
+P: U' R U R' U' R' F R2 U' R' U' R U R'
+
+**U F2 U L2 R2 D F2 D' F2 D F2 D' B L B' R D L B' R2 D**
+
+C: R' U'2 R2 F
+
+绿红 蓝橙 绿橙 蓝红 P是T

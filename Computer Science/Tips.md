@@ -56,6 +56,12 @@ venv\Scripts\activate
 uvicorn app.main:app --reload
 ```
 
+#### 禁用 Administrator 账户登陆选项
+
+```sh
+net user administrator /active:no
+```
+
 ### Cargo / Rustc
 
 #### 以汇编指令查看编译结果
@@ -71,8 +77,8 @@ rustc -O --emit=asm src/main.rs
 ```sh
 git init
 git remote add origin https://github.com/Somnia1337/xxx.git
-git pull origin main --rebase
 git checkout -b main
+git pull origin main --rebase
 git push -u origin main
 ```
 
