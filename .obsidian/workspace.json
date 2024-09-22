@@ -19,7 +19,9 @@
                 "backlinks": false,
                 "source": false
               },
-              "pinned": true
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "README"
             }
           },
           {
@@ -32,7 +34,9 @@
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Obsidian Flavored Markdown"
             }
           }
         ]
@@ -55,7 +59,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -70,7 +76,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -78,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -102,7 +112,9 @@
               "type": "outline",
               "state": {
                 "file": "README.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "README 的大纲"
             }
           },
           {
@@ -113,7 +125,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           }
         ]
@@ -129,7 +143,9 @@
             "state": {
               "type": "graph",
               "state": {},
-              "pinned": true
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -153,52 +169,53 @@
   },
   "active": "67fbb707231150bd",
   "lastOpenFiles": [
-    "Private/Plan/Plan - Index.canvas",
-    "DRAFT.md",
-    "SCU/Finals.md",
-    "Private/Log/Log - 2024/Log - 2024.09.md",
     "Private/Diary/Diary - 2024/Diary - 2024.09.md",
+    "Reading/Quotes.md",
+    "寻羊冒险记.md",
+    "挪威的森林.md",
+    "海边的卡夫卡.md",
+    "国境以南，太阳以西.md",
+    "Private/Log/Log - 2024/Log - 2024.09.md",
+    "Private/Weekly Report/Weekly Report - 2024/Weekly Report - 2024.38.md",
+    "Intro.md",
+    "Private/Weekly Report/Weekly Report - 2024/Weekly Report - 2024.37.md",
+    "_Attachment/Private/Weekly Report/Weekly Report - 2024/Snipaste_240921_164130.png",
+    "Private/Plan/Plan - Index.canvas",
+    "挪威的森林.md",
+    "寻羊冒险记.md",
+    "海边的卡夫卡.md",
+    "国境以南，太阳以西.md",
+    "海边的卡夫卡.txt",
+    "国境以南，太阳以西.txt",
+    "挪威的森林.txt",
+    "DRAFT.md",
+    "COUNTER.md",
+    "Mathematics/微积分/6 空间解析几何与矢量代数.md",
+    "_Attachment/Private/Diary/Diary - 2024/Snipaste_240919_214647.png",
+    "人造卫星情人.md",
+    "人造卫星情人.txt",
+    "Misc/Scramble.md",
+    "SCU/Finals.md",
+    "SCU",
+    "GIT.md",
+    "README.md",
     "_Attachment/Private/Diary/Diary - 2024/Snipaste_240918_184440.png",
     "Mathematics/微积分/7 多元函数微分学.md",
-    "Mathematics/微积分/6 空间解析几何与矢量代数.md",
     "Mathematics/微积分/5 定积分.md",
     "Mathematics/微积分/4 不定积分.md",
     "Mathematics/微积分/3 微分中值定理与导数的应用.md",
-    "Mathematics/微积分/2 导数与微分.md",
-    "Mathematics/微积分/1 极限与连续性.md",
-    "Mathematics/微积分/0 微积分.md",
-    "Excalidraw/Drawing 2024-09-18 19.27.36.excalidraw.md",
-    "Misc/Scramble.md",
     "_Attachment/Private/Diary/Diary - 2024/Snipaste_240917_205504.png",
     "_Attachment/Private/Diary/Diary - 2024/Snipaste_240916_233416.png",
     "_Attachment/Private/Diary/Diary - 2024/Snipaste_240916_173330.png",
     "_Attachment/Private/Diary/Diary - 2024/Snipaste_240916_172835.png",
     "EmberNecrono.zip",
-    "Private/Weekly Report/Weekly Report - 2024/Weekly Report - 2024.37.md",
     "_Attachment/Private/Weekly Report/Weekly Report - 2024/IMG_20240914_191128.jpg",
     "_Attachment/Private/Weekly Report/Weekly Report - 2024/IMG_20240914_191154.jpg",
     "_Attachment/Private/Weekly Report/Weekly Report - 2024/Image_1726312353374.jpg",
-    "HTML Test.md",
     "pkg/rgb_triangle_bg.wasm.d.ts",
     "pkg/rgb_triangle_bg.wasm",
     "pkg/rgb_triangle.js",
     "pkg/rgb_triangle.d.ts",
-    "pkg/package.json",
-    "pkg",
-    "_Attachment/Private/Weekly Report/Weekly Report - 2024/Snipaste_240913_204411.png",
-    "_Attachment/Private/Weekly Report/Weekly Report - 2024/Snipaste_240913_203350.png",
-    "Private/Weekly Report/Weekly Report - 2024/Weekly Report - 2024.36.md",
-    "Private/Plan/Plan - 2024/Plan - 03.Autumn.md",
-    "Private/Plan/Plan - 2024/Plan - Winter 2025.md",
-    "Private/Plan/Plan - 2024/Plan - Winter 2024.md",
-    "Private/Password.md",
-    "Mathematics/线性代数/4 向量空间.md",
-    "Mathematics/线性代数/3 行列式.md",
-    "Mathematics/线性代数/1 线性方程组.md",
-    "Mathematics/线性代数/2 矩阵代数.md",
-    "_Attachment/Private/Weekly Report/Weekly Report - 2024/03.Autumn_Curriculum.png.~tmp",
-    "_Attachment/Grokking Machine Learning.pdf",
-    "Excalidraw",
     "未命名.canvas",
     "Private/Plan/Plan - Kanban.canvas",
     "Start-Up Project.canvas",

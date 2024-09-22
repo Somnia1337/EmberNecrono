@@ -75,3 +75,19 @@ P: U' R U R' U' R' F R2 U' R' U' R U R'
 C: R' U'2 R2 F
 
 绿红 蓝橙 绿橙 蓝红 P是T
+
+16.811   U B U R L2 F' U F2 R2 F2 L' U2 L B2 R' F2 L2 D F2   @2024-09-19 21:27:18
+
+y' R' U R' y' L' U
+
+y2 U L' U L
+
+y U R U' R'
+
+y' U'2 R U' R' U' y' R' U' R
+
+y' U R U' R'
+
+F R U' R' U' R U R' F'
+
+y R U R' U' R' F R2 U' R' U' R U R'
