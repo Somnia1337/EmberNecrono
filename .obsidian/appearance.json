@@ -1,5 +1,5 @@
 {
-  "accentColor": "",
+  "accentColor": "#027dfd",
   "theme": "system",
   "interfaceFontFamily": "Microsoft YaHei UI",
   "textFontFamily": "Inter Display",
@@ -18,8 +18,8 @@
     "eye-protection-color",
     "cursor_test",
     "pdf",
-    "horizontal",
-    "color"
+    "color",
+    "horizontal"
   ],
   "baseFontSizeAction": true
 }

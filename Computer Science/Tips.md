@@ -62,6 +62,58 @@ uvicorn app.main:app --reload
 net user administrator /active:no
 ```
 
+#### 自修复命令
+
+检查并修复损坏的系统文件：
+
+```
+sfc /scannow
+```
+
+修复系统映像和 Windows 组件存储：
+
+```
+DISM /Online /Cleanup-Image /CheckHealth
+```
+
+```
+DISM /Online /Cleanup-Image /ScanHealth
+```
+
+```
+DISM /Online /Cleanup-Image /RestoreHealth
+```
+
+扫描硬盘上的文件系统错误和坏扇区，并尝试修复它们：
+
+```
+chkdsk C: /f /r
+```
+
+- `C:` 表示要检查的磁盘分区，可以根据需要更改。
+- `/f` 选项用于修复磁盘上的错误。
+- `/r` 选项用于查找坏扇区并恢复可读信息。
+
+检查系统内存问题：
+
+1. 按 **Win + R** 打开运行窗口，输入 `mdsched.exe`，按回车。
+2. 选择“立即重新启动并检查问题”。
+3. 系统将重新启动，并运行内存诊断程序。完成后，系统会在登录后显示诊断结果。
+
+修复与系统引导相关的问题，如 Windows 无法正常启动：
+
+```
+bootrec /fixmbr
+```
+
+```
+bootrec /fixboot
+```
+
+```
+bootrec /rebuildbcd
+```
+
 ### Cargo / Rustc
 
 #### 以汇编指令查看编译结果

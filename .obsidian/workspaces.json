@@ -143,20 +143,13 @@
             "type": "tabs",
             "children": [
               {
-                "id": "1fd09e006123d522",
+                "id": "bbf32eb2d2834c56",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "Private/Plan/Plan - Index.canvas",
-                    "viewState": {
-                      "x": -1130,
-                      "y": -465,
-                      "zoom": -0.4761984692167039
-                    }
-                  },
-                  "pinned": true
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "新标签页"
                 }
               }
             ]
@@ -179,7 +172,9 @@
                   "type": "file-explorer",
                   "state": {
                     "sortOrder": "alphabetical"
-                  }
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
                 }
               },
               {
@@ -194,7 +189,9 @@
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "byModifiedTime"
-                  }
+                  },
+                  "icon": "lucide-search",
+                  "title": "搜索"
                 }
               },
               {
@@ -202,7 +199,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "bookmarks",
-                  "state": {}
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "书签"
                 }
               }
             ]
@@ -225,9 +224,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "Private/Plan/Plan - Index.canvas"
-                  }
+                  "state": {},
+                  "icon": "lucide-list",
+                  "title": "大纲"
                 }
               },
               {
@@ -238,7 +237,9 @@
                   "state": {
                     "sortOrder": "frequency",
                     "useHierarchy": true
-                  }
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
                 }
               }
             ]
@@ -255,7 +256,9 @@
                 "state": {
                   "type": "graph",
                   "state": {},
-                  "pinned": true
+                  "pinned": true,
+                  "icon": "lucide-git-fork",
+                  "title": "关系图谱"
                 }
               },
               {
@@ -267,7 +270,9 @@
                   "state": {
                     "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
                   },
-                  "pinned": true
+                  "pinned": true,
+                  "icon": "lucide-image",
+                  "title": "Done Manifesto"
                 }
               }
             ],
@@ -279,6 +284,7 @@
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-git:Open Git source control": false,
           "obsidian-excalidraw-plugin:新建绘图文件": false,
           "switcher:打开快速切换": true,
           "graph:查看关系图谱": true,
@@ -289,8 +295,8 @@
           "command-palette:打开命令面板": true
         }
       },
-      "active": "1fd09e006123d522",
-      "mtime": "2024-09-02T23:52:28+08:00"
+      "active": "bbf32eb2d2834c56",
+      "mtime": "2024-09-23T21:31:11+08:00"
     },
     "Intro": {
       "main": {
