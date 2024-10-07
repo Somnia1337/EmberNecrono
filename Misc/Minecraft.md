@@ -2,6 +2,20 @@
 
 Ninjabrain-Bot Standard Deviation: `0.0044`
 
+## Command
+
+加特林弩：
+
+```text
+/give @p minecraft:crossbow{Unbreakable:1b,Enchantments:[{id:"minecraft:quick_charge",lvl:5s},{id:"minecraft:multishot",lvl:1s},{id:"minecraft:piercing",lvl:100s}]} 1
+```
+
+任意威力火球：
+
+```text
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:100}
+```
+
 ## Seed
 
 ### Set Seed
@@ -124,6 +138,8 @@ additional info: death reset x1
 | Bastion   | 01:38         |
 | Blind     | 06:52(3 rods) |
 | End Enter | 10:23         |
+
+## Misc
 
 ### Rods dropped, Eyes thrown and End Enter
 
