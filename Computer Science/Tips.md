@@ -129,7 +129,7 @@ rustc -O --emit=asm src/main.rs
 ```sh
 git init
 git remote add origin https://github.com/Somnia1337/xxx.git
-git checkout -b main
+git branch -m master main
 git pull origin main --rebase
 git push -u origin main
 ```

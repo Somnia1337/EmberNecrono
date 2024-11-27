@@ -13,7 +13,7 @@
 
 .cm-s-obsidian span.cm-highlight,
 .markdown-rendered mark {
-  background-color: hsla(var(--interactive-accent-hsl), 0.25);
+  background-color: hsla(var(--interactive-accent-hsl), 0.15);
 }
 
 .markdown-rendered li code,
@@ -26,6 +26,7 @@
 .markdown-rendered h6 code,
 .callout code {
   color: var(--cus-inline-code-text);
+  background-color: var(--cus-highlight-cursor-line);
 }
 
 /* Color Tweak END */

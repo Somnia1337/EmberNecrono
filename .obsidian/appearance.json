@@ -2,7 +2,7 @@
   "accentColor": "#027dfd",
   "theme": "system",
   "interfaceFontFamily": "Microsoft YaHei UI",
-  "textFontFamily": "Inter Display",
+  "textFontFamily": "Inter Display,思源宋体",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": false,
   "nativeMenus": false,

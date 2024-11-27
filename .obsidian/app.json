@@ -15,7 +15,7 @@
   "spellcheck": true,
   "defaultViewMode": "source",
   "pdfExportSettings": {
-    "includeName": false,
+    "includeName": true,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
@@ -26,7 +26,7 @@
   "legacyEditor": false,
   "autoPairMarkdown": true,
   "smartIndentList": true,
-  "useTab": true,
+  "useTab": false,
   "foldHeading": false,
   "showRibbon": true
 }

@@ -268,7 +268,8 @@
   "editor:table-row-before": [
     {
       "modifiers": [
-        "Alt"
+        "Alt",
+        "Mod"
       ],
       "key": "ArrowUp"
     }
@@ -276,7 +277,8 @@
   "editor:table-row-after": [
     {
       "modifiers": [
-        "Alt"
+        "Alt",
+        "Mod"
       ],
       "key": "ArrowDown"
     }
@@ -330,6 +332,22 @@
         "Shift"
       ],
       "key": "T"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:swap-line-down": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowDown"
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "bookmarks": [
+    {
+      "id": "-1051282417",
+      "name": "滴答清单",
+      "url": "https://www.dida365.com/webapp/#q/today/tasks",
+      "description": "",
+      "category": [
+        ""
+      ],
+      "tags": "",
+      "created": 1732363380000,
+      "modified": 1732363380000
+    }
+  ],
+  "categories": [
+    {
+      "value": "ROOT",
+      "text": "ROOT",
+      "label": "ROOT",
+      "children": []
+    }
+  ]
+}
