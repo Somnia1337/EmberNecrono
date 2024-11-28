@@ -151,9 +151,9 @@
                   "state": {
                     "file": "Private/Plan/Plan - Index.canvas",
                     "viewState": {
-                      "x": -635,
-                      "y": 470,
-                      "zoom": -0.384663850235325
+                      "x": -705,
+                      "y": 530,
+                      "zoom": -0.3773958497712858
                     }
                   },
                   "pinned": true,
@@ -178,7 +178,8 @@
                   "title": "DRAFT"
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -319,11 +320,12 @@
           "templates:插入模板": true,
           "workspaces:管理工作区布局": true,
           "command-palette:打开命令面板": true,
-          "remotely-save:Remotely Save": false
+          "remotely-save:Remotely Save": false,
+          "obsidian-git:Open Git source control": false
         }
       },
-      "active": "de79193f0d73ccc7",
-      "mtime": "2024-11-17T10:10:51+08:00"
+      "active": "26cca0ff28bc8f11",
+      "mtime": "2024-11-27T23:06:07+08:00"
     },
     "Intro": {
       "main": {
@@ -1152,5 +1154,5 @@
       "mtime": "2024-11-25T20:56:33+08:00"
     }
   },
-  "active": "Intro"
+  "active": "SStation"
 }

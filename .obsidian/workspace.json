@@ -4,42 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "6f958b5dd0bfa52d",
+        "id": "60ec07d1257e6bfa",
         "type": "tabs",
         "children": [
           {
-            "id": "67fbb707231150bd",
+            "id": "de79193f0d73ccc7",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Private/Plan/Plan - Index.canvas",
+                "viewState": {
+                  "x": -705,
+                  "y": 530,
+                  "zoom": -0.3773958497712858
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-layout-dashboard",
+              "title": "Plan - Index"
+            }
+          },
+          {
+            "id": "26cca0ff28bc8f11",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "DRAFT.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "be770c7df8b704bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tutorial & Guideline/Obsidian Flavored Markdown.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Obsidian Flavored Markdown"
+              "title": "DRAFT"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,6 +109,7 @@
       {
         "id": "9dcd13e17669b1d4",
         "type": "tabs",
+        "dimension": 45.58823529411765,
         "children": [
           {
             "id": "0ce62af74faa4eb4",
@@ -111,10 +117,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Private/Plan/Plan - Index.canvas"
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "Plan - Index 的大纲"
             }
           },
           {
@@ -135,6 +141,7 @@
       {
         "id": "8cf1e91e844c4b04",
         "type": "tabs",
+        "dimension": 54.41176470588235,
         "children": [
           {
             "id": "4bf01b8ecbb5b957",
@@ -147,66 +154,82 @@
               "icon": "lucide-git-fork",
               "title": "关系图谱"
             }
+          },
+          {
+            "id": "233dc7f8e9802c66",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "_Attachment/Tutorial & Guideline/Done Manifesto/Done Manifesto.png"
+              },
+              "pinned": true,
+              "icon": "lucide-image",
+              "title": "Done Manifesto"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 377.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": true,
       "canvas:新建白板": false,
-      "templates:插入模板": false,
-      "graph:查看关系图谱": false,
-      "switcher:打开快速切换": false,
+      "templates:插入模板": true,
       "workspaces:管理工作区布局": true,
-      "remotely-save:Remotely Save": true,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": true,
+      "remotely-save:Remotely Save": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67fbb707231150bd",
+  "active": "26cca0ff28bc8f11",
   "lastOpenFiles": [
-    "DRAFT.md",
     "Private/Plan/Plan - Index.canvas",
+    "DRAFT.md",
+    "Private/Diary/Diary - 2024/Diary - 2024.11.md",
     "Private/Log/Log - 2024/Log - 2024.11.md",
-    "Private/Mistake/Mistake - 2024.md",
     "Private/Question.md",
     "Private/Retro/Retro - 2024.md",
-    "Private/Diary/Diary - 2024/Diary - 2024.11.md",
+    "Private/Mistake/Mistake - 2024.md",
     "11408/408/操作系统/操作系统 - 笔记.md",
-    "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+    "_Attachment/11408/408/操作系统/OS-fragment.png",
+    "Mathematics/微积分/7 多元函数微分学.md",
+    "Mathematics/微积分/8 重积分及其应用.md",
+    "Mathematics/微积分/9 曲线积分与曲面积分.md",
+    "Mathematics/微积分/11 微分方程.md",
+    "Mathematics/微积分/Calculus 1600.md",
+    "Mathematics/微积分/6 空间解析几何与矢量代数.md",
+    "Media Platform/算法题解/15 基环树的环长.md",
     "11408/408/操作系统/操作系统 - 习题.md",
+    "Tutorial & Guideline/Obsidian Flavored Markdown.md",
+    "_Attachment/11408/408/操作系统/OS-resource_assignment_graph.png",
+    "Media Platform/算法题解/18 初见 CodeForces：排列的 LCS.md",
+    "Media Platform/算法题解/17 蓝桥真题：日志统计（附 IO 模板）.md",
+    "Media Platform/算法题解/16 麦乐鸡定理.md",
+    "Media Platform/算法题解/14 MST：Kruskal & Prim.md",
+    "PROCESSOR.md",
+    "README.md",
     "Private/Resume.md",
     "Private/Plan/Plan - 2024/Plan - 2024 - Weekly.md",
     "Mathematics/线性代数/4 向量空间.md",
-    "Media Platform/算法题解/15 基环树的环长.md",
-    "Media Platform/算法题解/14 MST：Kruskal & Prim.md",
-    "Media Platform/算法题解/13 在“树上” DP？.md",
-    "Media Platform/算法题解/12 子数组问题：从枚举到同向双指针.md",
-    "Media Platform/算法题解/11 周赛最后一题，真的不难.md",
-    "PROCESSOR.md",
-    "Private/Plan/Plan - 2025/Plan - Winter 2025.md",
     "_Attachment/11408/408/操作系统/OS-virtual_machine.png",
     "_Attachment/11408/408/操作系统/OS-evolution.png",
     "_Attachment/11408/408/操作系统/OS_evolution.png",
     "_Attachment/11408/408/操作系统",
     "_Attachment/11408/408/新建文件夹",
-    "Mathematics/离散数学/离散数学 - Typst.md",
-    "Private/Plan/Plan - 2024/Plan - 2024 - Monthly.md",
-    "Private/Plan/Plan - 2024/Plan - 2024 - Archive.md",
-    "Computer Science/Tips.md",
-    "Computer Science/计算机图形学/作业/03 - 光栅化渲染 3D 场景.md",
     "11408/408/操作系统",
-    "11408/408/计算机组成原理/计算机组成原理 - 笔记.md",
     "_Attachment/Private/Weekly Report/Weekly Report - 2024/Snipaste_241123_185559.png",
     "_Attachment/Computer Science/数字图像处理/dip_homework_2_2_6.png",
     "_Attachment/Computer Science/数字图像处理/dip_homework_2_2_5.png",
     "_Attachment/Computer Science/数字图像处理/dip_homework_2_2_4.png",
     "_Attachment/Computer Science/数字图像处理/dip_homework_2_2_3.png",
-    "_Attachment/Computer Science/数字图像处理/dip_homework_2_2_2.png",
-    "_Attachment/Computer Science/数字图像处理/dip_homework_2_2_1.png",
     "_Attachment/Computer Science/数字图像处理",
     "_Attachment/Computer Science/数据图像处理",
     "_Attachment/Computer Science/新建文件夹",
