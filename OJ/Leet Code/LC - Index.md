@@ -2,7 +2,7 @@
 
 #### 🏷️ [[LC - Tags]]
 
-#### 🏆 [[LC - Contest]]
+#### 🏆 [[LC - Contest - Legacy]]
 
 #### 🔆 [[LC - Daily - 2024.03]]
 

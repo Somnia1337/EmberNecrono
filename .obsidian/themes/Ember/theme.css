@@ -1372,22 +1372,24 @@ body {
   background-color: var(--cus-highlight-cursor-line);
 }
 
-/* .markdown-rendered pre {
-    border: 1px solid var(--cus-code-block-border);
-  }
-  
-  .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-    border-top: 1px solid var(--cus-code-block-border);
-  }
-  
-  .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-    border-bottom: 1px solid var(--cus-code-block-border);
-  }
-  
-  .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
-    border-left: 1px solid var(--cus-code-block-border);
-    border-right: 1px solid var(--cus-code-block-border);
-  } */
+/*
+.markdown-rendered pre {
+  border: 1px solid var(--cus-code-block-border);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  border-top: 1px solid var(--cus-code-block-border);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom: 1px solid var(--cus-code-block-border);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-left: 1px solid var(--cus-code-block-border);
+  border-right: 1px solid var(--cus-code-block-border);
+}
+*/
 
 /* Code Block END */
 
@@ -1448,11 +1450,11 @@ table {
 
 /* Align Center END */
 
-/* Ban Annoying Vault-Profile Hover Tag START */
+/* Ban Vault-Profile Hover Tag START */
 
-.workspace-sidedock-vault-profile {
+/* .workspace-sidedock-vault-profile {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
-/* Ban Annoying Vault-Profile Hover Tag END */
+/* Ban Vault-Profile Hover Tag END */

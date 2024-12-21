@@ -349,5 +349,13 @@
       ],
       "key": "ArrowDown"
     }
+  ],
+  "editor:clear-formatting": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
   ]
 }

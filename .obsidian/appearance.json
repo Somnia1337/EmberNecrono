@@ -19,7 +19,10 @@
     "cursor_test",
     "pdf",
     "color",
-    "horizontal"
+    "horizontal",
+    "colorful",
+    "PDF tab fix",
+    "grid_or_dot"
   ],
   "baseFontSizeAction": true
 }

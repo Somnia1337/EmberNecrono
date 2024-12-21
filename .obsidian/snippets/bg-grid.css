@@ -1,11 +1,6 @@
-/* Moy-Grid Background */
-/* Last update: 2024.10.29 */
-/* Used to display two styles of backgrounds: Grid & Dot */
-
+/* Grid Background */
 /* Original code from: https://spacexcode.com/blog/pure-css-grid-line/ */
 /* Also reference: https://forum-zh.obsidian.md/t/topic/37076 */
-
-/* ============================================================ */
 
 /* Different colors of light and dark themes */
 .theme-dark {
@@ -32,7 +27,6 @@
       transparent 1px
     ),
     linear-gradient(to bottom, var(--grid-line-color-2) 1px, transparent 1px);
-  /* Add a gradient mask around the perimeter */
   -webkit-mask-image: linear-gradient(
       to bottom,
       transparent,
@@ -61,22 +55,7 @@
   -webkit-mask-composite: source-in, xor;
 }
 
-/* Dot matrix background */
-/* .markdown-reading-view .markdown-rendered, .markdown-source-view.mod-cm6 .cm-scroller, */
-.grid-dot-bg {
-  height: 100%;
-  background-image: radial-gradient(
-    circle,
-    var(--grid-dot-color) 1px,
-    var(--background-primary) 1px
-  );
-  background-size: 20px 20px;
-  background-position: center center;
-}
-
 /* Avoid strange anomalies in the Hover Editor */
 .popover .grid-bg {
   mask-image: none;
 }
-
-/* ============================================================ */

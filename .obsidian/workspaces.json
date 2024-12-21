@@ -491,33 +491,33 @@
             "type": "tabs",
             "children": [
               {
-                "id": "f54148259f5b6152",
+                "id": "0cf60585db4a3822",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Private/Log/Log - 2024/Log - 2024.11.md",
+                    "file": "Private/Log/Log - 2024/Log - 2024.12.md",
                     "mode": "source",
                     "backlinks": false,
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "Log - 2024.11"
+                  "title": "Log - 2024.12"
                 }
               },
               {
-                "id": "2685e1ac6cebd80b",
+                "id": "82b5010f49f5945e",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Private/Diary/Diary - 2024/Diary - 2024.11.md",
+                    "file": "Private/Diary/Diary - 2024/Diary - 2024.12.md",
                     "mode": "source",
                     "backlinks": false,
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "Diary - 2024.11"
+                  "title": "Diary - 2024.12"
                 }
               },
               {
@@ -709,8 +709,8 @@
           "remotely-save:Remotely Save": false
         }
       },
-      "active": "f54148259f5b6152",
-      "mtime": "2024-11-18T22:01:18+08:00"
+      "active": "0cf60585db4a3822",
+      "mtime": "2024-12-03T23:42:09+08:00"
     },
     "Planning": {
       "main": {
@@ -773,6 +773,36 @@
                   },
                   "icon": "lucide-file",
                   "title": "Plan - 2024 - Weekly"
+                }
+              },
+              {
+                "id": "3b5ea451e83ee70a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Private/Plan/Plan - 2024/Plan - 2024 - Archive.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plan - 2024 - Archive"
+                }
+              },
+              {
+                "id": "ac84f29b11af769e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Private/Retro/Retro - 2024.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Retro - 2024"
                 }
               }
             ]
@@ -920,8 +950,8 @@
           "remotely-save:Remotely Save": false
         }
       },
-      "active": "35d15bf7815b9c8a",
-      "mtime": "2024-11-24T22:42:33+08:00"
+      "active": "4eb486c174c54416",
+      "mtime": "2024-12-01T22:27:54+08:00"
     },
     "408-OS": {
       "main": {
@@ -1079,7 +1109,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Private/Plan/Plan - Index.canvas"
+                    "file": "11408/408/操作系统/操作系统 - 笔记.md"
                   },
                   "icon": "lucide-list",
                   "title": "Plan - Index 的大纲"

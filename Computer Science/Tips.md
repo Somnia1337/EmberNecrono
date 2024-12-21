@@ -147,6 +147,14 @@ git push -u origin main
 - build (Build) 影响构建系统或外部依赖的变更，比如 Gradle、Maven、npm 等
 - ci (Continuous Integration) 持续集成相关的变更，比如 Travis、Circle、Jenkins 配置文件的更新
 
+### Misc
+
+#### HTML 文字样式
+
+```html
+<p style="text-align: center; font-size: 24px; color: #027dfd">text</p>
+```
+
 ### 语言更新
 
 #### Rust

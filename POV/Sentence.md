@@ -11,3 +11,7 @@ The art isn't the art. The art is never the art. The art is the thing that happe
 There are only two hard things in Computer Science: cache invalidation and naming things. - Phil Karlton
 
 Being well-educated just means you are confused on a higher level.
+
+Empowering everyone to build reliable and efficient software.
+
+Elegance is not optional.
