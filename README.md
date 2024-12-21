@@ -1,4 +1,4 @@
-[中文](https://github.com/Somnia1337/EmberNecrono/blob/main/README-ZH.md)
+English | [中文](https://github.com/Somnia1337/EmberNecrono/blob/main/README-ZH.md)
 
 # [EmberNecrono](https://github.com/Somnia1337/EmberNecrono)
 
@@ -15,11 +15,11 @@ The notes Somnia1337 took with Obsidian in Markdown.
 I recommend using [Obsidian](https://obsidian.md/) - the Markdown editor I've been using - to read & edit my notes, it offers an elegant and fluent experience.
 
 <div align=center>
-  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-1_v0.7.png?raw=true">
+  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-1_v0.8.png?raw=true">
 </div>
 
 <div align=center>
-  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-2_v0.7.png?raw=true">
+  <img src="https://github.com/Somnia1337/EmberNecrono/blob/main/_Attachment/Screenshot-2_v0.8.png?raw=true">
 </div>
 
 Click [here](https://github.com/Somnia1337/EmberNecrono/archive/refs/heads/main.zip) to download all the notes and attachments as a `.zip` file, then unzip it and open the whole folder as an Obsidian vault.

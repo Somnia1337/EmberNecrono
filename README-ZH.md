@@ -1,4 +1,4 @@
-[English](https://github.com/Somnia1337/EmberNecrono/blob/main/README.md)
+[English](https://github.com/Somnia1337/EmberNecrono/blob/main/README.md) | 中文
 
 # [炽烬死灵录](https://github.com/Somnia1337/EmberNecrono)
 
